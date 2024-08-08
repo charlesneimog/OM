@@ -1,0 +1,4 @@
+; OM File Header - Saved 2022/01/07 0:40:35
+; (6.2 :patc (om-make-point 118 110) (om-make-point 50 50) (om-make-point 1374 733) "" 183 0 "2021/12/08 18:59:34" "2022/01/07 0:40:35")
+; End File Header
+(in-package :om)(load-lib-for (quote nil))(setf *om-current-persistent* (om-load-patch1 "Patch 5" (quote ((let ((box (om-load-boxcall (quote abstraction) "lispfunction" (om-load-lisp-abspatch "lispfunction" 6.2 ";;; Edit a valid LAMBDA EXPRESSION for \"lispfunction\"$;;; e.g. (lambda (arg1 arg2 ...) ( ... ))$$(lambda () (om-beep))") (quote nil) (om-make-point 334 216) nil nil nil nil))) (when (fboundp (quote set-active)) (set-active box nil)) box))) (quote nil) nil 6.2))

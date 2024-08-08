@@ -1,0 +1,1139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE score-partwise PUBLIC "-//Recordare//DTD MusicXML 3.0 Partwise//EN" "http://www.musicxml.org/dtds/partwise.dtd">
+<score-partwise>
+	<work>
+		<work-title>Texture</work-title>
+	</work>
+	<identification>
+		<creator type="composer">Texture</creator>
+		<encoding>
+			<encoding-date>2022-03-04</encoding-date>
+			<software>pymusicxml</software>
+		</encoding>
+	</identification>
+	<part-list>
+		<part-group type="start">
+			<group-symbol>bracket</group-symbol>
+			<group-barline>yes</group-barline>
+		</part-group>
+		<score-part id="P1">
+			<part-name>Piano 1</part-name>
+			<score-instrument id="P1-I1">
+				<instrument-name>Electric Piano 1</instrument-name>
+			</score-instrument>
+			<midi-instrument id="P1-I1">
+				<midi-program>5</midi-program>
+			</midi-instrument>
+		</score-part>
+		<part-group type="stop"/>
+	</part-list>
+	<part id="P1">
+		<measure number="1">
+			<attributes>
+				<divisions>14</divisions>
+				<time>
+					<beats>4</beats>
+					<beat-type>4</beat-type>
+				</time>
+			</attributes>
+			<note>
+				<rest/>
+				<duration>7</duration>
+				<voice>1</voice>
+				<type>eighth</type>
+			</note>
+			<note>
+				<rest/>
+				<duration>6</duration>
+				<voice>1</voice>
+				<type>eighth</type>
+				<dot/>
+				<time-modification>
+					<actual-notes>7</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<direction placement="below">
+				<direction-type>
+					<dynamics>
+						<f/>
+					</dynamics>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>8</duration>
+				<tie type="start"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<time-modification>
+					<actual-notes>7</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>14</duration>
+				<tie type="start"/>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<notations>
+					<tied type="start"/>
+					<tied type="stop"/>
+				</notations>
+			</note>
+		</measure>
+		<measure number="2">
+			<attributes>
+				<divisions>42</divisions>
+			</attributes>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>7</duration>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>16th</type>
+				<time-modification>
+					<actual-notes>6</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="stop"/>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<direction placement="below">
+				<direction-type>
+					<dynamics>
+						<f/>
+					</dynamics>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>28</duration>
+				<tie type="start"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<time-modification>
+					<actual-notes>6</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>7</duration>
+				<tie type="start"/>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>16th</type>
+				<time-modification>
+					<actual-notes>6</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+					<tied type="stop"/>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>7</duration>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>16th</type>
+				<time-modification>
+					<actual-notes>6</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="stop"/>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<direction placement="below">
+				<direction-type>
+					<dynamics>
+						<f/>
+					</dynamics>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>28</duration>
+				<tie type="start"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<time-modification>
+					<actual-notes>6</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>7</duration>
+				<tie type="start"/>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>16th</type>
+				<time-modification>
+					<actual-notes>6</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+					<tied type="stop"/>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>7</duration>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>16th</type>
+				<time-modification>
+					<actual-notes>6</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="stop"/>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<direction placement="below">
+				<direction-type>
+					<dynamics>
+						<f/>
+					</dynamics>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>28</duration>
+				<tie type="start"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<time-modification>
+					<actual-notes>6</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>7</duration>
+				<tie type="start"/>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>16th</type>
+				<time-modification>
+					<actual-notes>6</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+					<tied type="stop"/>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>24</duration>
+				<tie type="start"/>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<time-modification>
+					<actual-notes>7</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+					<tied type="stop"/>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>6</duration>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>16th</type>
+				<time-modification>
+					<actual-notes>7</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<beam number="1">begin</beam>
+				<beam number="2">forward hook</beam>
+				<notations>
+					<tied type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<direction placement="below">
+				<direction-type>
+					<dynamics>
+						<f/>
+					</dynamics>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>12</duration>
+				<tie type="start"/>
+				<voice>1</voice>
+				<type>eighth</type>
+				<time-modification>
+					<actual-notes>7</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<beam number="1">end</beam>
+				<notations>
+					<tied type="start"/>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+		</measure>
+		<measure number="3">
+			<attributes>
+				<divisions>15</divisions>
+			</attributes>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>15</duration>
+				<tie type="start"/>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<notations>
+					<tied type="start"/>
+					<tied type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>3</duration>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>16th</type>
+				<time-modification>
+					<actual-notes>5</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="stop"/>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<direction placement="below">
+				<direction-type>
+					<dynamics>
+						<f/>
+					</dynamics>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>12</duration>
+				<tie type="start"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<time-modification>
+					<actual-notes>5</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>5</duration>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>eighth</type>
+				<time-modification>
+					<actual-notes>3</actual-notes>
+					<normal-notes>2</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="stop"/>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<direction placement="below">
+				<direction-type>
+					<dynamics>
+						<f/>
+					</dynamics>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>10</duration>
+				<tie type="start"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<time-modification>
+					<actual-notes>3</actual-notes>
+					<normal-notes>2</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>15</duration>
+				<tie type="start"/>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<notations>
+					<tied type="start"/>
+					<tied type="stop"/>
+				</notations>
+			</note>
+		</measure>
+		<measure number="4">
+			<attributes>
+				<divisions>20</divisions>
+			</attributes>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>5</duration>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>eighth</type>
+				<time-modification>
+					<actual-notes>4</actual-notes>
+					<normal-notes>2</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="stop"/>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<direction placement="below">
+				<direction-type>
+					<dynamics>
+						<f/>
+					</dynamics>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>15</duration>
+				<tie type="start"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<dot/>
+				<time-modification>
+					<actual-notes>4</actual-notes>
+					<normal-notes>2</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>5</duration>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>eighth</type>
+				<time-modification>
+					<actual-notes>4</actual-notes>
+					<normal-notes>2</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="stop"/>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<direction placement="below">
+				<direction-type>
+					<dynamics>
+						<f/>
+					</dynamics>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>15</duration>
+				<tie type="start"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<dot/>
+				<time-modification>
+					<actual-notes>4</actual-notes>
+					<normal-notes>2</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>5</duration>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>eighth</type>
+				<time-modification>
+					<actual-notes>4</actual-notes>
+					<normal-notes>2</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="stop"/>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<direction placement="below">
+				<direction-type>
+					<dynamics>
+						<f/>
+					</dynamics>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>15</duration>
+				<tie type="start"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<dot/>
+				<time-modification>
+					<actual-notes>4</actual-notes>
+					<normal-notes>2</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>16</duration>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<time-modification>
+					<actual-notes>5</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="stop"/>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<direction placement="below">
+				<direction-type>
+					<dynamics>
+						<f/>
+					</dynamics>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>4</duration>
+				<tie type="start"/>
+				<voice>1</voice>
+				<type>16th</type>
+				<time-modification>
+					<actual-notes>5</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+		</measure>
+		<measure number="5">
+			<attributes>
+				<divisions>12</divisions>
+			</attributes>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>12</duration>
+				<tie type="start"/>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<notations>
+					<tied type="start"/>
+					<tied type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>3</duration>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>eighth</type>
+				<time-modification>
+					<actual-notes>4</actual-notes>
+					<normal-notes>2</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="stop"/>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<direction placement="below">
+				<direction-type>
+					<dynamics>
+						<f/>
+					</dynamics>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>9</duration>
+				<tie type="start"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<dot/>
+				<time-modification>
+					<actual-notes>4</actual-notes>
+					<normal-notes>2</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>4</duration>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>eighth</type>
+				<time-modification>
+					<actual-notes>3</actual-notes>
+					<normal-notes>2</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="stop"/>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<direction placement="below">
+				<direction-type>
+					<dynamics>
+						<f/>
+					</dynamics>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>8</duration>
+				<tie type="start"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<time-modification>
+					<actual-notes>3</actual-notes>
+					<normal-notes>2</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>12</duration>
+				<tie type="start"/>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<notations>
+					<tied type="start"/>
+					<tied type="stop"/>
+				</notations>
+			</note>
+		</measure>
+		<measure number="6">
+			<attributes>
+				<divisions>70</divisions>
+			</attributes>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>10</duration>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>16th</type>
+				<time-modification>
+					<actual-notes>7</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="stop"/>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<direction placement="below">
+				<direction-type>
+					<dynamics>
+						<f/>
+					</dynamics>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>60</duration>
+				<tie type="start"/>
+				<voice>1</voice>
+				<type>quarter</type>
+				<dot/>
+				<time-modification>
+					<actual-notes>7</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="start"/>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+			<direction placement="above">
+				<direction-type>
+					<words>~B0,64</words>
+				</direction-type>
+				<voice>1</voice>
+			</direction>
+			<note dynamics="88.89">
+				<pitch>
+					<step>C</step>
+					<alter>0</alter>
+					<octave>4</octave>
+				</pitch>
+				<duration>14</duration>
+				<tie type="stop"/>
+				<voice>1</voice>
+				<type>16th</type>
+				<time-modification>
+					<actual-notes>5</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tied type="stop"/>
+					<tuplet type="start"/>
+				</notations>
+			</note>
+			<note>
+				<rest/>
+				<duration>56</duration>
+				<voice>1</voice>
+				<type>quarter</type>
+				<time-modification>
+					<actual-notes>5</actual-notes>
+					<normal-notes>4</normal-notes>
+				</time-modification>
+				<notations>
+					<tuplet type="stop"/>
+				</notations>
+			</note>
+			<note>
+				<rest/>
+				<duration>35</duration>
+				<voice>1</voice>
+				<type>eighth</type>
+			</note>
+		</measure>
+	</part>
+</score-partwise>

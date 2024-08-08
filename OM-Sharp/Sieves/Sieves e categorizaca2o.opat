@@ -1,0 +1,14 @@
+
+(:patch
+ (:name "2.1. - Sieves e categorizaca2o")
+ (:doc "")
+ (:info
+  (:created nil)
+  (:modified "2020/09/01 17:59:51")
+  (:by "om-sharp")
+  (:version 1.0))
+ (:window (:size nil) (:position nil))
+ (:grid nil)
+ (:lock nil)
+ (:boxes)
+ (:connections))

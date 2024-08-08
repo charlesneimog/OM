@@ -1,0 +1,6 @@
+; OM File Header - Saved 2021/09/02 0:15:06
+; (6.070005 :patc (om-make-point 94 234) (om-make-point 463 306) (om-make-point 462 335) "" 183 0 nil "2021/09/02 0:15:06")
+; End File Header
+; External resources 
+; (list (list (quote :picture) "#P\"../../../../resources/pict/omsox\""))
+(in-package :om)(load-lib-for (quote nil))(setf *om-current-persistent* (om-load-patch1 "5-plotting" (quote ((om-load-boxcomment "comment" (om-make-point 252 30) (quote "Plot the frequency response of the filter") "" (om-make-point 131 24) nil (om-make-color 0.0 0.0 0.0) (om-make-font "Verdana" 12 :family "Verdana" :style (quote (:plain)) :mode (quote nil))) (om-load-boxcomment "comment" (om-make-point 172 34) (quote "--under construction--") "" (om-make-point 155 132) nil (om-make-color 1.0 0.0 0.0) (om-make-font "Verdana" 14.0 :family "Verdana" :style (quote (:plain)) :mode (quote nil))))) (quote nil) (list (let ((newpict (make-instance (quote patch-picture) :name "omsox" :source (quote user) :pict-pathname (restore-pict-path (restore-path nil)) :thepict (om-get-picture "omsox" (quote user)) :storemode :external :draw-params (quote (p 0 0 100 100)) :extraobjs nil))) (setf (pict-pos newpict) (om-make-point 60 8)) (setf (pict-size newpict) (om-make-point 65 55)) newpict)) 6.070004))

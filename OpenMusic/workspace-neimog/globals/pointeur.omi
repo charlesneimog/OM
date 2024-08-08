@@ -1,0 +1,4 @@
+; OM File Header - Saved 2017/05/04 3:36:32
+; (6.120001 :inst (om-make-point 249 48) (om-make-point 150 100) (om-make-point 250 280) "" 215 0 nil "2017/05/04 3:36:32")
+; End File Header
+(in-package :om)(load-lib-for (quote nil))(setf *instance-to-load* (om-load-ominstance1 (quote ominstance) "pointeur" 215 (if (find-class (quote store) nil) (make-instance (quote store) :value 45.0D0 :from-file t)) (pairlis (quote (winsize winpos)) (list (om-make-point 335 275) (om-make-point 10 40))) nil ""))

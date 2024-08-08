@@ -1,0 +1,731 @@
+
+(:patch
+ (:name "Sieve")
+ (:doc "")
+ (:info
+  (:created "2020/12/07 17:10:30")
+  (:modified "2020/12/07 17:20:18")
+  (:by "om-sharp")
+  (:version 1.01))
+ (:window (:size (1938 1098)) (:position (-9 -9)))
+ (:grid nil)
+ (:lock t)
+ (:boxes
+  (:box
+   (:library "OM-Sieves")
+   (:type :object)
+   (:reference sieve)
+   (:group-id nil)
+   (:name nil)
+   (:x 281)
+   (:y 113)
+   (:w 256)
+   (:h 89)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :text)
+   (:showname nil)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SELF")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "CR-EXP")
+     (:value (:list 2 0 18))
+     (:reactive nil)))
+   (:outputs
+    (:output (:name "SELF") (:reactive nil))
+    (:output (:name "CR-EXP") (:reactive nil)))
+   (:window (:size nil) (:position nil))
+   (:edition-params)
+   (:value
+    (:object (:class sieve) (:slots ((:cr-exp (:list 11 16 64))))))
+   (:id 0))
+  (:box
+   (:library "OM-Sieves")
+   (:type :object)
+   (:reference sieve)
+   (:group-id nil)
+   (:name nil)
+   (:x 773)
+   (:y 111)
+   (:w 256)
+   (:h 89)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :text)
+   (:showname nil)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SELF")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "CR-EXP")
+     (:value (:list 2 0 18))
+     (:reactive nil)))
+   (:outputs
+    (:output (:name "SELF") (:reactive nil))
+    (:output (:name "CR-EXP") (:reactive nil)))
+   (:window (:size nil) (:position nil))
+   (:edition-params)
+   (:value
+    (:object (:class sieve) (:slots ((:cr-exp (:list 19 16 64))))))
+   (:id 1))
+  (:comment
+   (:x 552)
+   (:y 138)
+   (:w 213)
+   (:h 35)
+   (:fgcolor nil)
+   (:bgcolor nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font
+    (:font-or-nil
+     (:font (:font (:face "Georgia") (:size 18) (:style :bold)))
+     (:t-or-nil t)))
+   (:align nil)
+   (:text "<- Objeto sieve ->")
+   (:id 2))
+  (:box
+   (:library "OM-Sieves")
+   (:type :function)
+   (:reference revel-sieve)
+   (:group-id nil)
+   (:name "revel-sieve")
+   (:x 165)
+   (:y 260)
+   (:w 148)
+   (:h 41)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SELF")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 3))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 149)
+   (:y 315)
+   (:w 191)
+   (:h 41)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs
+    (:input
+     (:type :optional)
+     (:name "in")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value (:list 16 27 38 49 60))
+   (:id 4))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 407)
+   (:y 70)
+   (:w 127)
+   (:h 41)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value (:list 11 16 64))
+   (:id 5))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 899)
+   (:y 66)
+   (:w 127)
+   (:h 41)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value (:list 19 16 64))
+   (:id 6))
+  (:box
+   (:library "OM-Sieves")
+   (:type :function)
+   (:reference s-union)
+   (:group-id nil)
+   (:name "s-union")
+   (:x 397)
+   (:y 312)
+   (:w 154)
+   (:h 41)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SELF")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 7))
+  (:box
+   (:library "OM-Sieves")
+   (:type :function)
+   (:reference s-complement)
+   (:group-id nil)
+   (:name "s-complement")
+   (:x 206)
+   (:y 405)
+   (:w 197)
+   (:h 41)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SELF")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 8))
+  (:box
+   (:library "OM-Sieves")
+   (:type :function)
+   (:reference revel-sieve)
+   (:group-id nil)
+   (:name "revel-sieve")
+   (:x 230)
+   (:y 449)
+   (:w 148)
+   (:h 41)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SELF")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 9))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 157)
+   (:y 510)
+   (:w 398)
+   (:h 158)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs
+    (:input
+     (:type :optional)
+     (:name "in")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value
+    (:list
+     17
+     18
+     19
+     20
+     21
+     22
+     23
+     24
+     25
+     26
+     28
+     29
+     30
+     31
+     32
+     33
+     34
+     36
+     37
+     39
+     40
+     41
+     42
+     43
+     44
+     45
+     46
+     47
+     48
+     50
+     51
+     52
+     53
+     55
+     56
+     57
+     58
+     59
+     61
+     62
+     63
+     64))
+   (:id 10))
+  (:box
+   (:library "OM-Sieves")
+   (:type :function)
+   (:reference revel-sieve)
+   (:group-id nil)
+   (:name "revel-sieve")
+   (:x 687)
+   (:y 519)
+   (:w 148)
+   (:h 41)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SELF")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 11))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 633)
+   (:y 570)
+   (:w 256)
+   (:h 45)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs
+    (:input
+     (:type :optional)
+     (:name "in")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value (:list 16 27 35 38 49 54 60))
+   (:id 12))
+  (:box
+   (:library "OM-Sieves")
+   (:type :function)
+   (:reference s-intersection)
+   (:group-id nil)
+   (:name "s-intersection")
+   (:x 843)
+   (:y 380)
+   (:w 174)
+   (:h 41)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SELF")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 13))
+  (:box
+   (:library "OM-Sieves")
+   (:type :function)
+   (:reference revel-sieve)
+   (:group-id nil)
+   (:name "revel-sieve")
+   (:x 1057)
+   (:y 244)
+   (:w 148)
+   (:h 41)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SELF")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 14))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 1067)
+   (:y 300)
+   (:w 127)
+   (:h 41)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs
+    (:input
+     (:type :optional)
+     (:name "in")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value (:list 16 35 54))
+   (:id 15))
+  (:box
+   (:library "OM-Sieves")
+   (:type :function)
+   (:reference revel-sieve)
+   (:group-id nil)
+   (:name "revel-sieve")
+   (:x 1108)
+   (:y 464)
+   (:w 148)
+   (:h 41)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SELF")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 16))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 1152)
+   (:y 518)
+   (:w 61)
+   (:h 47)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs
+    (:input
+     (:type :optional)
+     (:name "in")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value (:list 16))
+   (:id 17))
+  (:comment
+   (:x 557)
+   (:y 312)
+   (:w 236)
+   (:h 35)
+   (:fgcolor (:color-or-nil (:color nil) (:t-or-nil nil)))
+   (:bgcolor nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font
+    (:font-or-nil
+     (:font (:font (:face "Georgia") (:size 18) (:style :bold)))
+     (:t-or-nil t)))
+   (:align nil)
+   (:text "<- União dos crivos")
+   (:id 18))
+  (:comment
+   (:x 1030)
+   (:y 384)
+   (:w 303)
+   (:h 35)
+   (:fgcolor (:color-or-nil (:color nil) (:t-or-nil nil)))
+   (:bgcolor nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font
+    (:font-or-nil
+     (:font (:font (:face "Georgia") (:size 18) (:style :bold)))
+     (:t-or-nil t)))
+   (:align nil)
+   (:text "<- Intersecção dos crivos")
+   (:id 19))
+  (:comment
+   (:x 410)
+   (:y 408)
+   (:w 223)
+   (:h 35)
+   (:fgcolor (:color-or-nil (:color nil) (:t-or-nil nil)))
+   (:bgcolor nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font
+    (:font-or-nil
+     (:font (:font (:face "Georgia") (:size 18) (:style :bold)))
+     (:t-or-nil t)))
+   (:align nil)
+   (:text "Complementação")
+   (:id 20)))
+ (:connections
+  (:connection
+   (:from (:box 0 :out 0))
+   (:to (:box 3 :in 0))
+   (:attributes
+    (:color
+     (:color-or-nil (:color (:color 1.0 0.0 0.0 1.0)) (:t-or-nil t))
+     :style
+     nil
+     :modif
+     nil)))
+  (:connection
+   (:from (:box 0 :out 0))
+   (:to (:box 7 :in 0))
+   (:attributes
+    (:color
+     (:color-or-nil (:color (:color 1.0 0.0 0.0 1.0)) (:t-or-nil t))
+     :style
+     nil
+     :modif
+     nil)))
+  (:connection
+   (:from (:box 0 :out 0))
+   (:to (:box 13 :in 0))
+   (:attributes
+    (:color
+     (:color-or-nil (:color (:color 1.0 0.0 0.0 1.0)) (:t-or-nil t))
+     :style
+     nil
+     :modif
+     nil)))
+  (:connection
+   (:from (:box 1 :out 0))
+   (:to (:box 7 :in 1))
+   (:attributes
+    (:color
+     (:color-or-nil (:color (:color 0.0 0.0 1.0 1.0)) (:t-or-nil t))
+     :style
+     nil
+     :modif
+     (0 16/115))))
+  (:connection
+   (:from (:box 1 :out 0))
+   (:to (:box 13 :in 1))
+   (:attributes
+    (:color
+     (:color-or-nil (:color (:color 0.0 0.0 1.0 1.0)) (:t-or-nil t))
+     :style
+     nil
+     :modif
+     (0 -7/55))))
+  (:connection
+   (:from (:box 1 :out 0))
+   (:to (:box 14 :in 0))
+   (:attributes
+    (:color
+     (:color-or-nil (:color (:color 0.0 0.0 1.0 1.0)) (:t-or-nil t))
+     :style
+     nil
+     :modif
+     nil)))
+  (:connection (:from (:box 3 :out 0)) (:to (:box 4 :in 0)))
+  (:connection (:from (:box 5 :out 0)) (:to (:box 0 :in 1)))
+  (:connection (:from (:box 6 :out 0)) (:to (:box 1 :in 1)))
+  (:connection
+   (:from (:box 7 :out 0))
+   (:to (:box 8 :in 0))
+   (:attributes
+    (:color
+     (:color-or-nil
+      (:color (:color 0.5019608 0.0 0.5019608 1.0))
+      (:t-or-nil t))
+     :style
+     nil
+     :modif
+     (0 13/62))))
+  (:connection
+   (:from (:box 7 :out 0))
+   (:to (:box 11 :in 0))
+   (:attributes
+    (:color
+     (:color-or-nil
+      (:color (:color 0.0 0.5019608 0.2509804 1.0))
+      (:t-or-nil t))
+     :style
+     nil
+     :modif
+     (0 -35/176))))
+  (:connection (:from (:box 8 :out 0)) (:to (:box 9 :in 0)))
+  (:connection
+   (:from (:box 9 :out 0))
+   (:to (:box 10 :in 0))
+   (:attributes
+    (:color
+     (:color-or-nil
+      (:color (:color 0.5019608 0.0 0.5019608 1.0))
+      (:t-or-nil t))
+     :style
+     nil
+     :modif
+     nil)))
+  (:connection
+   (:from (:box 11 :out 0))
+   (:to (:box 12 :in 0))
+   (:attributes
+    (:color
+     (:color-or-nil
+      (:color (:color 0.0 0.5019608 0.2509804 1.0))
+      (:t-or-nil t))
+     :style
+     nil
+     :modif
+     nil)))
+  (:connection
+   (:from (:box 13 :out 0))
+   (:to (:box 16 :in 0))
+   (:attributes
+    (:color
+     (:color-or-nil
+      (:color (:color 1.0 0.0 0.5019608 1.0))
+      (:t-or-nil t))
+     :style
+     nil
+     :modif
+     nil)))
+  (:connection (:from (:box 14 :out 0)) (:to (:box 15 :in 0)))
+  (:connection
+   (:from (:box 16 :out 0))
+   (:to (:box 17 :in 0))
+   (:attributes
+    (:color
+     (:color-or-nil
+      (:color (:color 1.0 0.0 0.5019608 1.0))
+      (:t-or-nil t))
+     :style
+     nil
+     :modif
+     nil)))))

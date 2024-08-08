@@ -1,0 +1,193 @@
+
+(:patch
+ (:name "S-decompose")
+ (:doc "")
+ (:info
+  (:created "2020/10/29 15:14:00")
+  (:modified "2020/12/07 17:28:38")
+  (:by "om-sharp")
+  (:version 1.01))
+ (:window (:size (1121 774)) (:position (256 77)))
+ (:grid nil)
+ (:lock t)
+ (:boxes
+  (:box
+   (:library "OM-Sieves")
+   (:type :function)
+   (:reference s-decompose)
+   (:group-id nil)
+   (:name "s-decompose")
+   (:x 374)
+   (:y 362)
+   (:w 170)
+   (:h 41)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value
+      (:list
+       23
+       33
+       47
+       63
+       70
+       71
+       93
+       95
+       119
+       123
+       143
+       153
+       167
+       174
+       183
+       191
+       213
+       215
+       239
+       243
+       263
+       273
+       278
+       287
+       303
+       311
+       333
+       335
+       359
+       363
+       382
+       383
+       393
+       407
+       423
+       431
+       453
+       455
+       479
+       483
+       486))
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 0))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 178)
+   (:y 210)
+   (:w 562)
+   (:h 125)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :left)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value
+    (:list
+     23
+     33
+     47
+     63
+     70
+     71
+     93
+     95
+     119
+     123
+     143
+     153
+     167
+     174
+     183
+     191
+     213
+     215
+     239
+     243
+     263
+     273
+     278
+     287
+     303
+     311
+     333
+     335
+     359
+     363
+     382
+     383
+     393
+     407
+     423
+     431
+     453
+     455
+     479
+     483
+     486))
+   (:id 1))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 243)
+   (:y 426)
+   (:w 432)
+   (:h 49)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :left)
+   (:lock nil)
+   (:inputs
+    (:input
+     (:type :optional)
+     (:name "in")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value
+    (:list (:list 30 33 486) (:list 24 23 486) (:list 104 70 486)))
+   (:id 2))
+  (:comment
+   (:x 176)
+   (:y 144)
+   (:w 568)
+   (:h 62)
+   (:fgcolor nil)
+   (:bgcolor nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font
+    (:font-or-nil
+     (:font (:font (:face "Georgia") (:size 18) (:style :plain)))
+     (:t-or-nil t)))
+   (:align nil)
+   (:text
+    "Exemplo utilizado por Xenakis (1990). Objeto baseado em Ariza (2005)")
+   (:id 3)))
+ (:connections
+  (:connection (:from (:box 0 :out 0)) (:to (:box 2 :in 0)))
+  (:connection (:from (:box 1 :out 0)) (:to (:box 0 :in 0)))))

@@ -1,0 +1,2580 @@
+
+(:patch
+ (:name "DECOMPOSICAO DE SIEVE")
+ (:doc "")
+ (:info
+  (:created "2020/10/05 17:52:27")
+  (:modified "2020/10/06 1:21:10")
+  (:by "om-sharp")
+  (:version 1.0))
+ (:window (:size (1295 728)) (:position (78 11)))
+ (:grid nil)
+ (:lock nil)
+ (:boxes
+  (:box
+   (:type :abstraction)
+   (:reference
+    (:textfun
+     (:name "my-function")
+     (:doc "")
+     (:info
+      (:created nil)
+      (:modified nil)
+      (:by *app-name*)
+      (:version 0))
+     (:window (:size (1217 561)) (:position (53 53)))
+     (:text
+      (:list
+       "(lambda (sieve)"
+       ""
+       "(let* ("
+       ""
+       "(action1"
+       "        (loop :for crible-element :in sieve :collect "
+       ""
+       "            (remove nil (let* ( "
+       "                    (last-elem-sieve (last-elem sieve))"
+       "                    (flat-sieve (flat sieve)))"
+       ""
+       "                    (loop :for cknloop :in flat-sieve :collect "
+       "                        (let* ((box-abs (abs (om- crible-element cknloop)))"
+       "                                (box-omif (if (om= box-abs 0) crible-element box-abs)))"
+       "                                (if  (om= (length flat-sieve) (length (remove-duplicates "
+       "                                    (x-append"
+       "                                         (arithm-ser crible-element last-elem-sieve box-omif)"
+       "                                                flat-sieve)"
+       "                                                    :test"
+       "                                                 'equal)))"
+       "                                (x-append box-omif crible-element last-elem-sieve) nil))))))))"
+       ""
+       ""
+       "(first (sort-list (flat action1 1) :test '< :key 'second))))"
+       ""
+       ""
+       ""
+       ""
+       ""))))
+   (:group-id nil)
+   (:name "my-function")
+   (:x 567)
+   (:y 213)
+   (:w 104)
+   (:h 60)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :hidden)
+   (:lock nil)
+   (:lambda nil)
+   (:pre-delay 0)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 0))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 269)
+   (:y 27)
+   (:w 283)
+   (:h 170)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value
+    (:list
+     33
+     63
+     70
+     93
+     123
+     153
+     174
+     183
+     213
+     243
+     273
+     278
+     303
+     333
+     363
+     382
+     393
+     423
+     453
+     483
+     486))
+   (:id 1))
+  (:box
+   (:type :abstraction)
+   (:reference
+    (:textfun
+     (:name "my-function")
+     (:doc "")
+     (:info
+      (:created nil)
+      (:modified nil)
+      (:by *app-name*)
+      (:version 0))
+     (:window (:size (911 440)) (:position (130 130)))
+     (:text
+      (:list
+       "(lambda (crible sieve)"
+       ""
+       "(let* ("
+       "(one-crible (arithm-ser (second sieve) (third sieve) (first sieve)))"
+       ""
+       "(main-action "
+       "(loop :for cknloop :in one-crible :collect"
+       "        (let* ((accum-fun #'(lambda (crible cknloop) (remove cknloop crible))))"
+       "                  (setf crible (funcall accum-fun crible cknloop))))))"
+       ""
+       "(last-elem main-action)))"))))
+   (:group-id nil)
+   (:name "my-function")
+   (:x 456)
+   (:y 288)
+   (:w 104)
+   (:h 60)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :hidden)
+   (:lock nil)
+   (:lambda nil)
+   (:pre-delay 0)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "CRIBLE")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 2))
+  (:box
+   (:type :abstraction)
+   (:reference
+    (:patch
+     (:name "retirar-números-da-sieve")
+     (:doc "")
+     (:info
+      (:created nil)
+      (:modified nil)
+      (:by *app-name*)
+      (:version 0))
+     (:window (:size (500 500)) (:position (156 152)))
+     (:grid nil)
+     (:lock nil)
+     (:boxes
+      (:box
+       (:type :io)
+       (:reference
+        (:in (:type omin) (:index 1) (:name "input") (:doc "")))
+       (:group-id nil)
+       (:name "input")
+       (:x 171)
+       (:y 21)
+       (:w 50)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 0))
+      (:box
+       (:type :io)
+       (:reference
+        (:out (:type omout) (:name "output 1") (:index 1) (:doc "")))
+       (:group-id nil)
+       (:name "output 1")
+       (:x 308)
+       (:y 332)
+       (:w 68)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "out-value")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs)
+       (:id 1))
+      (:box
+       (:type :io)
+       (:reference
+        (:in (:type omin) (:index 2) (:name "in") (:doc "")))
+       (:group-id nil)
+       (:name "in")
+       (:x 271)
+       (:y 69)
+       (:w 40)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 2))
+      (:box
+       (:type :abstraction)
+       (:reference
+        (:patch
+         (:name "remove")
+         (:doc "")
+         (:info
+          (:created nil)
+          (:modified nil)
+          (:by *app-name*)
+          (:version 0))
+         (:window (:size (500 500)) (:position (182 178)))
+         (:grid nil)
+         (:lock nil)
+         (:boxes
+          (:box
+           (:type :io)
+           (:reference
+            (:out
+             (:type omout)
+             (:name "output")
+             (:index 1)
+             (:doc nil)))
+           (:group-id nil)
+           (:name "output")
+           (:x 101)
+           (:y 238)
+           (:w 58)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "out-value")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs)
+           (:id 0))
+          (:box
+           (:type :io)
+           (:reference
+            (:in (:type omin) (:index 1) (:name "sequenci") (:doc "")))
+           (:group-id nil)
+           (:name "sequenci")
+           (:x 238)
+           (:y 78)
+           (:w 69)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs)
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 1))
+          (:box
+           (:type :io)
+           (:reference
+            (:in (:type omin) (:index 2) (:name "item") (:doc "")))
+           (:group-id nil)
+           (:name "item")
+           (:x 147)
+           (:y 79)
+           (:w 59)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs)
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 2))
+          (:box
+           (:type :function)
+           (:reference remove)
+           (:group-id nil)
+           (:name "remove")
+           (:x 179)
+           (:y 140)
+           (:w 80)
+           (:h 29)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "ITEM")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "SEQUENCE")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 3)))
+         (:connections
+          (:connection (:from (:box 1 :out 0)) (:to (:box 3 :in 1)))
+          (:connection (:from (:box 2 :out 0)) (:to (:box 3 :in 0)))
+          (:connection (:from (:box 3 :out 0)) (:to (:box 0 :in 0))))))
+       (:group-id nil)
+       (:name "remove")
+       (:x 130)
+       (:y 132)
+       (:w 80)
+       (:h 48)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:display :mini-view)
+       (:lock nil)
+       (:lambda :lambda)
+       (:pre-delay 0)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "sequenci")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "item")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "output") (:reactive nil)))
+       (:id 3))
+      (:box
+       (:type :special)
+       (:reference accum)
+       (:group-id nil)
+       (:name "accum")
+       (:x 0)
+       (:y 191)
+       (:w 339)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 0.82 0.7 0.7 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "data-in")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "accum-function")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "init")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs
+        (:output (:name "collect") (:reactive nil))
+        (:output (:name "data-out") (:reactive nil))
+        (:output (:name "init") (:reactive nil)))
+       (:id 4))
+      (:box
+       (:type :special)
+       (:reference iterate)
+       (:group-id nil)
+       (:name "iterate")
+       (:x 32)
+       (:y 273)
+       (:w 57)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 0.82 0.85 0.7 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "action")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs)
+       (:id 5))
+      (:box
+       (:type :special)
+       (:reference loop-list)
+       (:group-id nil)
+       (:name "list-loop")
+       (:x 28)
+       (:y 138)
+       (:w 64)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 0.82 0.85 0.7 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "list")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "i") (:reactive nil)))
+       (:id 6)))
+     (:connections
+      (:connection (:from (:box 0 :out 0)) (:to (:box 6 :in 0)))
+      (:connection (:from (:box 2 :out 0)) (:to (:box 4 :in 2)))
+      (:connection (:from (:box 3 :out 0)) (:to (:box 4 :in 1)))
+      (:connection (:from (:box 4 :out 0)) (:to (:box 5 :in 0)))
+      (:connection (:from (:box 4 :out 1)) (:to (:box 1 :in 0)))
+      (:connection (:from (:box 6 :out 0)) (:to (:box 4 :in 0))))))
+   (:group-id nil)
+   (:name "retirar-números-da-sieve")
+   (:x 876)
+   (:y 22)
+   (:w 177)
+   (:h 48)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :mini-view)
+   (:lock nil)
+   (:lambda nil)
+   (:pre-delay 0)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "input")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "in")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "output 1") (:reactive nil)))
+   (:id 3))
+  (:box
+   (:type :abstraction)
+   (:reference
+    (:patch
+     (:name "my-patch")
+     (:doc "")
+     (:info
+      (:created nil)
+      (:modified nil)
+      (:by *app-name*)
+      (:version 0))
+     (:window (:size (447 316)) (:position nil))
+     (:grid nil)
+     (:lock nil)
+     (:boxes
+      (:box
+       (:type :abstraction)
+       (:reference
+        (:patch
+         (:name "retirar-números-da-sieve")
+         (:doc "")
+         (:info
+          (:created nil)
+          (:modified nil)
+          (:by *app-name*)
+          (:version 0))
+         (:window (:size nil) (:position nil))
+         (:grid nil)
+         (:lock nil)
+         (:boxes
+          (:box
+           (:type :io)
+           (:reference
+            (:in (:type omin) (:index 1) (:name "input") (:doc "")))
+           (:group-id nil)
+           (:name "input")
+           (:x 35)
+           (:y 81)
+           (:w 50)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs)
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 0))
+          (:box
+           (:type :io)
+           (:reference
+            (:out
+             (:type omout)
+             (:name "output 1")
+             (:index 1)
+             (:doc "")))
+           (:group-id nil)
+           (:name "output 1")
+           (:x 308)
+           (:y 332)
+           (:w 68)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "out-value")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs)
+           (:id 1))
+          (:box
+           (:type :io)
+           (:reference
+            (:in (:type omin) (:index 2) (:name "input 2") (:doc "")))
+           (:group-id nil)
+           (:name "input 2")
+           (:x 249)
+           (:y 99)
+           (:w 59)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs)
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 2))
+          (:box
+           (:type :abstraction)
+           (:reference
+            (:patch
+             (:name "remove")
+             (:doc "")
+             (:info
+              (:created nil)
+              (:modified nil)
+              (:by *app-name*)
+              (:version 0))
+             (:window (:size nil) (:position nil))
+             (:grid nil)
+             (:lock nil)
+             (:boxes
+              (:box
+               (:type :io)
+               (:reference
+                (:out
+                 (:type omout)
+                 (:name "output")
+                 (:index 1)
+                 (:doc nil)))
+               (:group-id nil)
+               (:name "output")
+               (:x 101)
+               (:y 238)
+               (:w 58)
+               (:h 42)
+               (:color
+                (:color-or-nil
+                 (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+                 (:t-or-nil t)))
+               (:border 0)
+               (:roundness 0)
+               (:text-font nil)
+               (:align :center)
+               (:icon :top)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "out-value")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs)
+               (:id 0))
+              (:box
+               (:type :io)
+               (:reference
+                (:in
+                 (:type omin)
+                 (:index 1)
+                 (:name "input")
+                 (:doc "")))
+               (:group-id nil)
+               (:name "input")
+               (:x 238)
+               (:y 78)
+               (:w 50)
+               (:h 42)
+               (:color
+                (:color-or-nil
+                 (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+                 (:t-or-nil t)))
+               (:border 0)
+               (:roundness 0)
+               (:text-font nil)
+               (:align :center)
+               (:icon :top)
+               (:inputs)
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 1))
+              (:box
+               (:type :io)
+               (:reference
+                (:in
+                 (:type omin)
+                 (:index 2)
+                 (:name "input 2")
+                 (:doc "")))
+               (:group-id nil)
+               (:name "input 2")
+               (:x 55)
+               (:y 45)
+               (:w 59)
+               (:h 42)
+               (:color
+                (:color-or-nil
+                 (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+                 (:t-or-nil t)))
+               (:border 0)
+               (:roundness 0)
+               (:text-font nil)
+               (:align :center)
+               (:icon :top)
+               (:inputs)
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 2))
+              (:box
+               (:type :function)
+               (:reference remove)
+               (:group-id nil)
+               (:name "remove")
+               (:x 179)
+               (:y 140)
+               (:w 80)
+               (:h 29)
+               (:color nil)
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align nil)
+               (:icon :left)
+               (:lock nil)
+               (:lambda nil)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "ITEM")
+                 (:value nil)
+                 (:reactive nil))
+                (:input
+                 (:type :standard)
+                 (:name "SEQUENCE")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 3)))
+             (:connections
+              (:connection
+               (:from (:box 1 :out 0))
+               (:to (:box 3 :in 1)))
+              (:connection
+               (:from (:box 2 :out 0))
+               (:to (:box 3 :in 0)))
+              (:connection
+               (:from (:box 3 :out 0))
+               (:to (:box 0 :in 0))))))
+           (:group-id nil)
+           (:name "remove")
+           (:x 130)
+           (:y 132)
+           (:w 80)
+           (:h 48)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:display :mini-view)
+           (:lock nil)
+           (:lambda :lambda)
+           (:pre-delay 0)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "input")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "input 2")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "output") (:reactive nil)))
+           (:id 3))
+          (:box
+           (:type :special)
+           (:reference accum)
+           (:group-id nil)
+           (:name "accum")
+           (:x 0)
+           (:y 191)
+           (:w 339)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.7 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "data-in")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "accum-function")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "init")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs
+            (:output (:name "collect") (:reactive nil))
+            (:output (:name "data-out") (:reactive nil))
+            (:output (:name "init") (:reactive nil)))
+           (:id 4))
+          (:box
+           (:type :special)
+           (:reference iterate)
+           (:group-id nil)
+           (:name "iterate")
+           (:x 32)
+           (:y 273)
+           (:w 57)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.85 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "action")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs)
+           (:id 5))
+          (:box
+           (:type :special)
+           (:reference loop-list)
+           (:group-id nil)
+           (:name "list-loop")
+           (:x 28)
+           (:y 138)
+           (:w 64)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.85 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "list")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "i") (:reactive nil)))
+           (:id 6)))
+         (:connections
+          (:connection (:from (:box 0 :out 0)) (:to (:box 6 :in 0)))
+          (:connection (:from (:box 2 :out 0)) (:to (:box 4 :in 2)))
+          (:connection (:from (:box 3 :out 0)) (:to (:box 4 :in 1)))
+          (:connection (:from (:box 4 :out 0)) (:to (:box 5 :in 0)))
+          (:connection (:from (:box 4 :out 1)) (:to (:box 1 :in 0)))
+          (:connection (:from (:box 6 :out 0)) (:to (:box 4 :in 0))))))
+       (:group-id nil)
+       (:name "retirar-números-da-sieve")
+       (:x 170)
+       (:y 50)
+       (:w 177)
+       (:h 48)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:display :mini-view)
+       (:lock nil)
+       (:lambda nil)
+       (:pre-delay 0)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "input")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "input 2")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "output 1") (:reactive nil)))
+       (:id 0))
+      (:box
+       (:type :abstraction)
+       (:reference
+        (:patch
+         (:name "new-patch")
+         (:doc "")
+         (:info
+          (:created nil)
+          (:modified nil)
+          (:by *app-name*)
+          (:version 0))
+         (:window (:size nil) (:position nil))
+         (:grid nil)
+         (:lock nil)
+         (:boxes
+          (:box
+           (:type :io)
+           (:reference
+            (:in (:type omin) (:index 1) (:name "SIEVE") (:doc "")))
+           (:group-id nil)
+           (:name "SIEVE")
+           (:x 219)
+           (:y 30)
+           (:w 51)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs)
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 0))
+          (:box
+           (:type :io)
+           (:reference
+            (:out (:type omout) (:name "out") (:index 1) (:doc "")))
+           (:group-id nil)
+           (:name "out")
+           (:x 174)
+           (:y 419)
+           (:w 40)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "out-value")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs)
+           (:id 1))
+          (:box
+           (:type :special)
+           (:reference accum)
+           (:group-id nil)
+           (:name "accum")
+           (:x 80)
+           (:y 345)
+           (:w 204)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.7 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "data-in")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "accum-function")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "init")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs
+            (:output (:name "collect") (:reactive nil))
+            (:output (:name "data-out") (:reactive nil))
+            (:output (:name "init") (:reactive nil)))
+           (:id 2))
+          (:box
+           (:type :abstraction)
+           (:reference
+            (:textfun
+             (:name "my-function")
+             (:doc "")
+             (:info
+              (:created nil)
+              (:modified nil)
+              (:by *app-name*)
+              (:version 0))
+             (:window (:size nil) (:position nil))
+             (:text
+              (:list
+               "(lambda (sieve)"
+               ""
+               "(let* ("
+               ""
+               "(action1"
+               "        (loop :for crible-element :in sieve :collect "
+               ""
+               "            (remove nil (let* ( "
+               "                    (last-elem-sieve (last-elem sieve))"
+               "                    (flat-sieve (flat sieve)))"
+               ""
+               "                    (loop :for cknloop :in flat-sieve :collect "
+               "                        (let* ((box-abs (abs (om- crible-element cknloop)))"
+               "                                (box-omif (if (om= box-abs 0) crible-element box-abs)))"
+               "                                (if  (om= (length flat-sieve) (length (remove-duplicates "
+               "                                    (x-append"
+               "                                         (arithm-ser crible-element last-elem-sieve box-omif)"
+               "                                                flat-sieve)"
+               "                                                    :test"
+               "                                                 'equal)))"
+               "                                (x-append box-omif crible-element last-elem-sieve) nil))))))))"
+               ""
+               ""
+               "(first (sort-list (flat action1 1) :test '< :key 'second))))"
+               ""
+               ""
+               ""
+               ""
+               ""))))
+           (:group-id nil)
+           (:name "my-function")
+           (:x 308)
+           (:y 155)
+           (:w 104)
+           (:h 60)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:display :hidden)
+           (:lock nil)
+           (:lambda nil)
+           (:pre-delay 0)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "SIEVE")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 3))
+          (:box
+           (:type :abstraction)
+           (:reference
+            (:textfun
+             (:name "my-function")
+             (:doc "")
+             (:info
+              (:created nil)
+              (:modified nil)
+              (:by *app-name*)
+              (:version 0))
+             (:window (:size nil) (:position nil))
+             (:text
+              (:list
+               "(lambda (sieve crible)"
+               ""
+               "(let* ("
+               "(one-crible (arithm-ser (second sieve) (third sieve) (first sieve)))"
+               ""
+               "(main-action "
+               "(loop :for cknloop :in one-crible :collect"
+               "        (let* ((accum-fun #'(lambda (crible cknloop) (remove cknloop crible))))"
+               "                  (setf crible (funcall accum-fun crible cknloop))))))"
+               ""
+               "(last-elem main-action)))"))))
+           (:group-id nil)
+           (:name "my-function")
+           (:x 170)
+           (:y 129)
+           (:w 104)
+           (:h 60)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:display :hidden)
+           (:lock nil)
+           (:lambda :lambda)
+           (:pre-delay 0)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "SIEVE")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "CRIBLE")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 4))
+          (:box
+           (:type :abstraction)
+           (:reference
+            (:textfun
+             (:name "my-function")
+             (:doc "")
+             (:info
+              (:created nil)
+              (:modified nil)
+              (:by *app-name*)
+              (:version 0))
+             (:window (:size nil) (:position nil))
+             (:text
+              (:list
+               "(lambda (sieve)"
+               ""
+               "(let* ("
+               ""
+               "(action1"
+               "        (loop :for crible-element :in sieve :collect "
+               ""
+               "            (remove nil (let* ( "
+               "                    (last-elem-sieve (last-elem sieve))"
+               "                    (flat-sieve (flat sieve)))"
+               ""
+               "                    (loop :for cknloop :in flat-sieve :collect "
+               "                        (let* ((box-abs (abs (om- crible-element cknloop)))"
+               "                                (box-omif (if (om= box-abs 0) crible-element box-abs)))"
+               "                                (if  (om= (length flat-sieve) (length (remove-duplicates "
+               "                                    (x-append"
+               "                                         (arithm-ser crible-element last-elem-sieve box-omif)"
+               "                                                flat-sieve)"
+               "                                                    :test"
+               "                                                 'equal)))"
+               "                                (x-append box-omif crible-element last-elem-sieve) nil))))))))"
+               ""
+               ""
+               "(first (sort-list (flat action1 1) :test '< :key 'second))))"
+               ""
+               ""
+               ""
+               ""
+               ""))))
+           (:group-id nil)
+           (:name "my-function")
+           (:x 15)
+           (:y 193)
+           (:w 104)
+           (:h 60)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:display :hidden)
+           (:lock nil)
+           (:lambda nil)
+           (:pre-delay 0)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "SIEVE")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 5))
+          (:box
+           (:type :special)
+           (:reference iterate)
+           (:group-id nil)
+           (:name "iterate")
+           (:x 83)
+           (:y 418)
+           (:w 57)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.85 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "action")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs)
+           (:id 6))
+          (:box
+           (:type :special)
+           (:reference iterate)
+           (:group-id nil)
+           (:name "iterate")
+           (:x 131)
+           (:y 294)
+           (:w 57)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.85 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "action")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs)
+           (:id 7))
+          (:box
+           (:type :special)
+           (:reference loop-while)
+           (:group-id nil)
+           (:name "while")
+           (:x 121)
+           (:y 224)
+           (:w 51)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.85 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "condition")
+             (:value t)
+             (:reactive nil)))
+           (:outputs (:output (:name "i") (:reactive nil)))
+           (:id 8)))
+         (:connections
+          (:connection (:from (:box 0 :out 0)) (:to (:box 3 :in 0)))
+          (:connection (:from (:box 2 :out 0)) (:to (:box 6 :in 0)))
+          (:connection (:from (:box 2 :out 1)) (:to (:box 1 :in 0)))
+          (:connection (:from (:box 3 :out 0)) (:to (:box 2 :in 2)))
+          (:connection (:from (:box 4 :out 0)) (:to (:box 2 :in 1)))
+          (:connection (:from (:box 4 :out 0)) (:to (:box 8 :in 0)))
+          (:connection (:from (:box 5 :out 0)) (:to (:box 2 :in 0)))
+          (:connection (:from (:box 8 :out 0)) (:to (:box 7 :in 0))))))
+       (:group-id nil)
+       (:name "new-patch")
+       (:x 50)
+       (:y 156)
+       (:w 96)
+       (:h 60)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:display :hidden)
+       (:lock nil)
+       (:lambda nil)
+       (:pre-delay 0)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SIEVE")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 1))
+      (:box
+       (:type :abstraction)
+       (:reference
+        (:patch
+         (:name "new-patch")
+         (:doc "")
+         (:info
+          (:created nil)
+          (:modified nil)
+          (:by *app-name*)
+          (:version 0))
+         (:window (:size nil) (:position nil))
+         (:grid nil)
+         (:lock nil)
+         (:boxes
+          (:box
+           (:type :io)
+           (:reference
+            (:in (:type omin) (:index 1) (:name "SIEVE") (:doc "")))
+           (:group-id nil)
+           (:name "SIEVE")
+           (:x 219)
+           (:y 30)
+           (:w 51)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs)
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 0))
+          (:box
+           (:type :io)
+           (:reference
+            (:out (:type omout) (:name "out") (:index 1) (:doc "")))
+           (:group-id nil)
+           (:name "out")
+           (:x 174)
+           (:y 419)
+           (:w 40)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "out-value")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs)
+           (:id 1))
+          (:box
+           (:type :special)
+           (:reference accum)
+           (:group-id nil)
+           (:name "accum")
+           (:x 80)
+           (:y 345)
+           (:w 204)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.7 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "data-in")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "accum-function")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "init")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs
+            (:output (:name "collect") (:reactive nil))
+            (:output (:name "data-out") (:reactive nil))
+            (:output (:name "init") (:reactive nil)))
+           (:id 2))
+          (:box
+           (:type :abstraction)
+           (:reference
+            (:textfun
+             (:name "my-function")
+             (:doc "")
+             (:info
+              (:created nil)
+              (:modified nil)
+              (:by *app-name*)
+              (:version 0))
+             (:window (:size nil) (:position nil))
+             (:text
+              (:list
+               "(lambda (sieve)"
+               ""
+               "(let* ("
+               ""
+               "(action1"
+               "        (loop :for crible-element :in sieve :collect "
+               ""
+               "            (remove nil (let* ( "
+               "                    (last-elem-sieve (last-elem sieve))"
+               "                    (flat-sieve (flat sieve)))"
+               ""
+               "                    (loop :for cknloop :in flat-sieve :collect "
+               "                        (let* ((box-abs (abs (om- crible-element cknloop)))"
+               "                                (box-omif (if (om= box-abs 0) crible-element box-abs)))"
+               "                                (if  (om= (length flat-sieve) (length (remove-duplicates "
+               "                                    (x-append"
+               "                                         (arithm-ser crible-element last-elem-sieve box-omif)"
+               "                                                flat-sieve)"
+               "                                                    :test"
+               "                                                 'equal)))"
+               "                                (x-append box-omif crible-element last-elem-sieve) nil))))))))"
+               ""
+               ""
+               "(first (sort-list (flat action1 1) :test '< :key 'second))))"
+               ""
+               ""
+               ""
+               ""
+               ""))))
+           (:group-id nil)
+           (:name "my-function")
+           (:x 308)
+           (:y 155)
+           (:w 104)
+           (:h 60)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:display :hidden)
+           (:lock nil)
+           (:lambda nil)
+           (:pre-delay 0)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "SIEVE")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 3))
+          (:box
+           (:type :abstraction)
+           (:reference
+            (:textfun
+             (:name "my-function")
+             (:doc "")
+             (:info
+              (:created nil)
+              (:modified nil)
+              (:by *app-name*)
+              (:version 0))
+             (:window (:size nil) (:position nil))
+             (:text
+              (:list
+               "(lambda (sieve crible)"
+               ""
+               "(let* ("
+               "(one-crible (arithm-ser (second sieve) (third sieve) (first sieve)))"
+               ""
+               "(main-action "
+               "(loop :for cknloop :in one-crible :collect"
+               "        (let* ((accum-fun #'(lambda (crible cknloop) (remove cknloop crible))))"
+               "                  (setf crible (funcall accum-fun crible cknloop))))))"
+               ""
+               "(last-elem main-action)))"))))
+           (:group-id nil)
+           (:name "my-function")
+           (:x 170)
+           (:y 129)
+           (:w 104)
+           (:h 60)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:display :hidden)
+           (:lock nil)
+           (:lambda :lambda)
+           (:pre-delay 0)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "SIEVE")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "CRIBLE")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 4))
+          (:box
+           (:type :abstraction)
+           (:reference
+            (:textfun
+             (:name "my-function")
+             (:doc "")
+             (:info
+              (:created nil)
+              (:modified nil)
+              (:by *app-name*)
+              (:version 0))
+             (:window (:size nil) (:position nil))
+             (:text
+              (:list
+               "(lambda (sieve)"
+               ""
+               "(let* ("
+               ""
+               "(action1"
+               "        (loop :for crible-element :in sieve :collect "
+               ""
+               "            (remove nil (let* ( "
+               "                    (last-elem-sieve (last-elem sieve))"
+               "                    (flat-sieve (flat sieve)))"
+               ""
+               "                    (loop :for cknloop :in flat-sieve :collect "
+               "                        (let* ((box-abs (abs (om- crible-element cknloop)))"
+               "                                (box-omif (if (om= box-abs 0) crible-element box-abs)))"
+               "                                (if  (om= (length flat-sieve) (length (remove-duplicates "
+               "                                    (x-append"
+               "                                         (arithm-ser crible-element last-elem-sieve box-omif)"
+               "                                                flat-sieve)"
+               "                                                    :test"
+               "                                                 'equal)))"
+               "                                (x-append box-omif crible-element last-elem-sieve) nil))))))))"
+               ""
+               ""
+               "(first (sort-list (flat action1 1) :test '< :key 'second))))"
+               ""
+               ""
+               ""
+               ""
+               ""))))
+           (:group-id nil)
+           (:name "my-function")
+           (:x 15)
+           (:y 193)
+           (:w 104)
+           (:h 60)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:display :hidden)
+           (:lock nil)
+           (:lambda nil)
+           (:pre-delay 0)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "SIEVE")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 5))
+          (:box
+           (:type :special)
+           (:reference iterate)
+           (:group-id nil)
+           (:name "iterate")
+           (:x 83)
+           (:y 418)
+           (:w 57)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.85 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "action")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs)
+           (:id 6))
+          (:box
+           (:type :special)
+           (:reference iterate)
+           (:group-id nil)
+           (:name "iterate")
+           (:x 131)
+           (:y 294)
+           (:w 57)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.85 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "action")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs)
+           (:id 7))
+          (:box
+           (:type :special)
+           (:reference loop-while)
+           (:group-id nil)
+           (:name "while")
+           (:x 121)
+           (:y 224)
+           (:w 51)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.85 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "condition")
+             (:value t)
+             (:reactive nil)))
+           (:outputs (:output (:name "i") (:reactive nil)))
+           (:id 8)))
+         (:connections
+          (:connection (:from (:box 0 :out 0)) (:to (:box 3 :in 0)))
+          (:connection (:from (:box 2 :out 0)) (:to (:box 6 :in 0)))
+          (:connection (:from (:box 2 :out 1)) (:to (:box 1 :in 0)))
+          (:connection (:from (:box 3 :out 0)) (:to (:box 2 :in 2)))
+          (:connection (:from (:box 4 :out 0)) (:to (:box 2 :in 1)))
+          (:connection (:from (:box 4 :out 0)) (:to (:box 8 :in 0)))
+          (:connection (:from (:box 5 :out 0)) (:to (:box 2 :in 0)))
+          (:connection (:from (:box 8 :out 0)) (:to (:box 7 :in 0))))))
+       (:group-id nil)
+       (:name "new-patch")
+       (:x 238)
+       (:y 152)
+       (:w 96)
+       (:h 60)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:display :hidden)
+       (:lock nil)
+       (:lambda nil)
+       (:pre-delay 0)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SIEVE")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 2))
+      (:box
+       (:type :abstraction)
+       (:reference
+        (:patch
+         (:name "new-patch")
+         (:doc "")
+         (:info
+          (:created nil)
+          (:modified nil)
+          (:by *app-name*)
+          (:version 0))
+         (:window (:size nil) (:position nil))
+         (:grid nil)
+         (:lock nil)
+         (:boxes
+          (:box
+           (:type :io)
+           (:reference
+            (:in (:type omin) (:index 1) (:name "SIEVE") (:doc "")))
+           (:group-id nil)
+           (:name "SIEVE")
+           (:x 219)
+           (:y 30)
+           (:w 51)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs)
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 0))
+          (:box
+           (:type :io)
+           (:reference
+            (:out (:type omout) (:name "out") (:index 1) (:doc "")))
+           (:group-id nil)
+           (:name "out")
+           (:x 174)
+           (:y 419)
+           (:w 40)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "out-value")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs)
+           (:id 1))
+          (:box
+           (:type :special)
+           (:reference accum)
+           (:group-id nil)
+           (:name "accum")
+           (:x 80)
+           (:y 345)
+           (:w 204)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.7 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "data-in")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "accum-function")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "init")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs
+            (:output (:name "collect") (:reactive nil))
+            (:output (:name "data-out") (:reactive nil))
+            (:output (:name "init") (:reactive nil)))
+           (:id 2))
+          (:box
+           (:type :abstraction)
+           (:reference
+            (:textfun
+             (:name "my-function")
+             (:doc "")
+             (:info
+              (:created nil)
+              (:modified nil)
+              (:by *app-name*)
+              (:version 0))
+             (:window (:size nil) (:position nil))
+             (:text
+              (:list
+               "(lambda (sieve)"
+               ""
+               "(let* ("
+               ""
+               "(action1"
+               "        (loop :for crible-element :in sieve :collect "
+               ""
+               "            (remove nil (let* ( "
+               "                    (last-elem-sieve (last-elem sieve))"
+               "                    (flat-sieve (flat sieve)))"
+               ""
+               "                    (loop :for cknloop :in flat-sieve :collect "
+               "                        (let* ((box-abs (abs (om- crible-element cknloop)))"
+               "                                (box-omif (if (om= box-abs 0) crible-element box-abs)))"
+               "                                (if  (om= (length flat-sieve) (length (remove-duplicates "
+               "                                    (x-append"
+               "                                         (arithm-ser crible-element last-elem-sieve box-omif)"
+               "                                                flat-sieve)"
+               "                                                    :test"
+               "                                                 'equal)))"
+               "                                (x-append box-omif crible-element last-elem-sieve) nil))))))))"
+               ""
+               ""
+               "(first (sort-list (flat action1 1) :test '< :key 'second))))"
+               ""
+               ""
+               ""
+               ""
+               ""))))
+           (:group-id nil)
+           (:name "my-function")
+           (:x 308)
+           (:y 155)
+           (:w 104)
+           (:h 60)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:display :hidden)
+           (:lock nil)
+           (:lambda nil)
+           (:pre-delay 0)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "SIEVE")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 3))
+          (:box
+           (:type :abstraction)
+           (:reference
+            (:textfun
+             (:name "my-function")
+             (:doc "")
+             (:info
+              (:created nil)
+              (:modified nil)
+              (:by *app-name*)
+              (:version 0))
+             (:window (:size nil) (:position nil))
+             (:text
+              (:list
+               "(lambda (sieve crible)"
+               ""
+               "(let* ("
+               "(one-crible (arithm-ser (second sieve) (third sieve) (first sieve)))"
+               ""
+               "(main-action "
+               "(loop :for cknloop :in one-crible :collect"
+               "        (let* ((accum-fun #'(lambda (crible cknloop) (remove cknloop crible))))"
+               "                  (setf crible (funcall accum-fun crible cknloop))))))"
+               ""
+               "(last-elem main-action)))"))))
+           (:group-id nil)
+           (:name "my-function")
+           (:x 170)
+           (:y 129)
+           (:w 104)
+           (:h 60)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:display :hidden)
+           (:lock nil)
+           (:lambda :lambda)
+           (:pre-delay 0)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "SIEVE")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "CRIBLE")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 4))
+          (:box
+           (:type :abstraction)
+           (:reference
+            (:textfun
+             (:name "my-function")
+             (:doc "")
+             (:info
+              (:created nil)
+              (:modified nil)
+              (:by *app-name*)
+              (:version 0))
+             (:window (:size nil) (:position nil))
+             (:text
+              (:list
+               "(lambda (sieve)"
+               ""
+               "(let* ("
+               ""
+               "(action1"
+               "        (loop :for crible-element :in sieve :collect "
+               ""
+               "            (remove nil (let* ( "
+               "                    (last-elem-sieve (last-elem sieve))"
+               "                    (flat-sieve (flat sieve)))"
+               ""
+               "                    (loop :for cknloop :in flat-sieve :collect "
+               "                        (let* ((box-abs (abs (om- crible-element cknloop)))"
+               "                                (box-omif (if (om= box-abs 0) crible-element box-abs)))"
+               "                                (if  (om= (length flat-sieve) (length (remove-duplicates "
+               "                                    (x-append"
+               "                                         (arithm-ser crible-element last-elem-sieve box-omif)"
+               "                                                flat-sieve)"
+               "                                                    :test"
+               "                                                 'equal)))"
+               "                                (x-append box-omif crible-element last-elem-sieve) nil))))))))"
+               ""
+               ""
+               "(first (sort-list (flat action1 1) :test '< :key 'second))))"
+               ""
+               ""
+               ""
+               ""
+               ""))))
+           (:group-id nil)
+           (:name "my-function")
+           (:x 15)
+           (:y 193)
+           (:w 104)
+           (:h 60)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:display :hidden)
+           (:lock nil)
+           (:lambda nil)
+           (:pre-delay 0)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "SIEVE")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 5))
+          (:box
+           (:type :special)
+           (:reference iterate)
+           (:group-id nil)
+           (:name "iterate")
+           (:x 83)
+           (:y 418)
+           (:w 57)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.85 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "action")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs)
+           (:id 6))
+          (:box
+           (:type :special)
+           (:reference iterate)
+           (:group-id nil)
+           (:name "iterate")
+           (:x 131)
+           (:y 294)
+           (:w 57)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.85 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "action")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs)
+           (:id 7))
+          (:box
+           (:type :special)
+           (:reference loop-while)
+           (:group-id nil)
+           (:name "while")
+           (:x 121)
+           (:y 224)
+           (:w 51)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.85 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "condition")
+             (:value t)
+             (:reactive nil)))
+           (:outputs (:output (:name "i") (:reactive nil)))
+           (:id 8)))
+         (:connections
+          (:connection (:from (:box 0 :out 0)) (:to (:box 3 :in 0)))
+          (:connection (:from (:box 2 :out 0)) (:to (:box 6 :in 0)))
+          (:connection (:from (:box 2 :out 1)) (:to (:box 1 :in 0)))
+          (:connection (:from (:box 3 :out 0)) (:to (:box 2 :in 2)))
+          (:connection (:from (:box 4 :out 0)) (:to (:box 2 :in 1)))
+          (:connection (:from (:box 4 :out 0)) (:to (:box 8 :in 0)))
+          (:connection (:from (:box 5 :out 0)) (:to (:box 2 :in 0)))
+          (:connection (:from (:box 8 :out 0)) (:to (:box 7 :in 0))))))
+       (:group-id nil)
+       (:name "new-patch")
+       (:x 107)
+       (:y 151)
+       (:w 96)
+       (:h 60)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:display :hidden)
+       (:lock nil)
+       (:lambda nil)
+       (:pre-delay 0)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SIEVE")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 3)))
+     (:connections)))
+   (:group-id nil)
+   (:name "my-patch")
+   (:x 37)
+   (:y 15)
+   (:w 90)
+   (:h 60)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :hidden)
+   (:lock nil)
+   (:lambda nil)
+   (:pre-delay 0)
+   (:inputs)
+   (:outputs)
+   (:id 4))
+  (:box
+   (:type :abstraction)
+   (:reference
+    (:patch
+     (:name "new-patch")
+     (:doc "")
+     (:info
+      (:created nil)
+      (:modified nil)
+      (:by *app-name*)
+      (:version 0))
+     (:window (:size (1366 725)) (:position (-8 -8)))
+     (:grid nil)
+     (:lock nil)
+     (:boxes
+      (:box
+       (:type :special)
+       (:reference accum)
+       (:group-id nil)
+       (:name "accum")
+       (:x 214)
+       (:y 361)
+       (:w 343)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 0.82 0.7 0.7 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "data-in")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "accum-function")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "init")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs
+        (:output (:name "collect") (:reactive nil))
+        (:output (:name "data-out") (:reactive nil))
+        (:output (:name "init") (:reactive nil)))
+       (:id 0))
+      (:box
+       (:type :abstraction)
+       (:reference
+        (:textfun
+         (:name "my-function")
+         (:doc "")
+         (:info
+          (:created nil)
+          (:modified nil)
+          (:by *app-name*)
+          (:version 0))
+         (:window (:size nil) (:position nil))
+         (:text
+          (:list
+           "(lambda (sieve)"
+           ""
+           "(let* ("
+           ""
+           "(action1"
+           "        (loop :for crible-element :in sieve :collect "
+           ""
+           "            (remove nil (let* ( "
+           "                    (last-elem-sieve (last-elem sieve))"
+           "                    (flat-sieve (flat sieve)))"
+           ""
+           "                    (loop :for cknloop :in flat-sieve :collect "
+           "                        (let* ((box-abs (abs (om- crible-element cknloop)))"
+           "                                (box-omif (if (om= box-abs 0) crible-element box-abs)))"
+           "                                (if  (om= (length flat-sieve) (length (remove-duplicates "
+           "                                    (x-append"
+           "                                         (arithm-ser crible-element last-elem-sieve box-omif)"
+           "                                                flat-sieve)"
+           "                                                    :test"
+           "                                                 'equal)))"
+           "                                (x-append box-omif crible-element last-elem-sieve) nil))))))))"
+           ""
+           ""
+           "(first (sort-list (flat action1 1) :test '< :key 'second))))"
+           ""
+           ""
+           ""
+           ""
+           ""))))
+       (:group-id nil)
+       (:name "my-function")
+       (:x 272)
+       (:y 109)
+       (:w 104)
+       (:h 60)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:display :hidden)
+       (:lock nil)
+       (:lambda nil)
+       (:pre-delay 0)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SIEVE")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 1))
+      (:box
+       (:type :abstraction)
+       (:reference
+        (:textfun
+         (:name "my-function")
+         (:doc "")
+         (:info
+          (:created nil)
+          (:modified nil)
+          (:by *app-name*)
+          (:version 0))
+         (:window (:size nil) (:position nil))
+         (:text
+          (:list
+           "(lambda (crible sieve)"
+           ""
+           "(let* ("
+           "(one-crible (arithm-ser (second sieve) (third sieve) (first sieve)))"
+           ""
+           "(main-action "
+           "(loop :for cknloop :in one-crible :collect"
+           "        (let* ((accum-fun #'(lambda (crible cknloop) (remove cknloop crible))))"
+           "                  (setf crible (funcall accum-fun crible cknloop))))))"
+           ""
+           "(last-elem main-action)))"))))
+       (:group-id nil)
+       (:name "my-function")
+       (:x 201)
+       (:y 189)
+       (:w 104)
+       (:h 60)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:display :hidden)
+       (:lock nil)
+       (:lambda nil)
+       (:pre-delay 0)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "CRIBLE")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "SIEVE")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 2))
+      (:box
+       (:type :io)
+       (:reference
+        (:in (:type omin) (:index 1) (:name "in") (:doc "")))
+       (:group-id nil)
+       (:name "in")
+       (:x 202)
+       (:y 31)
+       (:w 40)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 3)))
+     (:connections
+      (:connection (:from (:box 1 :out 0)) (:to (:box 2 :in 1)))
+      (:connection (:from (:box 3 :out 0)) (:to (:box 1 :in 0)))
+      (:connection (:from (:box 3 :out 0)) (:to (:box 2 :in 0))))))
+   (:group-id nil)
+   (:name "new-patch")
+   (:x 66)
+   (:y 124)
+   (:w 96)
+   (:h 60)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :hidden)
+   (:lock nil)
+   (:lambda nil)
+   (:pre-delay 0)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "in")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs)
+   (:id 5))
+  (:box
+   (:type :function)
+   (:reference set)
+   (:group-id nil)
+   (:name "set")
+   (:x 323)
+   (:y 478)
+   (:w 55)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "VARIABLE")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "NEW-VALUE")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 6))
+  (:box
+   (:type :function)
+   (:reference print)
+   (:group-id nil)
+   (:name "print")
+   (:x 649)
+   (:y 336)
+   (:w 64)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SOMETHING")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 7))
+  (:box
+   (:type :abstraction)
+   (:reference
+    (:textfun
+     (:name "my-function")
+     (:doc "")
+     (:info
+      (:created nil)
+      (:modified nil)
+      (:by *app-name*)
+      (:version 0))
+     (:window (:size nil) (:position nil))
+     (:text
+      (:list
+       "(lambda (sieve)"
+       ""
+       "(let* ("
+       ""
+       "(action1"
+       "        (loop :for crible-element :in sieve :collect "
+       ""
+       "            (remove nil (let* ( "
+       "                    (last-elem-sieve (last-elem sieve))"
+       "                    (flat-sieve (flat sieve)))"
+       ""
+       "                    (loop :for cknloop :in flat-sieve :collect "
+       "                        (let* ((box-abs (abs (om- crible-element cknloop)))"
+       "                                (box-omif (if (om= box-abs 0) crible-element box-abs)))"
+       "                                (if  (om= (length flat-sieve) (length (remove-duplicates "
+       "                                    (x-append"
+       "                                         (arithm-ser crible-element last-elem-sieve box-omif)"
+       "                                                flat-sieve)"
+       "                                                    :test"
+       "                                                 'equal)))"
+       "                                (x-append box-omif crible-element last-elem-sieve) nil))))))))"
+       ""
+       ""
+       "(first (sort-list (flat action1 1) :test '< :key 'second))))"
+       ""
+       ""
+       ""
+       ""
+       ""))))
+   (:group-id nil)
+   (:name "my-function")
+   (:x 556)
+   (:y 411)
+   (:w 104)
+   (:h 60)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :hidden)
+   (:lock nil)
+   (:lambda nil)
+   (:pre-delay 0)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 8))
+  (:box
+   (:type :abstraction)
+   (:reference
+    (:textfun
+     (:name "my-function")
+     (:doc "")
+     (:info
+      (:created nil)
+      (:modified nil)
+      (:by *app-name*)
+      (:version 0))
+     (:window (:size nil) (:position nil))
+     (:text
+      (:list
+       "(lambda (crible sieve)"
+       ""
+       "(let* ("
+       "(one-crible (arithm-ser (second sieve) (third sieve) (first sieve)))"
+       ""
+       "(main-action "
+       "(loop :for cknloop :in one-crible :collect"
+       "        (let* ((accum-fun #'(lambda (crible cknloop) (remove cknloop crible))))"
+       "                  (setf crible (funcall accum-fun crible cknloop))))))"
+       ""
+       "(last-elem main-action)))"))))
+   (:group-id nil)
+   (:name "my-function")
+   (:x 445)
+   (:y 486)
+   (:w 104)
+   (:h 60)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :hidden)
+   (:lock nil)
+   (:lambda nil)
+   (:pre-delay 0)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "CRIBLE")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 9))
+  (:box
+   (:type :function)
+   (:reference print)
+   (:group-id nil)
+   (:name "print")
+   (:x 638)
+   (:y 534)
+   (:w 64)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SOMETHING")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 10)))
+ (:connections
+  (:connection (:from (:box 0 :out 0)) (:to (:box 7 :in 0)))
+  (:connection (:from (:box 1 :out 0)) (:to (:box 0 :in 0)))
+  (:connection (:from (:box 1 :out 0)) (:to (:box 2 :in 0)))
+  (:connection (:from (:box 2 :out 0)) (:to (:box 8 :in 0)))
+  (:connection (:from (:box 2 :out 0)) (:to (:box 9 :in 0)))
+  (:connection (:from (:box 7 :out 0)) (:to (:box 2 :in 1)))
+  (:connection (:from (:box 8 :out 0)) (:to (:box 10 :in 0)))
+  (:connection (:from (:box 10 :out 0)) (:to (:box 9 :in 1)))))

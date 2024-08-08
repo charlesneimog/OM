@@ -1,0 +1,15 @@
+DC offset  -0.000008
+Min level  -0.059753
+Max level   0.056946
+Pk lev dB     -24.47
+RMS lev dB    -36.32
+RMS Pk dB     -33.23
+RMS Tr dB     -41.37
+Crest factor    3.91
+Flat factor     0.00
+Pk count           2
+Bit-depth      12/16
+Num samples    45.2k
+Length s       1.026
+Scale max   1.000000
+Window s       0.050

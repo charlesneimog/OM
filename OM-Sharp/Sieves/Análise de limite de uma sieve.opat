@@ -1,0 +1,2442 @@
+
+(:patch
+ (:name "Análise de limite de uma sieve")
+ (:doc "")
+ (:info
+  (:created "2020/09/01 17:55:05")
+  (:modified "2020/10/06 16:40:30")
+  (:by "om-sharp")
+  (:version 1.0))
+ (:window (:size (1382 784)) (:position (-8 -8)))
+ (:grid nil)
+ (:lock nil)
+ (:boxes
+  (:box
+   (:type :abstraction)
+   (:reference
+    (:patch
+     (:name "Sieve que será avaliada")
+     (:doc "")
+     (:info
+      (:created nil)
+      (:modified nil)
+      (:by *app-name*)
+      (:version 0))
+     (:window (:size (1366 725)) (:position (-8 -8)))
+     (:grid nil)
+     (:lock nil)
+     (:boxes
+      (:comment
+       (:x 795/2)
+       (:y 25)
+       (:w 84)
+       (:h 38)
+       (:fgcolor (:color 0 0 0 1.0))
+       (:bgcolor nil)
+       (:border 0)
+       (:roundness nil)
+       (:text-font
+        (:font (:face "Verdana") (:size 12) (:style :plain)))
+       (:align nil)
+       (:text "Ponto de Partida")
+       (:id 0))
+      (:comment
+       (:x 641/2)
+       (:y 21)
+       (:w 72)
+       (:h 38)
+       (:fgcolor (:color 0 0 0 1.0))
+       (:bgcolor nil)
+       (:border 0)
+       (:roundness nil)
+       (:text-font
+        (:font (:face "Verdana") (:size 12) (:style :plain)))
+       (:align nil)
+       (:text "Unidade somatória")
+       (:id 1))
+      (:box
+       (:type :value)
+       (:reference fixnum)
+       (:group-id nil)
+       (:name "aux 5")
+       (:x 747/2)
+       (:y 81)
+       (:w 32)
+       (:h 29)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value 16)
+       (:id 2))
+      (:box
+       (:type :value)
+       (:reference fixnum)
+       (:group-id nil)
+       (:name "aux 4")
+       (:x 669/2)
+       (:y 65)
+       (:w 32)
+       (:h 29)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value 11)
+       (:id 3))
+      (:box
+       (:type :value)
+       (:reference fixnum)
+       (:group-id nil)
+       (:name "aux 3")
+       (:x 255)
+       (:y 1285/12)
+       (:w 32)
+       (:h 29)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value 16)
+       (:id 4))
+      (:box
+       (:type :value)
+       (:reference fixnum)
+       (:group-id nil)
+       (:name "aux 2")
+       (:x 213)
+       (:y 1357/12)
+       (:w 32)
+       (:h 29)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value 19)
+       (:id 5))
+      (:box
+       (:library "Mathtools")
+       (:type :function)
+       (:reference revel-crible)
+       (:group-id nil)
+       (:name "revel-crible")
+       (:x 521/2)
+       (:y 4177/12)
+       (:w 100)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SELF")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 6))
+      (:box
+       (:type :function)
+       (:reference x-append)
+       (:group-id nil)
+       (:name "x-append")
+       (:x 715/2)
+       (:y 1441/12)
+       (:w 90)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "L1?")
+         (:value 24)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "L2?")
+         (:value 23)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "lst?")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 7))
+      (:box
+       (:type :function)
+       (:reference x-append)
+       (:group-id nil)
+       (:name "x-append")
+       (:x 467/2)
+       (:y 1765/12)
+       (:w 90)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "L1?")
+         (:value 30)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "L2?")
+         (:value 3)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "lst?")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 8))
+      (:box
+       (:library "OM-Symmetry")
+       (:type :object)
+       (:reference crible)
+       (:group-id nil)
+       (:name "CRIBLE 2")
+       (:x 605/2)
+       (:y 2509/12)
+       (:w 70)
+       (:h 50)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:display :hidden)
+       (:showname nil)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SELF")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "CR-EXP")
+         (:value (:list 2 0 18))
+         (:reactive nil)))
+       (:outputs
+        (:output (:name "SELF") (:reactive nil))
+        (:output (:name "CR-EXP") (:reactive nil)))
+       (:window (:size nil) (:position nil))
+       (:edition-params)
+       (:value
+        (:object
+         (:class crible)
+         (:slots ((:cr-exp (:list 30 3 180))))))
+       (:id 9))
+      (:box
+       (:library "Mathtools")
+       (:type :function)
+       (:reference c-union)
+       (:group-id nil)
+       (:name "c-union")
+       (:x 543/2)
+       (:y 3349/12)
+       (:w 80)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SELF")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "CRIBLE")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 10))
+      (:box
+       (:library "OM-Symmetry")
+       (:type :object)
+       (:reference crible)
+       (:group-id nil)
+       (:name "CRIBLE")
+       (:x 231)
+       (:y 2509/12)
+       (:w 70)
+       (:h 50)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:display :hidden)
+       (:showname nil)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SELF")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "CR-EXP")
+         (:value (:list 2 0 18))
+         (:reactive nil)))
+       (:outputs
+        (:output (:name "SELF") (:reactive nil))
+        (:output (:name "CR-EXP") (:reactive nil)))
+       (:window (:size nil) (:position nil))
+       (:edition-params)
+       (:value
+        (:object
+         (:class crible)
+         (:slots ((:cr-exp (:list 73 70 180))))))
+       (:id 11))
+      (:box
+       (:type :io)
+       (:reference
+        (:out (:type omout) (:name "output") (:index 1) (:doc nil)))
+       (:group-id nil)
+       (:name "output")
+       (:x 281)
+       (:y 387)
+       (:w 58)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "out-value")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs)
+       (:id 12))
+      (:box
+       (:type :io)
+       (:reference
+        (:in (:type omin) (:index 1) (:name "input") (:doc "")))
+       (:group-id nil)
+       (:name "input")
+       (:x 92)
+       (:y 1)
+       (:w 50)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 13)))
+     (:connections
+      (:connection
+       (:from (:box 2 :out 0))
+       (:to (:box 7 :in 1))
+       (:attributes
+        (:color (:color 1.0S0 0.0S0 0.0S0 1.0) :style nil :modif nil)))
+      (:connection
+       (:from (:box 3 :out 0))
+       (:to (:box 7 :in 0))
+       (:attributes
+        (:color (:color 0.0S0 0.0S0 1.0S0 1.0) :style nil :modif nil)))
+      (:connection (:from (:box 4 :out 0)) (:to (:box 8 :in 1)))
+      (:connection (:from (:box 5 :out 0)) (:to (:box 8 :in 0)))
+      (:connection
+       (:from (:box 6 :out 0))
+       (:to (:box 12 :in 0))
+       (:attributes
+        (:color (:color 0.2 0.4 0.5 1.0) :style nil :modif nil)))
+      (:connection (:from (:box 7 :out 0)) (:to (:box 9 :in 1)))
+      (:connection (:from (:box 8 :out 0)) (:to (:box 11 :in 1)))
+      (:connection (:from (:box 9 :out 0)) (:to (:box 10 :in 1)))
+      (:connection (:from (:box 10 :out 0)) (:to (:box 6 :in 0)))
+      (:connection (:from (:box 11 :out 0)) (:to (:box 10 :in 0)))
+      (:connection
+       (:from (:box 13 :out 0))
+       (:to (:box 7 :in 2))
+       (:attributes
+        (:color (:color 0.2 0.4 0.5 1.0) :style nil :modif nil)))
+      (:connection
+       (:from (:box 13 :out 0))
+       (:to (:box 8 :in 2))
+       (:attributes
+        (:color (:color 0.2 0.4 0.5 1.0) :style nil :modif nil))))))
+   (:group-id nil)
+   (:name "Sieve que será avaliada")
+   (:x 36)
+   (:y 136)
+   (:w 169)
+   (:h 48)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :mini-view)
+   (:lock nil)
+   (:lambda :lambda)
+   (:pre-delay 0)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "input")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "output") (:reactive nil)))
+   (:id 0))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 506)
+   (:y 426)
+   (:w 74)
+   (:h 29)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value (:list 10 1200))
+   (:id 1))
+  (:box
+   (:type :abstraction)
+   (:reference
+    (:patch
+     (:name "Sieve que será avaliada")
+     (:doc "")
+     (:info
+      (:created nil)
+      (:modified nil)
+      (:by *app-name*)
+      (:version 0))
+     (:window (:size (823 500)) (:position (130 126)))
+     (:grid nil)
+     (:lock nil)
+     (:boxes
+      (:comment
+       (:x 795/2)
+       (:y 25)
+       (:w 84)
+       (:h 38)
+       (:fgcolor (:color 0 0 0 1.0))
+       (:bgcolor nil)
+       (:border 0)
+       (:roundness nil)
+       (:text-font
+        (:font (:face "Verdana") (:size 12) (:style :plain)))
+       (:align nil)
+       (:text "Ponto de Partida")
+       (:id 0))
+      (:comment
+       (:x 641/2)
+       (:y 21)
+       (:w 72)
+       (:h 38)
+       (:fgcolor (:color 0 0 0 1.0))
+       (:bgcolor nil)
+       (:border 0)
+       (:roundness nil)
+       (:text-font
+        (:font (:face "Verdana") (:size 12) (:style :plain)))
+       (:align nil)
+       (:text "Unidade somatória")
+       (:id 1))
+      (:box
+       (:type :value)
+       (:reference fixnum)
+       (:group-id nil)
+       (:name "aux 5")
+       (:x 587/2)
+       (:y 89)
+       (:w 32)
+       (:h 29)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value 16)
+       (:id 2))
+      (:box
+       (:type :value)
+       (:reference fixnum)
+       (:group-id nil)
+       (:name "aux 4")
+       (:x 509/2)
+       (:y 73)
+       (:w 32)
+       (:h 29)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value 11)
+       (:id 3))
+      (:box
+       (:type :value)
+       (:reference fixnum)
+       (:group-id nil)
+       (:name "aux 3")
+       (:x 175)
+       (:y 1273/12)
+       (:w 32)
+       (:h 29)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value 16)
+       (:id 4))
+      (:box
+       (:type :value)
+       (:reference fixnum)
+       (:group-id nil)
+       (:name "aux 2")
+       (:x 133)
+       (:y 1345/12)
+       (:w 32)
+       (:h 29)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value 19)
+       (:id 5))
+      (:box
+       (:library "Mathtools")
+       (:type :function)
+       (:reference revel-crible)
+       (:group-id nil)
+       (:name "revel-crible")
+       (:x 521/2)
+       (:y 4177/12)
+       (:w 100)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SELF")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 6))
+      (:box
+       (:type :function)
+       (:reference x-append)
+       (:group-id nil)
+       (:name "x-append")
+       (:x 555/2)
+       (:y 1537/12)
+       (:w 90)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "L1?")
+         (:value 24)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "L2?")
+         (:value 23)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "lst?")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 7))
+      (:box
+       (:type :function)
+       (:reference x-append)
+       (:group-id nil)
+       (:name "x-append")
+       (:x 307/2)
+       (:y 1753/12)
+       (:w 90)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "L1?")
+         (:value 30)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "L2?")
+         (:value 3)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "lst?")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 8))
+      (:box
+       (:type :io)
+       (:reference
+        (:out (:type omout) (:name "output") (:index 1) (:doc nil)))
+       (:group-id nil)
+       (:name "output")
+       (:x 281)
+       (:y 387)
+       (:w 58)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "out-value")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs)
+       (:id 9))
+      (:box
+       (:type :io)
+       (:reference
+        (:in (:type omin) (:index 1) (:name "input") (:doc "")))
+       (:group-id nil)
+       (:name "input")
+       (:x 92)
+       (:y 1)
+       (:w 50)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 10))
+      (:box
+       (:library "OM-Symmetry")
+       (:type :function)
+       (:reference c-union-l)
+       (:group-id nil)
+       (:name "c-union-l")
+       (:x 235)
+       (:y 248)
+       (:w 88)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "CRIBLE")
+         (:value (:list (:list 19 16 64) (:list 11 16 64)))
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 11)))
+     (:connections
+      (:connection
+       (:from (:box 2 :out 0))
+       (:to (:box 7 :in 1))
+       (:attributes
+        (:color (:color 1.0S0 0.0S0 0.0S0 1.0) :style nil :modif nil)))
+      (:connection
+       (:from (:box 3 :out 0))
+       (:to (:box 7 :in 0))
+       (:attributes
+        (:color (:color 0.0S0 0.0S0 1.0S0 1.0) :style nil :modif nil)))
+      (:connection (:from (:box 4 :out 0)) (:to (:box 8 :in 1)))
+      (:connection (:from (:box 5 :out 0)) (:to (:box 8 :in 0)))
+      (:connection
+       (:from (:box 6 :out 0))
+       (:to (:box 9 :in 0))
+       (:attributes
+        (:color (:color 0.2 0.4 0.5 1.0) :style nil :modif nil)))
+      (:connection
+       (:from (:box 10 :out 0))
+       (:to (:box 7 :in 2))
+       (:attributes
+        (:color (:color 0.2 0.4 0.5 1.0) :style nil :modif nil)))
+      (:connection
+       (:from (:box 10 :out 0))
+       (:to (:box 8 :in 2))
+       (:attributes
+        (:color (:color 0.2 0.4 0.5 1.0) :style nil :modif nil))))))
+   (:group-id nil)
+   (:name "Sieve que será avaliada")
+   (:x 241)
+   (:y 86)
+   (:w 169)
+   (:h 48)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :mini-view)
+   (:lock nil)
+   (:lambda :lambda)
+   (:pre-delay 0)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "input")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "output") (:reactive nil)))
+   (:id 2))
+  (:box
+   (:library "OM-Symmetry")
+   (:type :function)
+   (:reference c-symmetry-perfil)
+   (:group-id nil)
+   (:name "c-symmetry-perfil")
+   (:x 443)
+   (:y 481)
+   (:w 137)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value (:list crible))
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "RANGE")
+     (:value (:list 25 500))
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 3))
+  (:box
+   (:type :abstraction)
+   (:reference
+    (:patch
+     (:name "Sieve que será avaliada")
+     (:doc "")
+     (:info
+      (:created nil)
+      (:modified nil)
+      (:by *app-name*)
+      (:version 0))
+     (:window (:size (500 500)) (:position (156 152)))
+     (:grid nil)
+     (:lock nil)
+     (:boxes
+      (:comment
+       (:x 795/2)
+       (:y 25)
+       (:w 84)
+       (:h 38)
+       (:fgcolor (:color 0 0 0 1.0))
+       (:bgcolor nil)
+       (:border 0)
+       (:roundness nil)
+       (:text-font
+        (:font (:face "Verdana") (:size 12) (:style :plain)))
+       (:align nil)
+       (:text "Ponto de Partida")
+       (:id 0))
+      (:comment
+       (:x 641/2)
+       (:y 21)
+       (:w 72)
+       (:h 38)
+       (:fgcolor (:color 0 0 0 1.0))
+       (:bgcolor nil)
+       (:border 0)
+       (:roundness nil)
+       (:text-font
+        (:font (:face "Verdana") (:size 12) (:style :plain)))
+       (:align nil)
+       (:text "Unidade somatória")
+       (:id 1))
+      (:box
+       (:type :value)
+       (:reference fixnum)
+       (:group-id nil)
+       (:name "aux 5")
+       (:x 747/2)
+       (:y 81)
+       (:w 32)
+       (:h 29)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value 16)
+       (:id 2))
+      (:box
+       (:type :value)
+       (:reference fixnum)
+       (:group-id nil)
+       (:name "aux 4")
+       (:x 669/2)
+       (:y 65)
+       (:w 32)
+       (:h 29)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value 11)
+       (:id 3))
+      (:box
+       (:type :value)
+       (:reference fixnum)
+       (:group-id nil)
+       (:name "aux 3")
+       (:x 255)
+       (:y 1285/12)
+       (:w 32)
+       (:h 29)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value 16)
+       (:id 4))
+      (:box
+       (:type :value)
+       (:reference fixnum)
+       (:group-id nil)
+       (:name "aux 2")
+       (:x 213)
+       (:y 1357/12)
+       (:w 32)
+       (:h 29)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value 19)
+       (:id 5))
+      (:box
+       (:library "Mathtools")
+       (:type :function)
+       (:reference revel-crible)
+       (:group-id nil)
+       (:name "revel-crible")
+       (:x 513/2)
+       (:y 3901/12)
+       (:w 100)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SELF")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 6))
+      (:box
+       (:type :function)
+       (:reference x-append)
+       (:group-id nil)
+       (:name "x-append")
+       (:x 715/2)
+       (:y 1441/12)
+       (:w 90)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "L1?")
+         (:value 24)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "L2?")
+         (:value 23)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "lst?")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 7))
+      (:box
+       (:type :function)
+       (:reference x-append)
+       (:group-id nil)
+       (:name "x-append")
+       (:x 467/2)
+       (:y 1765/12)
+       (:w 90)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "L1?")
+         (:value 30)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "L2?")
+         (:value 3)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "lst?")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 8))
+      (:box
+       (:library "OM-Symmetry")
+       (:type :object)
+       (:reference crible)
+       (:group-id nil)
+       (:name "CRIBLE 2")
+       (:x 605/2)
+       (:y 2509/12)
+       (:w 70)
+       (:h 50)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:display :hidden)
+       (:showname nil)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SELF")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "CR-EXP")
+         (:value (:list 2 0 18))
+         (:reactive nil)))
+       (:outputs
+        (:output (:name "SELF") (:reactive nil))
+        (:output (:name "CR-EXP") (:reactive nil)))
+       (:window (:size nil) (:position nil))
+       (:edition-params)
+       (:value
+        (:object
+         (:class crible)
+         (:slots ((:cr-exp (:list 30 3 180))))))
+       (:id 9))
+      (:box
+       (:library "Mathtools")
+       (:type :function)
+       (:reference c-union)
+       (:group-id nil)
+       (:name "c-union")
+       (:x 543/2)
+       (:y 3349/12)
+       (:w 80)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SELF")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "CRIBLE")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 10))
+      (:box
+       (:library "OM-Symmetry")
+       (:type :object)
+       (:reference crible)
+       (:group-id nil)
+       (:name "CRIBLE")
+       (:x 231)
+       (:y 2509/12)
+       (:w 70)
+       (:h 50)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:display :hidden)
+       (:showname nil)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SELF")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "CR-EXP")
+         (:value (:list 2 0 18))
+         (:reactive nil)))
+       (:outputs
+        (:output (:name "SELF") (:reactive nil))
+        (:output (:name "CR-EXP") (:reactive nil)))
+       (:window (:size nil) (:position nil))
+       (:edition-params)
+       (:value
+        (:object
+         (:class crible)
+         (:slots ((:cr-exp (:list 73 70 180))))))
+       (:id 11))
+      (:box
+       (:type :io)
+       (:reference
+        (:out (:type omout) (:name "output") (:index 1) (:doc nil)))
+       (:group-id nil)
+       (:name "output")
+       (:x 281)
+       (:y 387)
+       (:w 58)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "out-value")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs)
+       (:id 12))
+      (:box
+       (:type :io)
+       (:reference
+        (:in (:type omin) (:index 1) (:name "input") (:doc "")))
+       (:group-id nil)
+       (:name "input")
+       (:x 92)
+       (:y 1)
+       (:w 50)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 13)))
+     (:connections
+      (:connection
+       (:from (:box 2 :out 0))
+       (:to (:box 7 :in 1))
+       (:attributes
+        (:color (:color 1.0S0 0.0S0 0.0S0 1.0) :style nil :modif nil)))
+      (:connection
+       (:from (:box 3 :out 0))
+       (:to (:box 7 :in 0))
+       (:attributes
+        (:color (:color 0.0S0 0.0S0 1.0S0 1.0) :style nil :modif nil)))
+      (:connection (:from (:box 4 :out 0)) (:to (:box 8 :in 1)))
+      (:connection (:from (:box 5 :out 0)) (:to (:box 8 :in 0)))
+      (:connection
+       (:from (:box 6 :out 0))
+       (:to (:box 12 :in 0))
+       (:attributes
+        (:color (:color 0.2 0.4 0.5 1.0) :style nil :modif nil)))
+      (:connection (:from (:box 7 :out 0)) (:to (:box 9 :in 1)))
+      (:connection (:from (:box 8 :out 0)) (:to (:box 11 :in 1)))
+      (:connection (:from (:box 9 :out 0)) (:to (:box 10 :in 1)))
+      (:connection (:from (:box 10 :out 0)) (:to (:box 6 :in 0)))
+      (:connection (:from (:box 11 :out 0)) (:to (:box 10 :in 0)))
+      (:connection
+       (:from (:box 13 :out 0))
+       (:to (:box 7 :in 2))
+       (:attributes
+        (:color (:color 0.2 0.4 0.5 1.0) :style nil :modif nil)))
+      (:connection
+       (:from (:box 13 :out 0))
+       (:to (:box 8 :in 2))
+       (:attributes
+        (:color (:color 0.2 0.4 0.5 1.0) :style nil :modif nil))))))
+   (:group-id nil)
+   (:name "Sieve que será avaliada")
+   (:x 480)
+   (:y 112)
+   (:w 169)
+   (:h 48)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :mini-view)
+   (:lock nil)
+   (:lambda nil)
+   (:pre-delay 0)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "input")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "output") (:reactive nil)))
+   (:id 4))
+  (:box
+   (:type :value)
+   (:reference fixnum)
+   (:group-id nil)
+   (:name "value box")
+   (:x 548)
+   (:y 77)
+   (:w 32)
+   (:h 29)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value 50)
+   (:id 5))
+  (:box
+   (:type :abstraction)
+   (:reference
+    (:patch
+     (:name "my-patch")
+     (:doc "")
+     (:info
+      (:created nil)
+      (:modified nil)
+      (:by *app-name*)
+      (:version 0))
+     (:window (:size (466 446)) (:position (104 104)))
+     (:grid nil)
+     (:lock nil)
+     (:boxes
+      (:box
+       (:type :function)
+       (:reference mapcar)
+       (:group-id nil)
+       (:name "mapcar")
+       (:x 341/2)
+       (:y 2555/12)
+       (:w 79)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "FUNCTION")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "LIST")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 0))
+      (:box
+       (:type :function)
+       (:reference x-append)
+       (:group-id nil)
+       (:name "x-append")
+       (:x 57)
+       (:y 136)
+       (:w 90)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda :lambda)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "L1?")
+         (:value 24)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "L2?")
+         (:value 23)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 1))
+      (:box
+       (:library "OM-Symmetry")
+       (:type :function)
+       (:reference c-union-l)
+       (:group-id nil)
+       (:name "c-union-l")
+       (:x 159)
+       (:y 255)
+       (:w 88)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "CRIBLE")
+         (:value (:list (:list 19 16 64) (:list 11 16 64)))
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 2))
+      (:box
+       (:library "Mathtools")
+       (:type :function)
+       (:reference revel-crible)
+       (:group-id nil)
+       (:name "revel-crible")
+       (:x 153)
+       (:y 315)
+       (:w 100)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SELF")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 3))
+      (:box
+       (:type :io)
+       (:reference
+        (:in (:type omin) (:index 1) (:name "in") (:doc "")))
+       (:group-id nil)
+       (:name "in")
+       (:x 98)
+       (:y 60)
+       (:w 40)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 4))
+      (:box
+       (:type :io)
+       (:reference
+        (:out (:type omout) (:name "output 1") (:index 1) (:doc "")))
+       (:group-id nil)
+       (:name "output 1")
+       (:x 169)
+       (:y 363)
+       (:w 68)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "out-value")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs)
+       (:id 5))
+      (:box
+       (:type :io)
+       (:reference
+        (:in (:type omin) (:index 2) (:name "in") (:doc "")))
+       (:group-id nil)
+       (:name "in")
+       (:x 292)
+       (:y 183)
+       (:w 40)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 6)))
+     (:connections
+      (:connection (:from (:box 0 :out 0)) (:to (:box 2 :in 0)))
+      (:connection (:from (:box 1 :out 0)) (:to (:box 0 :in 0)))
+      (:connection (:from (:box 2 :out 0)) (:to (:box 3 :in 0)))
+      (:connection (:from (:box 3 :out 0)) (:to (:box 5 :in 0)))
+      (:connection (:from (:box 4 :out 0)) (:to (:box 1 :in 1)))
+      (:connection (:from (:box 6 :out 0)) (:to (:box 0 :in 1))))))
+   (:group-id nil)
+   (:name "my-patch")
+   (:x 325)
+   (:y 404)
+   (:w 90)
+   (:h 60)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :hidden)
+   (:lock nil)
+   (:lambda :lambda)
+   (:pre-delay 0)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "in")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "in")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "output 1") (:reactive nil)))
+   (:id 6))
+  (:box
+   (:type :function)
+   (:reference prime-ser)
+   (:group-id nil)
+   (:name "prime-ser")
+   (:x 58)
+   (:y 230)
+   (:w 92)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "MAX")
+     (:value 100)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 7))
+  (:box
+   (:type :function)
+   (:reference nth-random)
+   (:group-id nil)
+   (:name "nth-random")
+   (:x 71)
+   (:y 285)
+   (:w 104)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "LIST")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 8))
+  (:box
+   (:type :special)
+   (:reference repeat-n)
+   (:group-id nil)
+   (:name "repeat-n")
+   (:x 147)
+   (:y 322)
+   (:w 89)
+   (:h 28)
+   (:color
+    (:color-or-nil (:color (:color 0.82 0.85 0.7 1.0)) (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:icon :left)
+   (:lock nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "self")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "num")
+     (:value 0)
+     (:reactive nil)))
+   (:outputs (:output (:name "collected results") (:reactive nil)))
+   (:id 9))
+  (:box
+   (:type :value)
+   (:reference fixnum)
+   (:group-id nil)
+   (:name "value box")
+   (:x 188)
+   (:y 287)
+   (:w 32)
+   (:h 29)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value 2)
+   (:id 10))
+  (:box
+   (:type :special)
+   (:reference repeat-n)
+   (:group-id nil)
+   (:name "repeat-n")
+   (:x 202)
+   (:y 351)
+   (:w 89)
+   (:h 28)
+   (:color
+    (:color-or-nil (:color (:color 0.82 0.85 0.7 1.0)) (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:icon :left)
+   (:lock nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "self")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "num")
+     (:value 0)
+     (:reactive nil)))
+   (:outputs (:output (:name "collected results") (:reactive nil)))
+   (:id 11))
+  (:box
+   (:type :value)
+   (:reference fixnum)
+   (:group-id nil)
+   (:name "value box")
+   (:x 243)
+   (:y 316)
+   (:w 32)
+   (:h 29)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value 2)
+   (:id 12))
+  (:box
+   (:type :value)
+   (:reference fixnum)
+   (:group-id nil)
+   (:name "value box")
+   (:x 84)
+   (:y 195)
+   (:w 39)
+   (:h 29)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value 100)
+   (:id 13))
+  (:box
+   (:type :function)
+   (:reference print)
+   (:group-id nil)
+   (:name "print")
+   (:x 325)
+   (:y 367)
+   (:w 64)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SOMETHING")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 14))
+  (:box
+   (:type :abstraction)
+   (:reference
+    (:patch
+     (:name "mk-sieve-u")
+     (:doc "")
+     (:info
+      (:created nil)
+      (:modified nil)
+      (:by *app-name*)
+      (:version 0))
+     (:window (:size (500 500)) (:position (156 152)))
+     (:grid nil)
+     (:lock nil)
+     (:boxes
+      (:box
+       (:type :function)
+       (:reference mapcar)
+       (:group-id nil)
+       (:name "mapcar")
+       (:x 341/2)
+       (:y 2555/12)
+       (:w 79)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "FUNCTION")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "LIST")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 0))
+      (:box
+       (:type :function)
+       (:reference x-append)
+       (:group-id nil)
+       (:name "x-append")
+       (:x 57)
+       (:y 136)
+       (:w 90)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda :lambda)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "L1?")
+         (:value 24)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "L2?")
+         (:value 23)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 1))
+      (:box
+       (:library "OM-Symmetry")
+       (:type :function)
+       (:reference c-union-l)
+       (:group-id nil)
+       (:name "c-union-l")
+       (:x 159)
+       (:y 255)
+       (:w 88)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "CRIBLE")
+         (:value (:list (:list 19 16 64) (:list 11 16 64)))
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 2))
+      (:box
+       (:library "Mathtools")
+       (:type :function)
+       (:reference revel-crible)
+       (:group-id nil)
+       (:name "revel-crible")
+       (:x 153)
+       (:y 315)
+       (:w 100)
+       (:h 29)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SELF")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 3))
+      (:box
+       (:type :io)
+       (:reference
+        (:in (:type omin) (:index 1) (:name "in") (:doc "")))
+       (:group-id nil)
+       (:name "in")
+       (:x 98)
+       (:y 60)
+       (:w 40)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 4))
+      (:box
+       (:type :io)
+       (:reference
+        (:out (:type omout) (:name "output 1") (:index 1) (:doc "")))
+       (:group-id nil)
+       (:name "output 1")
+       (:x 169)
+       (:y 363)
+       (:w 68)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "out-value")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs)
+       (:id 5))
+      (:box
+       (:type :io)
+       (:reference
+        (:in (:type omin) (:index 2) (:name "in") (:doc "")))
+       (:group-id nil)
+       (:name "in")
+       (:x 292)
+       (:y 183)
+       (:w 40)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 6)))
+     (:connections
+      (:connection (:from (:box 0 :out 0)) (:to (:box 2 :in 0)))
+      (:connection (:from (:box 1 :out 0)) (:to (:box 0 :in 0)))
+      (:connection (:from (:box 2 :out 0)) (:to (:box 3 :in 0)))
+      (:connection (:from (:box 2 :out 0)) (:to (:box 5 :in 0)))
+      (:connection (:from (:box 4 :out 0)) (:to (:box 1 :in 1)))
+      (:connection (:from (:box 6 :out 0)) (:to (:box 0 :in 1))))))
+   (:group-id nil)
+   (:name "mk-sieve-u")
+   (:x 689)
+   (:y 186)
+   (:w 100)
+   (:h 60)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :hidden)
+   (:lock nil)
+   (:lambda nil)
+   (:pre-delay 0)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "in")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "in")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "output 1") (:reactive nil)))
+   (:id 15))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 745)
+   (:y 151)
+   (:w 109)
+   (:h 29)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value (:list (:list 11 3) (:list 13 71)))
+   (:id 16))
+  (:box
+   (:type :value)
+   (:reference fixnum)
+   (:group-id nil)
+   (:name "value box")
+   (:x 701)
+   (:y 151)
+   (:w 32)
+   (:h 29)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value 69)
+   (:id 17))
+  (:box
+   (:library "OM-Symmetry")
+   (:type :function)
+   (:reference c-symmetry-perfil)
+   (:group-id nil)
+   (:name "c-symmetry-perfil")
+   (:x 342)
+   (:y 556)
+   (:w 137)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value (:list crible))
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "RANGE")
+     (:value (:list 25 500))
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 18))
+  (:box
+   (:library "OM-Symmetry")
+   (:type :function)
+   (:reference c-symmetry-perfil)
+   (:group-id nil)
+   (:name "c-symmetry-perfil")
+   (:x 557)
+   (:y 593)
+   (:w 137)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value (:list crible))
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "RANGE")
+     (:value (:list 25 500))
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 19))
+  (:box
+   (:library "OM-Symmetry")
+   (:type :function)
+   (:reference c-perfil)
+   (:group-id nil)
+   (:name "c-perfil")
+   (:x 518)
+   (:y 336)
+   (:w 77)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "CRIBLE")
+     (:value
+      (:list
+       23
+       33
+       47
+       63
+       70
+       71
+       93
+       95
+       119
+       123
+       143
+       153
+       167
+       174
+       183
+       191
+       213
+       215
+       239
+       243
+       263
+       273
+       278
+       287
+       303
+       311
+       333
+       335
+       359
+       363
+       382
+       383
+       393
+       407
+       423
+       431
+       453
+       455
+       479
+       483
+       486))
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 20))
+  (:box
+   (:library "OM-Symmetry")
+   (:type :function)
+   (:reference c-perfil)
+   (:group-id nil)
+   (:name "c-perfil")
+   (:x 790)
+   (:y 326)
+   (:w 77)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value
+      (:list
+       23
+       33
+       47
+       63
+       70
+       71
+       93
+       95
+       119
+       123
+       143
+       153
+       167
+       174
+       183
+       191
+       213
+       215
+       239
+       243
+       263
+       273
+       278
+       287
+       303
+       311
+       333
+       335
+       359
+       363
+       382
+       383
+       393
+       407
+       423
+       431
+       453
+       455
+       479
+       483
+       486))
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 21))
+  (:box
+   (:library "OM-Symmetry")
+   (:type :function)
+   (:reference c-decompose)
+   (:group-id nil)
+   (:name "c-decompose")
+   (:x 120)
+   (:y 462)
+   (:w 111)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value
+      (:list
+       23
+       33
+       47
+       63
+       70
+       71
+       93
+       95
+       119
+       123
+       143
+       153
+       167
+       174
+       183
+       191
+       213
+       215
+       239
+       243
+       263
+       273
+       278
+       287
+       303
+       311
+       333
+       335
+       359
+       363
+       382
+       383
+       393
+       407
+       423
+       431
+       453
+       455
+       479
+       483
+       486))
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 22))
+  (:box
+   (:library "OM-Symmetry")
+   (:type :function)
+   (:reference c-decompose)
+   (:group-id nil)
+   (:name "c-decompose")
+   (:x 645)
+   (:y 380)
+   (:w 111)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value
+      (:list
+       23
+       33
+       47
+       63
+       70
+       71
+       93
+       95
+       119
+       123
+       143
+       153
+       167
+       174
+       183
+       191
+       213
+       215
+       239
+       243
+       263
+       273
+       278
+       287
+       303
+       311
+       333
+       335
+       359
+       363
+       382
+       383
+       393
+       407
+       423
+       431
+       453
+       455
+       479
+       483
+       486))
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 23))
+  (:box
+   (:library "Mathtools")
+   (:type :function)
+   (:reference revel-crible)
+   (:group-id nil)
+   (:name "revel-crible")
+   (:x 636)
+   (:y 332)
+   (:w 100)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SELF")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 24))
+  (:box
+   (:library "OM-Symmetry")
+   (:type :function)
+   (:reference c-union-l)
+   (:group-id nil)
+   (:name "c-union-l")
+   (:x 560)
+   (:y 233)
+   (:w 88)
+   (:h 29)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "CRIBLE")
+     (:value (:list (:list 19 16 64) (:list 11 16 64)))
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 25)))
+ (:connections
+  (:connection (:from (:box 1 :out 0)) (:to (:box 3 :in 1)))
+  (:connection (:from (:box 5 :out 0)) (:to (:box 4 :in 0)))
+  (:connection (:from (:box 6 :out 0)) (:to (:box 3 :in 0)))
+  (:connection (:from (:box 7 :out 0)) (:to (:box 8 :in 0)))
+  (:connection (:from (:box 8 :out 0)) (:to (:box 9 :in 0)))
+  (:connection (:from (:box 9 :out 0)) (:to (:box 11 :in 0)))
+  (:connection (:from (:box 10 :out 0)) (:to (:box 9 :in 1)))
+  (:connection (:from (:box 11 :out 0)) (:to (:box 14 :in 0)))
+  (:connection (:from (:box 12 :out 0)) (:to (:box 11 :in 1)))
+  (:connection (:from (:box 13 :out 0)) (:to (:box 7 :in 0)))
+  (:connection (:from (:box 14 :out 0)) (:to (:box 6 :in 1)))
+  (:connection (:from (:box 15 :out 0)) (:to (:box 20 :in 0)))
+  (:connection (:from (:box 15 :out 0)) (:to (:box 21 :in 0)))
+  (:connection (:from (:box 16 :out 0)) (:to (:box 15 :in 1)))
+  (:connection (:from (:box 17 :out 0)) (:to (:box 15 :in 0)))
+  (:connection (:from (:box 24 :out 0)) (:to (:box 23 :in 0)))
+  (:connection (:from (:box 25 :out 0)) (:to (:box 24 :in 0)))))

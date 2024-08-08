@@ -1,0 +1,7656 @@
+
+(:patch
+ (:name "Cacador de espectro - v3")
+ (:doc "")
+ (:info
+  (:created "2020/09/28 11:23:42")
+  (:modified "2020/11/11 19:44:32")
+  (:by "om-sharp")
+  (:version 1.01))
+ (:window (:size (1920 1026)) (:position (-9 -9)))
+ (:grid nil)
+ (:lock nil)
+ (:boxes
+  (:box
+   (:type :abstraction)
+   (:reference
+    (:patch
+     (:name "Forca Bruta")
+     (:doc "")
+     (:info
+      (:created nil)
+      (:modified nil)
+      (:by *app-name*)
+      (:version 0))
+     (:window (:size (1370 844)) (:position (-8 0)))
+     (:grid nil)
+     (:lock nil)
+     (:boxes
+      (:box
+       (:type :io)
+       (:reference
+        (:out (:type omout) (:name "out") (:index 1) (:doc "")))
+       (:group-id nil)
+       (:name "out")
+       (:x 313)
+       (:y 734)
+       (:w 55)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "out-value")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs)
+       (:id 0))
+      (:box
+       (:type :io)
+       (:reference
+        (:in (:type omin) (:index 1) (:name "INTERVALOS") (:doc "")))
+       (:group-id nil)
+       (:name "INTERVALOS")
+       (:x 53)
+       (:y 88)
+       (:w 151)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 1))
+      (:box
+       (:type :io)
+       (:reference
+        (:in (:type omin) (:index 2) (:name "ESPECTRO") (:doc "")))
+       (:group-id nil)
+       (:name "ESPECTRO")
+       (:x 193)
+       (:y 195)
+       (:w 129)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 2))
+      (:box
+       (:type :io)
+       (:reference
+        (:in
+         (:type omin)
+         (:index 3)
+         (:name "RANGE_IN_CENTS")
+         (:doc "")))
+       (:group-id nil)
+       (:name "RANGE_IN_CENTS")
+       (:x 285)
+       (:y 151)
+       (:w 209)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 3))
+      (:box
+       (:type :io)
+       (:reference
+        (:in
+         (:type omin)
+         (:index 4)
+         (:name "UNIDADES-SOMATORIA")
+         (:doc "")))
+       (:group-id nil)
+       (:name "UNIDADES-SOMATORIA")
+       (:x 434)
+       (:y 117)
+       (:w 262)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 4))
+      (:box
+       (:type :io)
+       (:reference
+        (:in
+         (:type omin)
+         (:index 5)
+         (:name "SIEVE-INFERIOR-SUPERIOR")
+         (:doc "")))
+       (:group-id nil)
+       (:name "SIEVE-INFERIOR-SUPERIOR")
+       (:x 668)
+       (:y 159)
+       (:w 304)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 5))
+      (:box
+       (:type :io)
+       (:reference
+        (:in
+         (:type omin)
+         (:index 6)
+         (:name "FUNDAMENTAL-DA-AREA-DE-AFINACAO")
+         (:doc "")))
+       (:group-id nil)
+       (:name "FUNDAMENTAL-DA-AREA-DE-AFINACAO")
+       (:x 480)
+       (:y 271)
+       (:w 422)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 6))
+      (:box
+       (:type :abstraction)
+       (:reference
+        (:patch
+         (:name "Patches")
+         (:doc "")
+         (:info
+          (:created nil)
+          (:modified nil)
+          (:by *app-name*)
+          (:version 0))
+         (:window (:size (1920 1026)) (:position (-9 -9)))
+         (:grid nil)
+         (:lock nil)
+         (:boxes
+          (:box
+           (:type :io)
+           (:reference
+            (:in
+             (:type omin)
+             (:index 1)
+             (:name "Intervalo Justo")
+             (:doc "")))
+           (:group-id nil)
+           (:name "Intervalo Justo")
+           (:x 202)
+           (:y 18)
+           (:w 172)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs)
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 0))
+          (:box
+           (:type :io)
+           (:reference
+            (:out (:type omout) (:name "out") (:index 1) (:doc "")))
+           (:group-id nil)
+           (:name "out")
+           (:x 243)
+           (:y 678)
+           (:w 55)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "out-value")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs)
+           (:id 1))
+          (:box
+           (:type :io)
+           (:reference
+            (:in
+             (:type omin)
+             (:index 2)
+             (:name "Espectro do timbre")
+             (:doc "")))
+           (:group-id nil)
+           (:name "Espectro do timbre")
+           (:x 734)
+           (:y 58)
+           (:w 213)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs)
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 2))
+          (:box
+           (:type :io)
+           (:reference
+            (:in
+             (:type omin)
+             (:index 3)
+             (:name "Range em cents")
+             (:doc "")))
+           (:group-id nil)
+           (:name "Range em cents")
+           (:x 620)
+           (:y 284)
+           (:w 183)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs)
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 3))
+          (:box
+           (:type :io)
+           (:reference
+            (:in (:type omin) (:index 4) (:name "Unidade") (:doc "")))
+           (:group-id nil)
+           (:name "Unidade")
+           (:x 33)
+           (:y 22)
+           (:w 125)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs)
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 4))
+          (:box
+           (:type :io)
+           (:reference
+            (:in (:type omin) (:index 5) (:name "in") (:doc "")))
+           (:group-id nil)
+           (:name "in")
+           (:x 205)
+           (:y 69)
+           (:w 40)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs)
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 5))
+          (:box
+           (:type :io)
+           (:reference
+            (:in
+             (:type omin)
+             (:index 6)
+             (:name "FUNDAMENTAL")
+             (:doc "")))
+           (:group-id nil)
+           (:name "FUNDAMENTAL")
+           (:x 481)
+           (:y 35)
+           (:w 173)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+             (:t-or-nil t)))
+           (:border 0)
+           (:roundness 0)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs)
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 6))
+          (:box
+           (:library "OM-JI")
+           (:type :function)
+           (:reference interval-sob)
+           (:group-id nil)
+           (:name "interval-sob")
+           (:x 287)
+           (:y 113)
+           (:w 157)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "RATIO")
+             (:value 11/8)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "SIEVE")
+             (:value (:list 2 3 7 11 12))
+             (:reactive nil)))
+           (:outputs
+            (:output (:name "out0") (:reactive nil))
+            (:output (:name "out1") (:reactive nil)))
+           (:id 7))
+          (:box
+           (:type :function)
+           (:reference sort-list)
+           (:group-id nil)
+           (:name "sort-list")
+           (:x 363)
+           (:y 304)
+           (:w 114)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "LST")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 8))
+          (:box
+           (:library "OM-JI")
+           (:type :function)
+           (:reference rt->mc)
+           (:group-id nil)
+           (:name "rt->mc")
+           (:x 312)
+           (:y 191)
+           (:w 109)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "RATIO")
+             (:value 11/8)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "FUNDAMENTAL")
+             (:value 6000)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 9))
+          (:box
+           (:type :function)
+           (:reference sort-list)
+           (:group-id nil)
+           (:name "sort-list")
+           (:x 783)
+           (:y 112)
+           (:w 114)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "LST")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 10))
+          (:box
+           (:library "OM-JI")
+           (:type :function)
+           (:reference range-reduce)
+           (:group-id nil)
+           (:name "range-reduce")
+           (:x 334)
+           (:y 251)
+           (:w 172)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "NOTELIST")
+             (:value (:list 4800 7200 6000))
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "GRAVE")
+             (:value 6000)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "AGUDA")
+             (:value 7902)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 11))
+          (:box
+           (:type :special)
+           (:reference collect)
+           (:group-id nil)
+           (:name "collect")
+           (:x 124)
+           (:y 593)
+           (:w 109)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.7 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "data-in")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "push")
+             (:value t)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "init")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs
+            (:output (:name "collect") (:reactive nil))
+            (:output (:name "data-out") (:reactive nil))
+            (:output (:name "init") (:reactive nil)))
+           (:id 12))
+          (:box
+           (:type :special)
+           (:reference iterate)
+           (:group-id nil)
+           (:name "iterate")
+           (:x 85)
+           (:y 682)
+           (:w 88)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.85 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "action")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs)
+           (:id 13))
+          (:box
+           (:type :special)
+           (:reference if)
+           (:group-id nil)
+           (:name "IF")
+           (:x 116)
+           (:y 544)
+           (:w 71)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "TEST")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "THEN")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 14))
+          (:box
+           (:type :function)
+           (:reference first)
+           (:group-id nil)
+           (:name "first")
+           (:x 439)
+           (:y 188)
+           (:w 77)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "LIST")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 15))
+          (:box
+           (:type :function)
+           (:reference last-elem)
+           (:group-id nil)
+           (:name "last-elem")
+           (:x 517)
+           (:y 189)
+           (:w 130)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "LIST")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 16))
+          (:box
+           (:type :special)
+           (:reference loop-list)
+           (:group-id nil)
+           (:name "list-loop")
+           (:x 45)
+           (:y 75)
+           (:w 101)
+           (:h 42)
+           (:color
+            (:color-or-nil
+             (:color (:color 0.82 0.85 0.7 1.0))
+             (:t-or-nil t)))
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:icon :top)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "list")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "i") (:reactive nil)))
+           (:id 17))
+          (:box
+           (:type :function)
+           (:reference x-append)
+           (:group-id nil)
+           (:name "x-append")
+           (:x 136)
+           (:y 123)
+           (:w 132)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda :lambda)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "L1?")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "L2?")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 18))
+          (:box
+           (:type :function)
+           (:reference mapcar)
+           (:group-id nil)
+           (:name "mapcar")
+           (:x 59)
+           (:y 201)
+           (:w 113)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "FUNCTION")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "LIST")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 19))
+          (:box
+           (:library "OM-Sieves")
+           (:type :function)
+           (:reference s-union-l)
+           (:group-id nil)
+           (:name "s-union-l")
+           (:x 124)
+           (:y 254)
+           (:w 127)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "SIEVE")
+             (:value (:list (:list 19 16 64) (:list 11 16 64)))
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 20))
+          (:box
+           (:library "OM-Sieves")
+           (:type :function)
+           (:reference revel-sieve)
+           (:group-id nil)
+           (:name "revel-sieve")
+           (:x 128)
+           (:y 322)
+           (:w 148)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "SELF")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 21))
+          (:box
+           (:type :abstraction)
+           (:reference
+            (:patch
+             (:name "my-patch")
+             (:doc "")
+             (:info
+              (:created nil)
+              (:modified nil)
+              (:by *app-name*)
+              (:version 0))
+             (:window (:size (1187 837)) (:position (428 94)))
+             (:grid nil)
+             (:lock nil)
+             (:boxes
+              (:box
+               (:type :io)
+               (:reference
+                (:in
+                 (:type omin)
+                 (:index 1)
+                 (:name "Timbre")
+                 (:doc "")))
+               (:group-id nil)
+               (:name "Timbre")
+               (:x 76)
+               (:y 49)
+               (:w 85)
+               (:h 42)
+               (:color
+                (:color-or-nil
+                 (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+                 (:t-or-nil t)))
+               (:border 0)
+               (:roundness 0)
+               (:text-font nil)
+               (:align :center)
+               (:icon :top)
+               (:inputs)
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 0))
+              (:box
+               (:type :io)
+               (:reference
+                (:out
+                 (:type omout)
+                 (:name "out")
+                 (:index 1)
+                 (:doc "")))
+               (:group-id nil)
+               (:name "out")
+               (:x 337)
+               (:y 768)
+               (:w 51)
+               (:h 42)
+               (:color
+                (:color-or-nil
+                 (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+                 (:t-or-nil t)))
+               (:border 0)
+               (:roundness 0)
+               (:text-font nil)
+               (:align :center)
+               (:icon :top)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "out-value")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs)
+               (:id 1))
+              (:box
+               (:type :io)
+               (:reference
+                (:in
+                 (:type omin)
+                 (:index 2)
+                 (:name "Afinação")
+                 (:doc "")))
+               (:group-id nil)
+               (:name "Afinação")
+               (:x 191)
+               (:y 97)
+               (:w 98)
+               (:h 42)
+               (:color
+                (:color-or-nil
+                 (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+                 (:t-or-nil t)))
+               (:border 0)
+               (:roundness 0)
+               (:text-font nil)
+               (:align :center)
+               (:icon :top)
+               (:inputs)
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 2))
+              (:box
+               (:type :io)
+               (:reference
+                (:in
+                 (:type omin)
+                 (:index 3)
+                 (:name "cents")
+                 (:doc "")))
+               (:group-id nil)
+               (:name "cents")
+               (:x 329)
+               (:y 132)
+               (:w 69)
+               (:h 42)
+               (:color
+                (:color-or-nil
+                 (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+                 (:t-or-nil t)))
+               (:border 0)
+               (:roundness 0)
+               (:text-font nil)
+               (:align :center)
+               (:icon :top)
+               (:inputs)
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 3))
+              (:box
+               (:type :abstraction)
+               (:reference
+                (:patch
+                 (:name "substituir")
+                 (:doc "")
+                 (:info
+                  (:created nil)
+                  (:modified nil)
+                  (:by *app-name*)
+                  (:version 0))
+                 (:window (:size (1102 685)) (:position (224 224)))
+                 (:grid nil)
+                 (:lock nil)
+                 (:boxes
+                  (:box
+                   (:type :io)
+                   (:reference
+                    (:in
+                     (:type omin)
+                     (:index 1)
+                     (:name "in")
+                     (:doc "")))
+                   (:group-id nil)
+                   (:name "in")
+                   (:x 166)
+                   (:y 36)
+                   (:w 40)
+                   (:h 42)
+                   (:color
+                    (:color-or-nil
+                     (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+                     (:t-or-nil t)))
+                   (:border 0)
+                   (:roundness 0)
+                   (:text-font nil)
+                   (:align :center)
+                   (:icon :top)
+                   (:inputs)
+                   (:outputs (:output (:name "out") (:reactive nil)))
+                   (:id 0))
+                  (:box
+                   (:type :io)
+                   (:reference
+                    (:out
+                     (:type omout)
+                     (:name "out")
+                     (:index 1)
+                     (:doc "")))
+                   (:group-id nil)
+                   (:name "out")
+                   (:x 219)
+                   (:y 560)
+                   (:w 51)
+                   (:h 42)
+                   (:color
+                    (:color-or-nil
+                     (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+                     (:t-or-nil t)))
+                   (:border 0)
+                   (:roundness 0)
+                   (:text-font nil)
+                   (:align :center)
+                   (:icon :top)
+                   (:inputs
+                    (:input
+                     (:type :standard)
+                     (:name "out-value")
+                     (:value nil)
+                     (:reactive nil)))
+                   (:outputs)
+                   (:id 1))
+                  (:box
+                   (:type :io)
+                   (:reference
+                    (:in
+                     (:type omin)
+                     (:index 2)
+                     (:name "in")
+                     (:doc "")))
+                   (:group-id nil)
+                   (:name "in")
+                   (:x 37)
+                   (:y 69)
+                   (:w 40)
+                   (:h 42)
+                   (:color
+                    (:color-or-nil
+                     (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+                     (:t-or-nil t)))
+                   (:border 0)
+                   (:roundness 0)
+                   (:text-font nil)
+                   (:align :center)
+                   (:icon :top)
+                   (:inputs)
+                   (:outputs (:output (:name "out") (:reactive nil)))
+                   (:id 2))
+                  (:box
+                   (:type :io)
+                   (:reference
+                    (:in
+                     (:type omin)
+                     (:index 3)
+                     (:name "in")
+                     (:doc "")))
+                   (:group-id nil)
+                   (:name "in")
+                   (:x 439)
+                   (:y 4)
+                   (:w 40)
+                   (:h 42)
+                   (:color
+                    (:color-or-nil
+                     (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+                     (:t-or-nil t)))
+                   (:border 0)
+                   (:roundness 0)
+                   (:text-font nil)
+                   (:align :center)
+                   (:icon :top)
+                   (:inputs)
+                   (:outputs (:output (:name "out") (:reactive nil)))
+                   (:id 3))
+                  (:box
+                   (:type :function)
+                   (:reference om-)
+                   (:group-id nil)
+                   (:name "om-")
+                   (:x 165)
+                   (:y 123)
+                   (:w 74)
+                   (:h 38)
+                   (:color nil)
+                   (:border nil)
+                   (:roundness nil)
+                   (:text-font nil)
+                   (:align nil)
+                   (:icon :left)
+                   (:lock nil)
+                   (:lambda nil)
+                   (:inputs
+                    (:input
+                     (:type :standard)
+                     (:name "ARG1")
+                     (:value 0)
+                     (:reactive nil))
+                    (:input
+                     (:type :standard)
+                     (:name "ARG2")
+                     (:value 0)
+                     (:reactive nil)))
+                   (:outputs (:output (:name "out") (:reactive nil)))
+                   (:id 4))
+                  (:box
+                   (:type :special)
+                   (:reference and)
+                   (:group-id nil)
+                   (:name "and")
+                   (:x 420)
+                   (:y 401)
+                   (:w 71)
+                   (:h 38)
+                   (:color nil)
+                   (:border nil)
+                   (:roundness nil)
+                   (:text-font nil)
+                   (:align nil)
+                   (:icon :left)
+                   (:lock nil)
+                   (:lambda nil)
+                   (:inputs
+                    (:input
+                     (:type :optional)
+                     (:name "test-forms")
+                     (:value nil)
+                     (:reactive nil))
+                    (:input
+                     (:type :optional)
+                     (:name "test-forms")
+                     (:value nil)
+                     (:reactive nil)))
+                   (:outputs (:output (:name "out") (:reactive nil)))
+                   (:id 5))
+                  (:box
+                   (:type :function)
+                   (:reference <=)
+                   (:group-id nil)
+                   (:name "<=")
+                   (:x 360)
+                   (:y 335)
+                   (:w 66)
+                   (:h 38)
+                   (:color nil)
+                   (:border nil)
+                   (:roundness nil)
+                   (:text-font nil)
+                   (:align nil)
+                   (:icon :left)
+                   (:lock nil)
+                   (:lambda nil)
+                   (:inputs
+                    (:input
+                     (:type :standard)
+                     (:name "NUM")
+                     (:value nil)
+                     (:reactive nil))
+                    (:input
+                     (:type :optional)
+                     (:name "args")
+                     (:value nil)
+                     (:reactive nil)))
+                   (:outputs (:output (:name "out") (:reactive nil)))
+                   (:id 6))
+                  (:box
+                   (:type :function)
+                   (:reference om>=)
+                   (:group-id nil)
+                   (:name "om>=")
+                   (:x 434)
+                   (:y 341)
+                   (:w 95)
+                   (:h 38)
+                   (:color nil)
+                   (:border nil)
+                   (:roundness nil)
+                   (:text-font nil)
+                   (:align nil)
+                   (:icon :left)
+                   (:lock nil)
+                   (:lambda nil)
+                   (:inputs
+                    (:input
+                     (:type :standard)
+                     (:name "NUM1")
+                     (:value 0)
+                     (:reactive nil))
+                    (:input
+                     (:type :standard)
+                     (:name "NUM2")
+                     (:value 1)
+                     (:reactive nil)))
+                   (:outputs (:output (:name "out") (:reactive nil)))
+                   (:id 7))
+                  (:box
+                   (:type :special)
+                   (:reference if)
+                   (:group-id nil)
+                   (:name "if")
+                   (:x 225)
+                   (:y 472)
+                   (:w 49)
+                   (:h 38)
+                   (:color nil)
+                   (:border nil)
+                   (:roundness nil)
+                   (:text-font nil)
+                   (:align nil)
+                   (:icon :left)
+                   (:lock nil)
+                   (:lambda nil)
+                   (:inputs
+                    (:input
+                     (:type :standard)
+                     (:name "TEST")
+                     (:value nil)
+                     (:reactive nil))
+                    (:input
+                     (:type :standard)
+                     (:name "THEN")
+                     (:value nil)
+                     (:reactive nil))
+                    (:input
+                     (:type :optional)
+                     (:name "else")
+                     (:value nil)
+                     (:reactive nil)))
+                   (:outputs (:output (:name "out") (:reactive nil)))
+                   (:id 8))
+                  (:box
+                   (:type :function)
+                   (:reference first)
+                   (:group-id nil)
+                   (:name "first")
+                   (:x 345)
+                   (:y 110)
+                   (:w 73)
+                   (:h 38)
+                   (:color nil)
+                   (:border nil)
+                   (:roundness nil)
+                   (:text-font nil)
+                   (:align nil)
+                   (:icon :left)
+                   (:lock nil)
+                   (:lambda nil)
+                   (:inputs
+                    (:input
+                     (:type :standard)
+                     (:name "LIST")
+                     (:value nil)
+                     (:reactive nil)))
+                   (:outputs (:output (:name "out") (:reactive nil)))
+                   (:id 9))
+                  (:box
+                   (:type :function)
+                   (:reference second)
+                   (:group-id nil)
+                   (:name "second")
+                   (:x 450)
+                   (:y 105)
+                   (:w 100)
+                   (:h 38)
+                   (:color nil)
+                   (:border nil)
+                   (:roundness nil)
+                   (:text-font nil)
+                   (:align nil)
+                   (:icon :left)
+                   (:lock nil)
+                   (:lambda nil)
+                   (:inputs
+                    (:input
+                     (:type :standard)
+                     (:name "LIST")
+                     (:value nil)
+                     (:reactive nil)))
+                   (:outputs (:output (:name "out") (:reactive nil)))
+                   (:id 10))
+                  (:box
+                   (:type :function)
+                   (:reference abs)
+                   (:group-id nil)
+                   (:name "abs")
+                   (:x 210)
+                   (:y 211)
+                   (:w 69)
+                   (:h 38)
+                   (:color nil)
+                   (:border nil)
+                   (:roundness nil)
+                   (:text-font nil)
+                   (:align nil)
+                   (:icon :left)
+                   (:lock nil)
+                   (:lambda nil)
+                   (:inputs
+                    (:input
+                     (:type :standard)
+                     (:name "N")
+                     (:value nil)
+                     (:reactive nil)))
+                   (:outputs (:output (:name "out") (:reactive nil)))
+                   (:id 11)))
+                 (:connections
+                  (:connection
+                   (:from (:box 0 :out 0))
+                   (:to (:box 4 :in 0)))
+                  (:connection
+                   (:from (:box 2 :out 0))
+                   (:to (:box 4 :in 1)))
+                  (:connection
+                   (:from (:box 2 :out 0))
+                   (:to (:box 8 :in 1)))
+                  (:connection
+                   (:from (:box 3 :out 0))
+                   (:to (:box 9 :in 0)))
+                  (:connection
+                   (:from (:box 3 :out 0))
+                   (:to (:box 10 :in 0)))
+                  (:connection
+                   (:from (:box 4 :out 0))
+                   (:to (:box 11 :in 0)))
+                  (:connection
+                   (:from (:box 5 :out 0))
+                   (:to (:box 8 :in 0)))
+                  (:connection
+                   (:from (:box 6 :out 0))
+                   (:to (:box 5 :in 0)))
+                  (:connection
+                   (:from (:box 7 :out 0))
+                   (:to (:box 5 :in 1)))
+                  (:connection
+                   (:from (:box 8 :out 0))
+                   (:to (:box 1 :in 0)))
+                  (:connection
+                   (:from (:box 9 :out 0))
+                   (:to (:box 6 :in 0)))
+                  (:connection
+                   (:from (:box 10 :out 0))
+                   (:to (:box 7 :in 0)))
+                  (:connection
+                   (:from (:box 11 :out 0))
+                   (:to (:box 7 :in 1)))
+                  (:connection
+                   (:from (:box 11 :out 0))
+                   (:to (:box 6 :in 1))))))
+               (:group-id nil)
+               (:name "substituir")
+               (:x 64)
+               (:y 212)
+               (:w 123)
+               (:h 60)
+               (:color nil)
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align :center)
+               (:display :hidden)
+               (:lock nil)
+               (:lambda :lambda)
+               (:pre-delay 0)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "in")
+                 (:value nil)
+                 (:reactive nil))
+                (:input
+                 (:type :standard)
+                 (:name "in")
+                 (:value nil)
+                 (:reactive nil))
+                (:input
+                 (:type :standard)
+                 (:name "in")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 4))
+              (:box
+               (:type :special)
+               (:reference collect)
+               (:group-id nil)
+               (:name "collect")
+               (:x 211)
+               (:y 595)
+               (:w 79)
+               (:h 42)
+               (:color
+                (:color-or-nil
+                 (:color (:color 0.82 0.7 0.7 1.0))
+                 (:t-or-nil t)))
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align :center)
+               (:icon :top)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "data-in")
+                 (:value nil)
+                 (:reactive nil))
+                (:input
+                 (:type :standard)
+                 (:name "push")
+                 (:value t)
+                 (:reactive nil))
+                (:input
+                 (:type :standard)
+                 (:name "init")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs
+                (:output (:name "collect") (:reactive nil))
+                (:output (:name "data-out") (:reactive nil))
+                (:output (:name "init") (:reactive nil)))
+               (:id 5))
+              (:box
+               (:type :special)
+               (:reference iterate)
+               (:group-id nil)
+               (:name "iterate")
+               (:x 141)
+               (:y 720)
+               (:w 81)
+               (:h 42)
+               (:color
+                (:color-or-nil
+                 (:color (:color 0.82 0.85 0.7 1.0))
+                 (:t-or-nil t)))
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align :center)
+               (:icon :top)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "action")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs)
+               (:id 6))
+              (:box
+               (:type :function)
+               (:reference remove)
+               (:group-id nil)
+               (:name "remove")
+               (:x 48)
+               (:y 115)
+               (:w 106)
+               (:h 36)
+               (:color nil)
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align nil)
+               (:icon :left)
+               (:lock nil)
+               (:lambda nil)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "ITEM")
+                 (:value nil)
+                 (:reactive nil))
+                (:input
+                 (:type :standard)
+                 (:name "SEQUENCE")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 7))
+              (:box
+               (:type :function)
+               (:reference remove)
+               (:group-id nil)
+               (:name "remove")
+               (:x 406)
+               (:y 704)
+               (:w 106)
+               (:h 36)
+               (:color nil)
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align nil)
+               (:icon :left)
+               (:lock nil)
+               (:lambda nil)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "ITEM")
+                 (:value nil)
+                 (:reactive nil))
+                (:input
+                 (:type :standard)
+                 (:name "SEQUENCE")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 8))
+              (:box
+               (:type :special)
+               (:reference loop-list)
+               (:group-id nil)
+               (:name "loop-list")
+               (:x 49)
+               (:y 159)
+               (:w 94)
+               (:h 42)
+               (:color
+                (:color-or-nil
+                 (:color (:color 0.82 0.85 0.7 1.0))
+                 (:t-or-nil t)))
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align :center)
+               (:icon :top)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "list")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs (:output (:name "i") (:reactive nil)))
+               (:id 9))
+              (:box
+               (:type :special)
+               (:reference if)
+               (:group-id nil)
+               (:name "if")
+               (:x 219)
+               (:y 515)
+               (:w 49)
+               (:h 36)
+               (:color nil)
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align nil)
+               (:icon :left)
+               (:lock nil)
+               (:lambda nil)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "TEST")
+                 (:value nil)
+                 (:reactive nil))
+                (:input
+                 (:type :standard)
+                 (:name "THEN")
+                 (:value nil)
+                 (:reactive nil))
+                (:input
+                 (:type :optional)
+                 (:name "else")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 10))
+              (:box
+               (:type :function)
+               (:reference mapcar)
+               (:group-id nil)
+               (:name "mapcar")
+               (:x 215)
+               (:y 274)
+               (:w 105)
+               (:h 36)
+               (:color nil)
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align nil)
+               (:icon :left)
+               (:lock nil)
+               (:lambda nil)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "FUNCTION")
+                 (:value nil)
+                 (:reactive nil))
+                (:input
+                 (:type :standard)
+                 (:name "LIST")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 11))
+              (:box
+               (:type :function)
+               (:reference remove)
+               (:group-id nil)
+               (:name "remove")
+               (:x 193)
+               (:y 317)
+               (:w 106)
+               (:h 36)
+               (:color nil)
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align nil)
+               (:icon :left)
+               (:lock nil)
+               (:lambda nil)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "ITEM")
+                 (:value nil)
+                 (:reactive nil))
+                (:input
+                 (:type :standard)
+                 (:name "SEQUENCE")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 12))
+              (:box
+               (:type :function)
+               (:reference length)
+               (:group-id nil)
+               (:name "length")
+               (:x 138)
+               (:y 379)
+               (:w 94)
+               (:h 36)
+               (:color nil)
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align nil)
+               (:icon :left)
+               (:lock nil)
+               (:lambda nil)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "SEQUENCE")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 13))
+              (:box
+               (:type :function)
+               (:reference nth-random)
+               (:group-id nil)
+               (:name "nth-random")
+               (:x 281)
+               (:y 379)
+               (:w 145)
+               (:h 36)
+               (:color nil)
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align nil)
+               (:icon :left)
+               (:lock nil)
+               (:lambda nil)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "LIST")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 14))
+              (:box
+               (:type :function)
+               (:reference om>=)
+               (:group-id nil)
+               (:name "om>=")
+               (:x 143)
+               (:y 470)
+               (:w 95)
+               (:h 36)
+               (:color nil)
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align nil)
+               (:icon :left)
+               (:lock nil)
+               (:lambda nil)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "NUM1")
+                 (:value 0)
+                 (:reactive nil))
+                (:input
+                 (:type :standard)
+                 (:name "NUM2")
+                 (:value 1)
+                 (:reactive nil)))
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 15))
+              (:box
+               (:type :value)
+               (:reference fixnum)
+               (:group-id nil)
+               (:name "value box")
+               (:x 196)
+               (:y 435)
+               (:w 32)
+               (:h 38)
+               (:color
+                (:color-or-nil
+                 (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+                 (:t-or-nil t)))
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align nil)
+               (:lock nil)
+               (:inputs)
+               (:outputs (:output (:name "value") (:reactive nil)))
+               (:value 2)
+               (:id 16))
+              (:box
+               (:type :function)
+               (:reference flat)
+               (:group-id nil)
+               (:name "flat")
+               (:x 444)
+               (:y 628)
+               (:w 67)
+               (:h 36)
+               (:color nil)
+               (:border nil)
+               (:roundness nil)
+               (:text-font nil)
+               (:align nil)
+               (:icon :left)
+               (:lock nil)
+               (:lambda nil)
+               (:inputs
+                (:input
+                 (:type :standard)
+                 (:name "LST")
+                 (:value nil)
+                 (:reactive nil)))
+               (:outputs (:output (:name "out") (:reactive nil)))
+               (:id 17)))
+             (:connections
+              (:connection
+               (:from (:box 0 :out 0))
+               (:to (:box 7 :in 1)))
+              (:connection
+               (:from (:box 2 :out 0))
+               (:to (:box 11 :in 1)))
+              (:connection
+               (:from (:box 3 :out 0))
+               (:to (:box 4 :in 2)))
+              (:connection
+               (:from (:box 4 :out 0))
+               (:to (:box 11 :in 0)))
+              (:connection
+               (:from (:box 5 :out 0))
+               (:to (:box 6 :in 0)))
+              (:connection
+               (:from (:box 5 :out 1))
+               (:to (:box 17 :in 0)))
+              (:connection
+               (:from (:box 7 :out 0))
+               (:to (:box 9 :in 0)))
+              (:connection
+               (:from (:box 8 :out 0))
+               (:to (:box 1 :in 0)))
+              (:connection
+               (:from (:box 9 :out 0))
+               (:to (:box 4 :in 0)))
+              (:connection
+               (:from (:box 10 :out 0))
+               (:to (:box 5 :in 0)))
+              (:connection
+               (:from (:box 11 :out 0))
+               (:to (:box 12 :in 1)))
+              (:connection
+               (:from (:box 12 :out 0))
+               (:to (:box 13 :in 0)))
+              (:connection
+               (:from (:box 12 :out 0))
+               (:to (:box 14 :in 0)))
+              (:connection
+               (:from (:box 12 :out 0))
+               (:to (:box 10 :in 2)))
+              (:connection
+               (:from (:box 13 :out 0))
+               (:to (:box 15 :in 0)))
+              (:connection
+               (:from (:box 14 :out 0))
+               (:to (:box 10 :in 1)))
+              (:connection
+               (:from (:box 15 :out 0))
+               (:to (:box 10 :in 0)))
+              (:connection
+               (:from (:box 16 :out 0))
+               (:to (:box 15 :in 1)))
+              (:connection
+               (:from (:box 17 :out 0))
+               (:to (:box 8 :in 1))))))
+           (:group-id nil)
+           (:name "my-patch")
+           (:x 552)
+           (:y 366)
+           (:w 123)
+           (:h 60)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align :center)
+           (:display :hidden)
+           (:lock nil)
+           (:lambda nil)
+           (:pre-delay 0)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "Timbre")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "Afinação")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "cents")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 22))
+          (:box
+           (:type :function)
+           (:reference om-round)
+           (:group-id nil)
+           (:name "om-round")
+           (:x 376)
+           (:y 355)
+           (:w 127)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "N")
+             (:value 1)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 23))
+          (:box
+           (:type :function)
+           (:reference length)
+           (:group-id nil)
+           (:name "length")
+           (:x 566)
+           (:y 461)
+           (:w 94)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "SEQUENCE")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 24))
+          (:box
+           (:type :function)
+           (:reference length)
+           (:group-id nil)
+           (:name "length")
+           (:x 793)
+           (:y 465)
+           (:w 94)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "SEQUENCE")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 25))
+          (:box
+           (:type :function)
+           (:reference om=)
+           (:group-id nil)
+           (:name "om=")
+           (:x 706)
+           (:y 573)
+           (:w 80)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :standard)
+             (:name "NUM1")
+             (:value 0)
+             (:reactive nil))
+            (:input
+             (:type :standard)
+             (:name "NUM2")
+             (:value 0)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 26))
+          (:box
+           (:type :function)
+           (:reference list)
+           (:group-id nil)
+           (:name "list")
+           (:x 101)
+           (:y 474)
+           (:w 125)
+           (:h 36)
+           (:color nil)
+           (:border nil)
+           (:roundness nil)
+           (:text-font nil)
+           (:align nil)
+           (:icon :left)
+           (:lock nil)
+           (:lambda nil)
+           (:inputs
+            (:input
+             (:type :optional)
+             (:name "args")
+             (:value nil)
+             (:reactive nil))
+            (:input
+             (:type :optional)
+             (:name "args")
+             (:value nil)
+             (:reactive nil)))
+           (:outputs (:output (:name "out") (:reactive nil)))
+           (:id 27)))
+         (:connections
+          (:connection (:from (:box 0 :out 0)) (:to (:box 7 :in 0)))
+          (:connection (:from (:box 2 :out 0)) (:to (:box 10 :in 0)))
+          (:connection (:from (:box 3 :out 0)) (:to (:box 22 :in 2)))
+          (:connection (:from (:box 4 :out 0)) (:to (:box 17 :in 0)))
+          (:connection (:from (:box 5 :out 0)) (:to (:box 18 :in 1)))
+          (:connection
+           (:from (:box 6 :out 0))
+           (:to (:box 9 :in 1))
+           (:attributes (:color nil :style nil :modif (0 45/122))))
+          (:connection (:from (:box 7 :out 1)) (:to (:box 9 :in 0)))
+          (:connection (:from (:box 8 :out 0)) (:to (:box 23 :in 0)))
+          (:connection (:from (:box 9 :out 0)) (:to (:box 11 :in 0)))
+          (:connection
+           (:from (:box 10 :out 0))
+           (:to (:box 15 :in 0))
+           (:attributes (:color nil :style nil :modif (-29/136 0))))
+          (:connection (:from (:box 10 :out 0)) (:to (:box 16 :in 0)))
+          (:connection (:from (:box 10 :out 0)) (:to (:box 22 :in 0)))
+          (:connection (:from (:box 10 :out 0)) (:to (:box 25 :in 0)))
+          (:connection (:from (:box 11 :out 0)) (:to (:box 8 :in 0)))
+          (:connection (:from (:box 12 :out 0)) (:to (:box 13 :in 0)))
+          (:connection (:from (:box 12 :out 1)) (:to (:box 1 :in 0)))
+          (:connection (:from (:box 14 :out 0)) (:to (:box 12 :in 0)))
+          (:connection (:from (:box 15 :out 0)) (:to (:box 11 :in 1)))
+          (:connection (:from (:box 16 :out 0)) (:to (:box 11 :in 2)))
+          (:connection (:from (:box 17 :out 0)) (:to (:box 19 :in 1)))
+          (:connection (:from (:box 18 :out 0)) (:to (:box 19 :in 0)))
+          (:connection (:from (:box 19 :out 0)) (:to (:box 20 :in 0)))
+          (:connection (:from (:box 19 :out 0)) (:to (:box 27 :in 0)))
+          (:connection (:from (:box 20 :out 0)) (:to (:box 21 :in 0)))
+          (:connection (:from (:box 21 :out 0)) (:to (:box 7 :in 1)))
+          (:connection (:from (:box 22 :out 0)) (:to (:box 27 :in 1)))
+          (:connection (:from (:box 22 :out 0)) (:to (:box 24 :in 0)))
+          (:connection (:from (:box 23 :out 0)) (:to (:box 22 :in 1)))
+          (:connection (:from (:box 24 :out 0)) (:to (:box 26 :in 0)))
+          (:connection (:from (:box 25 :out 0)) (:to (:box 26 :in 1)))
+          (:connection
+           (:from (:box 26 :out 0))
+           (:to (:box 14 :in 0))
+           (:attributes (:color nil :style nil :modif (-4/627 0))))
+          (:connection
+           (:from (:box 27 :out 0))
+           (:to (:box 14 :in 1))))))
+       (:group-id nil)
+       (:name "Patches")
+       (:x 265)
+       (:y 353)
+       (:w 200)
+       (:h 103)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:display :mini-view)
+       (:lock nil)
+       (:lambda nil)
+       (:pre-delay 0)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "Intervalo Justo")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "Espectro do timbre")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "Range em cents")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "Unidade")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "in")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "FUNDAMENTAL")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 7))
+      (:box
+       (:library "OM-JI")
+       (:type :function)
+       (:reference rt-octave)
+       (:group-id nil)
+       (:name "rt-octave")
+       (:x 65)
+       (:y 262)
+       (:w 129)
+       (:h 36)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "FRAQ")
+         (:value 3/2)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 8))
+      (:box
+       (:type :special)
+       (:reference collect)
+       (:group-id nil)
+       (:name "collect")
+       (:x 171)
+       (:y 613)
+       (:w 84)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 0.82 0.7 0.7 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "data-in")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "push")
+         (:value t)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "init")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs
+        (:output (:name "collect") (:reactive nil))
+        (:output (:name "data-out") (:reactive nil))
+        (:output (:name "init") (:reactive nil)))
+       (:id 9))
+      (:box
+       (:type :special)
+       (:reference iterate)
+       (:group-id nil)
+       (:name "iterate")
+       (:x 152)
+       (:y 712)
+       (:w 88)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 0.82 0.85 0.7 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "action")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs)
+       (:id 10))
+      (:box
+       (:type :function)
+       (:reference flat)
+       (:group-id nil)
+       (:name "flat")
+       (:x 191)
+       (:y 500)
+       (:w 84)
+       (:h 36)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "LST")
+         (:value 0)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "level")
+         (:value 1)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 11))
+      (:box
+       (:type :value)
+       (:reference fixnum)
+       (:group-id nil)
+       (:name "value box")
+       (:x 228)
+       (:y 465)
+       (:w 32)
+       (:h 41)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value 1)
+       (:id 12))
+      (:box
+       (:type :function)
+       (:reference list)
+       (:group-id nil)
+       (:name "list")
+       (:x 90)
+       (:y 493)
+       (:w 66)
+       (:h 36)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :optional)
+         (:name "args")
+         (:value 1)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "args")
+         (:value 2)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 13))
+      (:box
+       (:type :function)
+       (:reference remove)
+       (:group-id nil)
+       (:name "remove")
+       (:x 305)
+       (:y 622)
+       (:w 114)
+       (:h 36)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "ITEM")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "SEQUENCE")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 14))
+      (:box
+       (:type :special)
+       (:reference loop-list)
+       (:group-id nil)
+       (:name "list-loop")
+       (:x 79)
+       (:y 149)
+       (:w 101)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 0.82 0.85 0.7 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "list")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "i") (:reactive nil)))
+       (:id 15)))
+     (:connections
+      (:connection (:from (:box 1 :out 0)) (:to (:box 15 :in 0)))
+      (:connection (:from (:box 2 :out 0)) (:to (:box 7 :in 1)))
+      (:connection (:from (:box 3 :out 0)) (:to (:box 7 :in 2)))
+      (:connection (:from (:box 4 :out 0)) (:to (:box 7 :in 3)))
+      (:connection (:from (:box 5 :out 0)) (:to (:box 7 :in 4)))
+      (:connection (:from (:box 6 :out 0)) (:to (:box 7 :in 5)))
+      (:connection
+       (:from (:box 7 :out 0))
+       (:to (:box 11 :in 0))
+       (:attributes (:color nil :style nil :modif (0 -5/18))))
+      (:connection (:from (:box 8 :out 0)) (:to (:box 13 :in 0)))
+      (:connection (:from (:box 8 :out 0)) (:to (:box 7 :in 0)))
+      (:connection (:from (:box 9 :out 0)) (:to (:box 10 :in 0)))
+      (:connection (:from (:box 9 :out 1)) (:to (:box 14 :in 1)))
+      (:connection
+       (:from (:box 11 :out 0))
+       (:to (:box 13 :in 1))
+       (:attributes (:color nil :style nil :modif (0 0))))
+      (:connection (:from (:box 12 :out 0)) (:to (:box 11 :in 1)))
+      (:connection (:from (:box 13 :out 0)) (:to (:box 9 :in 0)))
+      (:connection (:from (:box 14 :out 0)) (:to (:box 0 :in 0)))
+      (:connection (:from (:box 15 :out 0)) (:to (:box 8 :in 0))))))
+   (:group-id nil)
+   (:name "Forca Bruta")
+   (:x 199)
+   (:y 511)
+   (:w 200)
+   (:h 113)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :mini-view)
+   (:lock nil)
+   (:lambda nil)
+   (:pre-delay 0)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "INTERVALOS")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "ESPECTRO")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "RANGE_IN_CENTS")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "UNIDADES-SOMATORIA")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "SIEVE-INFERIOR-SUPERIOR")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "FUNDAMENTAL-DA-AREA-DE-AFINACAO")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 0))
+  (:box
+   (:type :abstraction)
+   (:reference
+    (:patch
+     (:name "filtro")
+     (:doc "")
+     (:info
+      (:created nil)
+      (:modified nil)
+      (:by *app-name*)
+      (:version 0))
+     (:window (:size (1366 923)) (:position (-8 0)))
+     (:grid nil)
+     (:lock nil)
+     (:boxes
+      (:box
+       (:type :io)
+       (:reference
+        (:in (:type omin) (:index 1) (:name "in") (:doc "")))
+       (:group-id nil)
+       (:name "in")
+       (:x 220)
+       (:y 9)
+       (:w 40)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs)
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 0))
+      (:box
+       (:type :io)
+       (:reference
+        (:out (:type omout) (:name "out") (:index 1) (:doc "")))
+       (:group-id nil)
+       (:name "out")
+       (:x 629)
+       (:y 812)
+       (:w 55)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 0.0S0))
+         (:t-or-nil t)))
+       (:border 0)
+       (:roundness 0)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "out-value")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs)
+       (:id 1))
+      (:box
+       (:type :special)
+       (:reference collect)
+       (:group-id nil)
+       (:name "collect")
+       (:x 429)
+       (:y 510)
+       (:w 107)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 0.82 0.7 0.7 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "data-in")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "push")
+         (:value t)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "init")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs
+        (:output (:name "collect") (:reactive nil))
+        (:output (:name "data-out") (:reactive nil))
+        (:output (:name "init") (:reactive nil)))
+       (:id 2))
+      (:box
+       (:type :special)
+       (:reference iterate)
+       (:group-id nil)
+       (:name "iterate")
+       (:x 285)
+       (:y 608)
+       (:w 88)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 0.82 0.85 0.7 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "action")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs)
+       (:id 3))
+      (:box
+       (:type :special)
+       (:reference if)
+       (:group-id nil)
+       (:name "IF")
+       (:x 447)
+       (:y 476)
+       (:w 71)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "TEST")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "THEN")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "else")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 4))
+      (:box
+       (:type :function)
+       (:reference equal)
+       (:group-id nil)
+       (:name "equal")
+       (:x 471)
+       (:y 660)
+       (:w 92)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "X")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "Y")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 5))
+      (:box
+       (:type :special)
+       (:reference if)
+       (:group-id nil)
+       (:name "IF")
+       (:x 569)
+       (:y 766)
+       (:w 169)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "TEST")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "THEN")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "else")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 6))
+      (:box
+       (:type :value)
+       (:reference (:symbol "SIMPLE-TEXT-STRING" "LISPWORKS"))
+       (:group-id nil)
+       (:name "value box")
+       (:x 579)
+       (:y 618)
+       (:w 290)
+       (:h 38)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :left)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value "nada cumpre os parametros")
+       (:id 7))
+      (:box
+       (:type :value)
+       (:reference (:symbol "SIMPLE-TEXT-STRING" "LISPWORKS"))
+       (:group-id nil)
+       (:name "value box")
+       (:x 670)
+       (:y 719)
+       (:w 56)
+       (:h 41)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value "fim")
+       (:id 8))
+      (:box
+       (:type :function)
+       (:reference remove)
+       (:group-id nil)
+       (:name "remove")
+       (:x 447)
+       (:y 614)
+       (:w 114)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "ITEM")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "SEQUENCE")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 9))
+      (:box
+       (:type :function)
+       (:reference print)
+       (:group-id nil)
+       (:name "print")
+       (:x 197)
+       (:y 375)
+       (:w 85)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "SOMETHING")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 10))
+      (:box
+       (:type :function)
+       (:reference list)
+       (:group-id nil)
+       (:name "list")
+       (:x 42)
+       (:y 329)
+       (:w 315)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :optional)
+         (:name "args")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "args")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "args")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "args")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "args")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 11))
+      (:box
+       (:type :value)
+       (:reference symbol)
+       (:group-id nil)
+       (:name "value box")
+       (:x 7)
+       (:y 267)
+       (:w 123)
+       (:h 41)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :left)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value intervalo)
+       (:id 12))
+      (:box
+       (:type :value)
+       (:reference symbol)
+       (:group-id nil)
+       (:name "value box")
+       (:x 153)
+       (:y 279)
+       (:w 57)
+       (:h 41)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :left)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value sieve)
+       (:id 13))
+      (:box
+       (:type :value)
+       (:reference symbol)
+       (:group-id nil)
+       (:name "value box")
+       (:x 277)
+       (:y 216)
+       (:w 153)
+       (:h 38)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :left)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value cumpre-timbre)
+       (:id 14))
+      (:box
+       (:type :function)
+       (:reference om/=)
+       (:group-id nil)
+       (:name "om/=")
+       (:x 688)
+       (:y 150)
+       (:w 94)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "NUM1")
+         (:value 0)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "NUM2")
+         (:value 0)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 15))
+      (:box
+       (:type :function)
+       (:reference first)
+       (:group-id nil)
+       (:name "first")
+       (:x 635)
+       (:y 59)
+       (:w 77)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "LIST")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 16))
+      (:box
+       (:type :value)
+       (:reference fixnum)
+       (:group-id nil)
+       (:name "value box")
+       (:x 741)
+       (:y 101)
+       (:w 32)
+       (:h 41)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value 1)
+       (:id 17))
+      (:box
+       (:type :function)
+       (:reference second)
+       (:group-id nil)
+       (:name "second")
+       (:x 484)
+       (:y 259)
+       (:w 108)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "LIST")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 18))
+      (:box
+       (:type :function)
+       (:reference remove)
+       (:group-id nil)
+       (:name "remove")
+       (:x 494)
+       (:y 297)
+       (:w 114)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "ITEM")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "SEQUENCE")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 19))
+      (:box
+       (:type :function)
+       (:reference first)
+       (:group-id nil)
+       (:name "first")
+       (:x 510)
+       (:y 328)
+       (:w 77)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "LIST")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 20))
+      (:box
+       (:type :function)
+       (:reference equal)
+       (:group-id nil)
+       (:name "equal")
+       (:x 442)
+       (:y 363)
+       (:w 92)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "X")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "Y")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 21))
+      (:box
+       (:type :special)
+       (:reference if)
+       (:group-id nil)
+       (:name "IF")
+       (:x 526)
+       (:y 144)
+       (:w 81)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "TEST")
+         (:value nil)
+         (:reactive nil))
+        (:input
+         (:type :standard)
+         (:name "THEN")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 22))
+      (:box
+       (:type :value)
+       (:reference null)
+       (:group-id nil)
+       (:name "value box")
+       (:x 427)
+       (:y 313)
+       (:w 32)
+       (:h 41)
+       (:color
+        (:color-or-nil
+         (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:lock nil)
+       (:inputs)
+       (:outputs (:output (:name "value") (:reactive nil)))
+       (:value nil)
+       (:id 23))
+      (:box
+       (:type :special)
+       (:reference loop-list)
+       (:group-id nil)
+       (:name "list-loop")
+       (:x 378)
+       (:y 27)
+       (:w 101)
+       (:h 42)
+       (:color
+        (:color-or-nil
+         (:color (:color 0.82 0.85 0.7 1.0))
+         (:t-or-nil t)))
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align :center)
+       (:icon :top)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "list")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "i") (:reactive nil)))
+       (:id 24))
+      (:box
+       (:type :function)
+       (:reference first)
+       (:group-id nil)
+       (:name "first")
+       (:x 115)
+       (:y 158)
+       (:w 73)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "LIST")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 25))
+      (:box
+       (:type :function)
+       (:reference second)
+       (:group-id nil)
+       (:name "second")
+       (:x 231)
+       (:y 153)
+       (:w 100)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "LIST")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 26))
+      (:box
+       (:type :function)
+       (:reference flat)
+       (:group-id nil)
+       (:name "flat")
+       (:x 273)
+       (:y 107)
+       (:w 67)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "LST")
+         (:value 1)
+         (:reactive nil))
+        (:input
+         (:type :optional)
+         (:name "level")
+         (:value 1)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 27))
+      (:box
+       (:type :function)
+       (:reference third)
+       (:group-id nil)
+       (:name "third")
+       (:x 403)
+       (:y 163)
+       (:w 80)
+       (:h 38)
+       (:color nil)
+       (:border nil)
+       (:roundness nil)
+       (:text-font nil)
+       (:align nil)
+       (:icon :left)
+       (:lock nil)
+       (:lambda nil)
+       (:inputs
+        (:input
+         (:type :standard)
+         (:name "LIST")
+         (:value nil)
+         (:reactive nil)))
+       (:outputs (:output (:name "out") (:reactive nil)))
+       (:id 28)))
+     (:connections
+      (:connection (:from (:box 0 :out 0)) (:to (:box 24 :in 0)))
+      (:connection (:from (:box 2 :out 0)) (:to (:box 3 :in 0)))
+      (:connection (:from (:box 2 :out 1)) (:to (:box 9 :in 1)))
+      (:connection (:from (:box 4 :out 0)) (:to (:box 2 :in 0)))
+      (:connection (:from (:box 5 :out 0)) (:to (:box 6 :in 0)))
+      (:connection (:from (:box 6 :out 0)) (:to (:box 1 :in 0)))
+      (:connection (:from (:box 7 :out 0)) (:to (:box 6 :in 1)))
+      (:connection (:from (:box 8 :out 0)) (:to (:box 6 :in 2)))
+      (:connection (:from (:box 9 :out 0)) (:to (:box 5 :in 1)))
+      (:connection (:from (:box 10 :out 0)) (:to (:box 4 :in 2)))
+      (:connection (:from (:box 11 :out 0)) (:to (:box 10 :in 0)))
+      (:connection (:from (:box 12 :out 0)) (:to (:box 11 :in 0)))
+      (:connection (:from (:box 13 :out 0)) (:to (:box 11 :in 2)))
+      (:connection (:from (:box 14 :out 0)) (:to (:box 11 :in 4)))
+      (:connection (:from (:box 15 :out 0)) (:to (:box 22 :in 0)))
+      (:connection (:from (:box 16 :out 0)) (:to (:box 15 :in 0)))
+      (:connection (:from (:box 17 :out 0)) (:to (:box 15 :in 1)))
+      (:connection (:from (:box 18 :out 0)) (:to (:box 19 :in 1)))
+      (:connection (:from (:box 19 :out 0)) (:to (:box 20 :in 0)))
+      (:connection (:from (:box 20 :out 0)) (:to (:box 21 :in 1)))
+      (:connection (:from (:box 21 :out 0)) (:to (:box 4 :in 0)))
+      (:connection (:from (:box 22 :out 0)) (:to (:box 18 :in 0)))
+      (:connection (:from (:box 23 :out 0)) (:to (:box 21 :in 0)))
+      (:connection (:from (:box 24 :out 0)) (:to (:box 16 :in 0)))
+      (:connection (:from (:box 24 :out 0)) (:to (:box 22 :in 1)))
+      (:connection (:from (:box 24 :out 0)) (:to (:box 25 :in 0)))
+      (:connection (:from (:box 24 :out 0)) (:to (:box 27 :in 0)))
+      (:connection (:from (:box 25 :out 0)) (:to (:box 11 :in 1)))
+      (:connection (:from (:box 26 :out 0)) (:to (:box 11 :in 3)))
+      (:connection (:from (:box 27 :out 0)) (:to (:box 26 :in 0)))
+      (:connection (:from (:box 27 :out 0)) (:to (:box 28 :in 0))))))
+   (:group-id nil)
+   (:name "filtro")
+   (:x 215)
+   (:y 659)
+   (:w 167)
+   (:h 133)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :mini-view)
+   (:lock nil)
+   (:lambda nil)
+   (:pre-delay 0)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "in")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 1))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 289)
+   (:y 287)
+   (:w 95)
+   (:h 38)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :left)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value (:list 50 400))
+   (:id 2))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 377)
+   (:y 379)
+   (:w 106)
+   (:h 38)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :left)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value (:list 32 512))
+   (:id 3))
+  (:box
+   (:type :value)
+   (:reference fixnum)
+   (:group-id nil)
+   (:name "value box")
+   (:x 469)
+   (:y 458)
+   (:w 69)
+   (:h 41)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :left)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value 6700)
+   (:id 4))
+  (:comment
+   (:x 488)
+   (:y 382)
+   (:w 218)
+   (:h 58)
+   (:fgcolor nil)
+   (:bgcolor nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font
+    (:font-or-nil
+     (:font (:font (:face "Verdana") (:size 16) (:style :plain)))
+     (:t-or-nil t)))
+   (:align nil)
+   (:text "Ponto de partida e limite do crivo")
+   (:id 5))
+  (:comment
+   (:x 246)
+   (:y 75)
+   (:w 299)
+   (:h 58)
+   (:fgcolor nil)
+   (:bgcolor nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:text "Espectro harmônico em Midicents")
+   (:id 6))
+  (:comment
+   (:x 383)
+   (:y 290)
+   (:w 181)
+   (:h 33)
+   (:fgcolor nil)
+   (:bgcolor nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font
+    (:font-or-nil
+     (:font (:font (:face "Verdana") (:size 16) (:style :plain)))
+     (:t-or-nil t)))
+   (:align nil)
+   (:text "Range em cents")
+   (:id 7))
+  (:comment
+   (:x 540)
+   (:y 461)
+   (:w 244)
+   (:h 33)
+   (:fgcolor nil)
+   (:bgcolor nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font
+    (:font-or-nil
+     (:font (:font (:face "Verdana") (:size 16) (:style :plain)))
+     (:t-or-nil t)))
+   (:align nil)
+   (:text "Fundamental do timbre")
+   (:id 8))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 621)
+   (:y 188)
+   (:w 158)
+   (:h 38)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :left)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value (:list 11 19 97))
+   (:id 9))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 40)
+   (:y 370)
+   (:w 108)
+   (:h 38)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :left)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value (:list 19 11 97))
+   (:id 10))
+  (:box
+   (:type :object)
+   (:reference textbuffer)
+   (:group-id nil)
+   (:name nil)
+   (:x 58)
+   (:y 71)
+   (:w 185)
+   (:h 50)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :center)
+   (:display :mini-view)
+   (:showname nil)
+   (:lock :locked)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SELF")
+     (:value nil)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "CONTENTS")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs
+    (:output (:name "SELF") (:reactive nil))
+    (:output (:name "CONTENTS") (:reactive nil)))
+   (:window (:size (1366 725)) (:position (-8 -8)))
+   (:edition-params)
+   (:value
+    (:object
+     (:class textbuffer)
+     (:slots
+      ((:contents
+        (:list
+         "4250 "
+         "4226 "
+         "4224 "
+         "4222 "
+         "4308 "
+         "4580 "
+         "4582 "
+         "4574 "
+         "4566 "
+         "4562 "
+         "4560 "
+         "4548 "
+         "4542 "
+         "4536 "
+         "4518 "
+         "4522 "
+         "4526 "
+         "6100 "
+         "4532 "
+         "4524 "
+         "4520 "
+         "4516 "
+         "5852 "
+         "5840 "
+         "5836 "
+         "5820 "
+         "5876 "
+         "5884 "
+         "5870 "
+         "5866 "
+         "5858 "
+         "5850 "
+         "5838 "
+         "5834 "
+         "5810 "
+         "5806 "
+         "5798 "
+         "5794 "
+         "5774 "
+         "5776 "
+         "5780 "
+         "5792 "
+         "5796 "
+         "5804 "
+         "5812 "
+         "5830 "
+         "5856 "
+         "6114 "
+         "4502 "
+         "4508 "
+         "4506 "
+         "4500 "
+         "4496 "
+         "4474 "
+         "4476 "
+         "4480 "
+         "4494 "
+         "4492 "
+         "4488 "
+         "4486 "
+         "4484 "
+         "4472 "
+         "5920 "
+         "5890 "
+         "5886 "
+         "5898 "
+         "5934 "
+         "5906 "
+         "5910 "
+         "5918 "
+         "5970 "
+         "6094 "
+         "6108 "
+         "6120 "
+         "4324 "
+         "4318 "
+         "4326 "
+         "4330 "
+         "4332 "
+         "4334 "
+         "4338 "
+         "4342 "
+         "4344 "
+         "4510 "
+         "4540 "
+         "4570 "
+         "8394 "
+         "8402 "
+         "8404 "
+         "8398 "
+         "6614 "
+         "10272 "
+         "10268 "
+         "10264 "
+         "10260 "
+         "10256 "
+         "10254 "
+         "10252 "
+         "10250 "
+         "10248 "
+         "10246 "
+         "10244 "
+         "10242 "
+         "10234 "
+         "10230 "
+         "10228 "
+         "10226 "
+         "10224 "
+         "10222 "
+         "10220 "
+         "10216 "
+         "10214 "
+         "10212 "
+         "10208 "
+         "6778 "
+         "6644 "
+         "6594 "
+         "4576 "
+         "4336 "
+         "4328 "
+         "4322 "
+         "4314 "
+         "4276 "
+         "4254 "
+         "4300 "
+         "4298 "
+         "4296 "
+         "4294 "
+         "4292 "
+         "4290 "
+         "4288 "
+         "4286 "
+         "4284 "
+         "4282 "
+         "4278 "
+         "4268 "
+         "4264 "
+         "4260 "
+         "4246 "
+         "4242 "
+         "4238 "
+         "4234 "
+         "4230 "
+         "4228 "
+         "4236 "
+         "4240 "
+         "4244 "
+         "4248 "
+         "4252 "
+         "4256 "
+         "4258 "
+         "4262 "
+         "4266 "
+         "4270 "
+         "4274 "
+         "4306 "
+         "4340 "
+         "4588 "
+         "8390 "
+         "6670 "
+         "4864 "
+         "4880 "
+         "4912 "
+         "4922 "
+         "4936 "
+         "4950 "
+         "4960 "
+         "4974 "
+         "5018 "
+         "5010 "
+         "5008 "
+         "4982 "
+         "4984 "
+         "5006 "
+         "5004 "
+         "5002 "
+         "4998 "
+         "4994 "
+         "4946 "
+         "4904 "
+         "4882 "
+         "10786 "
+         "10726 "
+         "10766 "
+         "4592 "
+         "4586 "
+         "4550 "
+         "4538 "
+         "4544 "
+         "4552 "
+         "4558 "
+         "4564 "
+         "4572 "
+         "4590 "
+         "6588 "
+         "6608 "
+         "6722 "
+         "6740 "
+         "8386 "
+         "6802 "
+         "8382 "
+         "8378 "
+         "8374 "
+         "8370 "
+         "6764 "
+         "6758 "
+         "10204 "
+         "10200 "
+         "10198 "
+         "10194 "
+         "10192 "
+         "10190 "
+         "6650 "
+         "6642 "
+         "6630 "
+         "6622 "
+         "6602 "
+         "10922 "
+         "6636 "
+         "6656 "
+         "6714 "
+         "6742 "
+         "7070 "
+         "7054 "
+         "7044 "
+         "7030 "
+         "6752 "
+         "6598 "
+         "7060 "
+         "6616 "
+         "6668 "
+         "7068 "
+         "7062 "
+         "6708 "
+         "7056 "
+         "6728 "
+         "7052 "
+         "6738 "
+         "7048 "
+         "7046 "
+         "7038 "
+         "6776 "
+         "7028 "
+         "4716 "
+         "4722 "
+         "11076 "
+         "6628 "
+         "4808 "
+         "4812 "
+         "6658 "
+         "10188 "
+         "6726 "
+         "4826 "
+         "6734 "
+         "4824 "
+         "6754 "
+         "6790 "
+         "6800 "
+         "4816 "
+         "10712 "
+         "6772 "
+         "4800 "
+         "6760 "
+         "4796 "
+         "6746 "
+         "6732 "
+         "4788 "
+         "4784 "
+         "8846 "
+         "4776 "
+         "6624 "
+         "6596 "
+         "4752 "
+         "4738 "
+         "4724 "
+         "7020 "
+         "4732 "
+         "4736 "
+         "4740 "
+         "4746 "
+         "4750 "
+         "10644 "
+         "10652 "
+         "4780 "
+         "4728 "
+         "4546 "
+         "4514 "
+         "4482 "
+         "10764 "
+         "7864 "
+         "7874 "
+         "4352 "
+         "4354 "
+         "7932 "
+         "4356 "
+         "4358 "
+         "7942 "
+         "4360 "
+         "4362 "
+         "4364 "
+         "4366 "
+         "4368 "
+         "11018 "
+         "11022 "
+         "8838 "
+         "8832 "
+         "8830 "
+         "11142 "
+         "7934 "
+         "11098 "
+         "11094 "
+         "7850 "
+         "7860 "
+         "4456 "
+         "4468 "
+         "4464 "
+         "4460 "
+         "4458 "
+         "10784 "
+         "4454 "
+         "10774 "
+         "10750 "
+         "10740 "
+         "10732 "
+         "8432 "
+         "4422 "
+         "4416 "
+         "10698 "
+         "4404 "
+         "4398 "
+         "8820 "
+         "7928 "
+         "7918 "
+         "10676 "
+         "10680 "
+         "10690 "
+         "4372 "
+         "4374 "
+         "10186 "
+         "4376 "
+         "4378 "
+         "4382 "
+         "10184 "
+         "4384 "
+         "4386 "
+         "10744 "
+         "4390 "
+         "10754 "
+         "4392 "
+         "8818 "
+         "4396 "
+         "4400 "
+         "4402 "
+         "4406 "
+         "10796 "
+         "4408 "
+         "4412 "
+         "4414 "
+         "8816 "
+         "4420 "
+         "4424 "
+         "7872 "
+         "7886 "
+         "4428 "
+         "4430 "
+         "4432 "
+         "4434 "
+         "4436 "
+         "11006 "
+         "4438 "
+         "11032 "
+         "4444 "
+         "4446 "
+         "4448 "
+         "4450 "
+         "4452 "
+         "4478 "
+         "4504 "
+         "4530 "
+         "4554 "
+         "7016 "
+         "4968 "
+         "4992 "
+         "5062 "
+         "5084 "
+         "5106 "
+         "5148 "
+         "11282 "
+         "7348 "
+         "5396 "
+         "5430 "
+         "5446 "
+         "7358 "
+         "5496 "
+         "5512 "
+         "7364 "
+         "5528 "
+         "5550 "
+         "5572 "
+         "11438 "
+         "7022 "
+         "11460 "
+         "7064 "
+         "5654 "
+         "5714 "
+         "5734 "
+         "5790 "
+         "5808 "
+         "5826 "
+         "7944 "
+         "7940 "
+         "7922 "
+         "7146 "
+         "7880 "
+         "6610 "
+         "7870 "
+         "6638 "
+         "6664 "
+         "7862 "
+         "7856 "
+         "7852 "
+         "6794 "
+         "11562 "
+         "11552 "
+         "11546 "
+         "7042 "
+         "7034 "
+         "7026 "
+         "11464 "
+         "7008 "
+         "7024 "
+         "7032 "
+         "7040 "
+         "7050 "
+         "7058 "
+         "7066 "
+         "11348 "
+         "7140 "
+         "6796 "
+         "6784 "
+         "11272 "
+         "6770 "
+         "6716 "
+         "6662 "
+         "11216 "
+         "6648 "
+         "6604 "
+         "8770 "
+         "11112 "
+         "11106 "
+         "11102 "
+         "11086 "
+         "11080 "
+         "8756 "
+         "11068 "
+         "11064 "
+         "10994 "
+         "6490 "
+         "8742 "
+         "10984 "
+         "10958 "
+         "8786 "
+         "10952 "
+         "10948 "
+         "6098 "
+         "6516 "
+         "8822 "
+         "10930 "
+         "8828 "
+         "8836 "
+         "8844 "
+         "10178 "
+         "5912 "
+         "5896 "
+         "5880 "
+         "5844 "
+         "5824 "
+         "5782 "
+         "5762 "
+         "5740 "
+         "10842 "
+         "5696 "
+         "10834 "
+         "5630 "
+         "5586 "
+         "5566 "
+         "5544 "
+         "5524 "
+         "5502 "
+         "5482 "
+         "5460 "
+         "5416 "
+         "5394 "
+         "5108 "
+         "10812 "
+         "5080 "
+         "5050 "
+         "5020 "
+         "4990 "
+         "10816 "
+         "4964 "
+         "4940 "
+         "4918 "
+         "4870 "
+         "4820 "
+         "7158 "
+         "4744 "
+         "7152 "
+         "4718 "
+         "4584 "
+         "4528 "
+         "4470 "
+         "7124 "
+         "4440 "
+         "4410 "
+         "4380 "
+         "7120 "
+         "4348 "
+         "4316 "
+         "4320 "
+         "7114 "
+         "4346 "
+         "4370 "
+         "4394 "
+         "4418 "
+         "4442 "
+         "4466 "
+         "4490 "
+         "4512 "
+         "10938 "
+         "10944 "
+         "4556 "
+         "4578 "
+         "10962 "
+         "10966 "
+         "10982 "
+         "10992 "
+         "11008 "
+         "11012 "
+         "4594 "
+         "11026 "
+         "11030 "
+         "11046 "
+         "11050 "
+         "11058 "
+         "11062 "
+         "11124 "
+         "11138 "
+         "4596 "
+         "4598 "
+         "4600 "
+         "4604 "
+         "11206 "
+         "4606 "
+         "4608 "
+         "7072 "
+         "7074 "
+         "4610 "
+         "4612 "
+         "11244 "
+         "7076 "
+         "7078 "
+         "4614 "
+         "7080 "
+         "4616 "
+         "4618 "
+         "7082 "
+         "7084 "
+         "7086 "
+         "11278 "
+         "7088 "
+         "7108 "
+         "9516 "
+         "4630 "
+         "7128 "
+         "7134 "
+         "7142 "
+         "7154 "
+         "7160 "
+         "7166 "
+         "4640 "
+         "7172 "
+         "7176 "
+         "11332 "
+         "11328 "
+         "11326 "
+         "11320 "
+         "11310 "
+         "11304 "
+         "11290 "
+         "11260 "
+         "11250 "
+         "9452 "
+         "11212 "
+         "11202 "
+         "11144 "
+         "11136 "
+         "11132 "
+         "11130 "
+         "11126 "
+         "11118 "
+         "7184 "
+         "11114 "
+         "11110 "
+         "11108 "
+         "11100 "
+         "11092 "
+         "11082 "
+         "11074 "
+         "7194 "
+         "11056 "
+         "11052 "
+         "11042 "
+         "11038 "
+         "11034 "
+         "11014 "
+         "11004 "
+         "11000 "
+         "10996 "
+         "10980 "
+         "10978 "
+         "10974 "
+         "10970 "
+         "10968 "
+         "10956 "
+         "10942 "
+         "10932 "
+         "10928 "
+         "10926 "
+         "10918 "
+         "10916 "
+         "10914 "
+         "10908 "
+         "10906 "
+         "6944 "
+         "6554 "
+         "6558 "
+         "10904 "
+         "6562 "
+         "10902 "
+         "7220 "
+         "7222 "
+         "7224 "
+         "7228 "
+         "7230 "
+         "7234 "
+         "7236 "
+         "7240 "
+         "7242 "
+         "7244 "
+         "10898 "
+         "7250 "
+         "7254 "
+         "7256 "
+         "6584 "
+         "7262 "
+         "10894 "
+         "10892 "
+         "7266 "
+         "7268 "
+         "7270 "
+         "10888 "
+         "7274 "
+         "10884 "
+         "7276 "
+         "7280 "
+         "10878 "
+         "10876 "
+         "7282 "
+         "10874 "
+         "10872 "
+         "10866 "
+         "7286 "
+         "10864 "
+         "10862 "
+         "7288 "
+         "10858 "
+         "10856 "
+         "10852 "
+         "7292 "
+         "10848 "
+         "10844 "
+         "10836 "
+         "10828 "
+         "10824 "
+         "10822 "
+         "10818 "
+         "10806 "
+         "10802 "
+         "10798 "
+         "10792 "
+         "10778 "
+         "10772 "
+         "7334 "
+         "7336 "
+         "10758 "
+         "10752 "
+         "7342 "
+         "10734 "
+         "10724 "
+         "7356 "
+         "10720 "
+         "10714 "
+         "10710 "
+         "10700 "
+         "10692 "
+         "10686 "
+         "10668 "
+         "10664 "
+         "10660 "
+         "10654 "
+         "9450 "
+         "10642 "
+         "10638 "
+         "10626 "
+         "10622 "
+         "10620 "
+         "4706 "
+         "4702 "
+         "8428 "
+         "10576 "
+         "6806 "
+         "4638 "
+         "4620 "
+         "4622 "
+         "10552 "
+         "4624 "
+         "4626 "
+         "4628 "
+         "10554 "
+         "4632 "
+         "10556 "
+         "4636 "
+         "10560 "
+         "10562 "
+         "10564 "
+         "6582 "
+         "10568 "
+         "10570 "
+         "10572 "
+         "10580 "
+         "10582 "
+         "10586 "
+         "10588 "
+         "10590 "
+         "6974 "
+         "10592 "
+         "10596 "
+         "10598 "
+         "10600 "
+         "10604 "
+         "10606 "
+         "10608 "
+         "10610 "
+         "10614 "
+         "10616 "
+         "10618 "
+         "4670 "
+         "10624 "
+         "10628 "
+         "10634 "
+         "7866 "
+         "10640 "
+         "7876 "
+         "10646 "
+         "10650 "
+         "10656 "
+         "10666 "
+         "7920 "
+         "10672 "
+         "7930 "
+         "10678 "
+         "10682 "
+         "10702 "
+         "10708 "
+         "10722 "
+         "10730 "
+         "10736 "
+         "10742 "
+         "10756 "
+         "10762 "
+         "6092 "
+         "10768 "
+         "4664 "
+         "10782 "
+         "10788 "
+         "6084 "
+         "4678 "
+         "10794 "
+         "4686 "
+         "10808 "
+         "4694 "
+         "6076 "
+         "10826 "
+         "4708 "
+         "10838 "
+         "6070 "
+         "10846 "
+         "4714 "
+         "10854 "
+         "4710 "
+         "10868 "
+         "10882 "
+         "10896 "
+         "4696 "
+         "4692 "
+         "10924 "
+         "4688 "
+         "10936 "
+         "4684 "
+         "10950 "
+         "4680 "
+         "4676 "
+         "10976 "
+         "4672 "
+         "4666 "
+         "11002 "
+         "4662 "
+         "11028 "
+         "11040 "
+         "7946 "
+         "7936 "
+         "11066 "
+         "6540 "
+         "7926 "
+         "11078 "
+         "7916 "
+         "11090 "
+         "6524 "
+         "7888 "
+         "11128 "
+         "7878 "
+         "11140 "
+         "7858 "
+         "10160 "
+         "4642 "
+         "4644 "
+         "4646 "
+         "4648 "
+         "11220 "
+         "11230 "
+         "4650 "
+         "4652 "
+         "8440 "
+         "6496 "
+         "4654 "
+         "4656 "
+         "6506 "
+         "4658 "
+         "11296 "
+         "4660 "
+         "11306 "
+         "7854 "
+         "4674 "
+         "11322 "
+         "7868 "
+         "4682 "
+         "7882 "
+         "4690 "
+         "4698 "
+         "4704 "
+         "7924 "
+         "4712 "
+         "7938 "
+         "4720 "
+         "6550 "
+         "4726 "
+         "7622 "
+         "4734 "
+         "4742 "
+         "6564 "
+         "4748 "
+         "11400 "
+         "6568 "
+         "4754 "
+         "11414 "
+         "4756 "
+         "4758 "
+         "11424 "
+         "4760 "
+         "4764 "
+         "11442 "
+         "11446 "
+         "9872 "
+         "4766 "
+         "4768 "
+         "4770 "
+         "4772 "
+         "11468 "
+         "7326 "
+         "6572 "
+         "9864 "
+         "4774 "
+         "4778 "
+         "4782 "
+         "4786 "
+         "9856 "
+         "4790 "
+         "8420 "
+         "4794 "
+         "9852 "
+         "4798 "
+         "8416 "
+         "9850 "
+         "4802 "
+         "11498 "
+         "6962 "
+         "5986 "
+         "4806 "
+         "6970 "
+         "5984 "
+         "4810 "
+         "8412 "
+         "9844 "
+         "4814 "
+         "4818 "
+         "9840 "
+         "5972 "
+         "4828 "
+         "6982 "
+         "7330 "
+         "4862 "
+         "5958 "
+         "7352 "
+         "4894 "
+         "5946 "
+         "4906 "
+         "4916 "
+         "4926 "
+         "6578 "
+         "4938 "
+         "4948 "
+         "11532 "
+         "10176 "
+         "6580 "
+         "8408 "
+         "6586 "
+         "4996 "
+         "10172 "
+         "5016 "
+         "11528 "
+         "6766 "
+         "10170 "
+         "6600 "
+         "5036 "
+         "6748 "
+         "8422 "
+         "6606 "
+         "5054 "
+         "11526 "
+         "8426 "
+         "10166 "
+         "5072 "
+         "6710 "
+         "10164 "
+         "6620 "
+         "11522 "
+         "8434 "
+         "10162 "
+         "6626 "
+         "8438 "
+         "10158 "
+         "6634 "
+         "11520 "
+         "10156 "
+         "6640 "
+         "6632 "
+         "10154 "
+         "11516 "
+         "6612 "
+         "6652 "
+         "6592 "
+         "10150 "
+         "6660 "
+         "5924 "
+         "6590 "
+         "9294 "
+         "6666 "
+         "5926 "
+         "11508 "
+         "6618 "
+         "5930 "
+         "6646 "
+         "5932 "
+         "8738 "
+         "5938 "
+         "11492 "
+         "10130 "
+         "5944 "
+         "11486 "
+         "6782 "
+         "6712 "
+         "5948 "
+         "11482 "
+         "9538 "
+         "6718 "
+         "11478 "
+         "6724 "
+         "10118 "
+         "6730 "
+         "5956 "
+         "8736 "
+         "6736 "
+         "5960 "
+         "5218 "
+         "8734 "
+         "6744 "
+         "8740 "
+         "6750 "
+         "7846 "
+         "5968 "
+         "6756 "
+         "5974 "
+         "11454 "
+         "6762 "
+         "11452 "
+         "6768 "
+         "5982 "
+         "5228 "
+         "9290 "
+         "6774 "
+         "6780 "
+         "11440 "
+         "6786 "
+         "6792 "
+         "5236 "
+         "8778 "
+         "6798 "
+         "11430 "
+         "6804 "
+         "11426 "
+         "5244 "
+         "11422 "
+         "11418 "
+         "11416 "
+         "9284 "
+         "11408 "
+         "11402 "
+         "7362 "
+         "11396 "
+         "11392 "
+         "7346 "
+         "11388 "
+         "7340 "
+         "11386 "
+         "9262 "
+         "7536 "
+         "11382 "
+         "7324 "
+         "6032 "
+         "11374 "
+         "7294 "
+         "7540 "
+         "11354 "
+         "7260 "
+         "7542 "
+         "7248 "
+         "11340 "
+         "11334 "
+         "8436 "
+         "8430 "
+         "7202 "
+         "8424 "
+         "8802 "
+         "8418 "
+         "7840 "
+         "11314 "
+         "8414 "
+         "7168 "
+         "8410 "
+         "7162 "
+         "8406 "
+         "8400 "
+         "5260 "
+         "8396 "
+         "5252 "
+         "11286 "
+         "8392 "
+         "7138 "
+         "8388 "
+         "7132 "
+         "11274 "
+         "8384 "
+         "7126 "
+         "6110 "
+         "8380 "
+         "7118 "
+         "6116 "
+         "11264 "
+         "8376 "
+         "7112 "
+         "11258 "
+         "8372 "
+         "7106 "
+         "5186 "
+         "11236 "
+         "11226 "
+         "6266 "
+         "6270 "
+         "5178 "
+         "7104 "
+         "6130 "
+         "11200 "
+         "7100 "
+         "6136 "
+         "7098 "
+         "7094 "
+         "11192 "
+         "5168 "
+         "7090 "
+         "7096 "
+         "7102 "
+         "5154 "
+         "7110 "
+         "5150 "
+         "7116 "
+         "5146 "
+         "7122 "
+         "11186 "
+         "7130 "
+         "5136 "
+         "7136 "
+         "5130 "
+         "7144 "
+         "7578 "
+         "5126 "
+         "7150 "
+         "7580 "
+         "7156 "
+         "7582 "
+         "7164 "
+         "7584 "
+         "11182 "
+         "7170 "
+         "7174 "
+         "5110 "
+         "7178 "
+         "7180 "
+         "5112 "
+         "7182 "
+         "7186 "
+         "5114 "
+         "11178 "
+         "7188 "
+         "9834 "
+         "7190 "
+         "7192 "
+         "7196 "
+         "9832 "
+         "7198 "
+         "5120 "
+         "7204 "
+         "5122 "
+         "5142 "
+         "7206 "
+         "7208 "
+         "11168 "
+         "7210 "
+         "7212 "
+         "8726 "
+         "11164 "
+         "7214 "
+         "7216 "
+         "7218 "
+         "7226 "
+         "5424 "
+         "7232 "
+         "5444 "
+         "7238 "
+         "7246 "
+         "5484 "
+         "11158 "
+         "7258 "
+         "5522 "
+         "7264 "
+         "8730 "
+         "5542 "
+         "7272 "
+         "5562 "
+         "7278 "
+         "5580 "
+         "7284 "
+         "5598 "
+         "11154 "
+         "7290 "
+         "5618 "
+         "11152 "
+         "8732 "
+         "5634 "
+         "11156 "
+         "8728 "
+         "11160 "
+         "8724 "
+         "5670 "
+         "11162 "
+         "5686 "
+         "11170 "
+         "5720 "
+         "11174 "
+         "5754 "
+         "5770 "
+         "11184 "
+         "11188 "
+         "10024 "
+         "5802 "
+         "11190 "
+         "5818 "
+         "11194 "
+         "7296 "
+         "11198 "
+         "7298 "
+         "5846 "
+         "7300 "
+         "5860 "
+         "11208 "
+         "8196 "
+         "7838 "
+         "5874 "
+         "11214 "
+         "8194 "
+         "7304 "
+         "5888 "
+         "11218 "
+         "7306 "
+         "5900 "
+         "7308 "
+         "5914 "
+         "11228 "
+         "8190 "
+         "7310 "
+         "11232 "
+         "7312 "
+         "11238 "
+         "7314 "
+         "5954 "
+         "11242 "
+         "7316 "
+         "5966 "
+         "11248 "
+         "7318 "
+         "11252 "
+         "7320 "
+         "5992 "
+         "11256 "
+         "7322 "
+         "7328 "
+         "5994 "
+         "11266 "
+         "7332 "
+         "11270 "
+         "7338 "
+         "11276 "
+         "7344 "
+         "11280 "
+         "5996 "
+         "7354 "
+         "7360 "
+         "11294 "
+         "7366 "
+         "5998 "
+         "11298 "
+         "11302 "
+         "11308 "
+         "11312 "
+         "11318 "
+         "11324 "
+         "7586 "
+         "6002 "
+         "11344 "
+         "11350 "
+         "11358 "
+         "11364 "
+         "11370 "
+         "6006 "
+         "11378 "
+         "6008 "
+         "11398 "
+         "6010 "
+         "11412 "
+         "6544 "
+         "6014 "
+         "6534 "
+         "6016 "
+         "11436 "
+         "6526 "
+         "6020 "
+         "11458 "
+         "6022 "
+         "11466 "
+         "11474 "
+         "6026 "
+         "11480 "
+         "6028 "
+         "11488 "
+         "6024 "
+         "6012 "
+         "11500 "
+         "11506 "
+         "5988 "
+         "11512 "
+         "5976 "
+         "6174 "
+         "5952 "
+         "5940 "
+         "11536 "
+         "5928 "
+         "5916 "
+         "11548 "
+         "5904 "
+         "11554 "
+         "5892 "
+         "11560 "
+         "5878 "
+         "5864 "
+         "11568 "
+         "5848 "
+         "11572 "
+         "5832 "
+         "5816 "
+         "11578 "
+         "11582 "
+         "5784 "
+         "11586 "
+         "5768 "
+         "11588 "
+         "5752 "
+         "11592 "
+         "5736 "
+         "5718 "
+         "11598 "
+         "5702 "
+         "5684 "
+         "11606 "
+         "5668 "
+         "11608 "
+         "10082 "
+         "5632 "
+         "11614 "
+         "5614 "
+         "10084 "
+         "5596 "
+         "5576 "
+         "10086 "
+         "5558 "
+         "5538 "
+         "10088 "
+         "5520 "
+         "5500 "
+         "5480 "
+         "10090 "
+         "5462 "
+         "10094 "
+         "10100 "
+         "10102 "
+         "5438 "
+         "10104 "
+         "6990 "
+         "10106 "
+         "9586 "
+         "5436 "
+         "10108 "
+         "5434 "
+         "7012 "
+         "10110 "
+         "5432 "
+         "7014 "
+         "10112 "
+         "5428 "
+         "10114 "
+         "5422 "
+         "7006 "
+         "10116 "
+         "5418 "
+         "7002 "
+         "10120 "
+         "5412 "
+         "6998 "
+         "5408 "
+         "5402 "
+         "6992 "
+         "10126 "
+         "5398 "
+         "10128 "
+         "5392 "
+         "6984 "
+         "5382 "
+         "5372 "
+         "6968 "
+         "5370 "
+         "11684 "
+         "8848 "
+         "5368 "
+         "6960 "
+         "9598 "
+         "11682 "
+         "6954 "
+         "6946 "
+         "8850 "
+         "11678 "
+         "6938 "
+         "6934 "
+         "6930 "
+         "6926 "
+         "9602 "
+         "8852 "
+         "8854 "
+         "8860 "
+         "8542 "
+         "8862 "
+         "8866 "
+         "8868 "
+         "8870 "
+         "8876 "
+         "8722 "
+         "8720 "
+         "11676 "
+         "11674 "
+         "11672 "
+         "11670 "
+         "11668 "
+         "6480 "
+         "11666 "
+         "6484 "
+         "6488 "
+         "11664 "
+         "6236 "
+         "6222 "
+         "6498 "
+         "11660 "
+         "6504 "
+         "6508 "
+         "6514 "
+         "11656 "
+         "6518 "
+         "11654 "
+         "9836 "
+         "6522 "
+         "11652 "
+         "9854 "
+         "6532 "
+         "11650 "
+         "9862 "
+         "11648 "
+         "6542 "
+         "6546 "
+         "11644 "
+         "6552 "
+         "11642 "
+         "6560 "
+         "11640 "
+         "11638 "
+         "6570 "
+         "11636 "
+         "6574 "
+         "11632 "
+         "11630 "
+         "9954 "
+         "11626 "
+         "11624 "
+         "11622 "
+         "9974 "
+         "11620 "
+         "11618 "
+         "11616 "
+         "6576 "
+         "11610 "
+         "6566 "
+         "11602 "
+         "6556 "
+         "11596 "
+         "6548 "
+         "11584 "
+         "6530 "
+         "11570 "
+         "6160 "
+         "6510 "
+         "11564 "
+         "6500 "
+         "11558 "
+         "6492 "
+         "11550 "
+         "6162 "
+         "6482 "
+         "11544 "
+         "11538 "
+         "6164 "
+         "11530 "
+         "6166 "
+         "11524 "
+         "6168 "
+         "11510 "
+         "6172 "
+         "11504 "
+         "6176 "
+         "11496 "
+         "11490 "
+         "11484 "
+         "9168 "
+         "11476 "
+         "11462 "
+         "11456 "
+         "11448 "
+         "8488 "
+         "11434 "
+         "11404 "
+         "11390 "
+         "11376 "
+         "11360 "
+         "11346 "
+         "11330 "
+         "11300 "
+         "11284 "
+         "10134 "
+         "5322 "
+         "11254 "
+         "11240 "
+         "10136 "
+         "11224 "
+         "11210 "
+         "10138 "
+         "9174 "
+         "11180 "
+         "9178 "
+         "11166 "
+         "11150 "
+         "10142 "
+         "11134 "
+         "10144 "
+         "11120 "
+         "11104 "
+         "10146 "
+         "11088 "
+         "11072 "
+         "11060 "
+         "11048 "
+         "5344 "
+         "11036 "
+         "8102 "
+         "11024 "
+         "11010 "
+         "10998 "
+         "10986 "
+         "8098 "
+         "10972 "
+         "10960 "
+         "10946 "
+         "10934 "
+         "8094 "
+         "10148 "
+         "6336 "
+         "10910 "
+         "7618 "
+         "8442 "
+         "5366 "
+         "10900 "
+         "6334 "
+         "5364 "
+         "10890 "
+         "10880 "
+         "8086 "
+         "5360 "
+         "10870 "
+         "6330 "
+         "5358 "
+         "7612 "
+         "8444 "
+         "5356 "
+         "6328 "
+         "5354 "
+         "10840 "
+         "5352 "
+         "10830 "
+         "8076 "
+         "10820 "
+         "5348 "
+         "10810 "
+         "8072 "
+         "10800 "
+         "6808 "
+         "5346 "
+         "10790 "
+         "6810 "
+         "5342 "
+         "10780 "
+         "5340 "
+         "10770 "
+         "5338 "
+         "10760 "
+         "8068 "
+         "10748 "
+         "5332 "
+         "5330 "
+         "10728 "
+         "5328 "
+         "10716 "
+         "5326 "
+         "10706 "
+         "5324 "
+         "10696 "
+         "10684 "
+         "5318 "
+         "10674 "
+         "5316 "
+         "10662 "
+         "10648 "
+         "10612 "
+         "7588 "
+         "10594 "
+         "10578 "
+         "10558 "
+         "10540 "
+         "10522 "
+         "10504 "
+         "10484 "
+         "10466 "
+         "10446 "
+         "7590 "
+         "10408 "
+         "7440 "
+         "10388 "
+         "10366 "
+         "7442 "
+         "10346 "
+         "7592 "
+         "10326 "
+         "10284 "
+         "7594 "
+         "10262 "
+         "10240 "
+         "9910 "
+         "10218 "
+         "7596 "
+         "10196 "
+         "10174 "
+         "10080 "
+         "7834 "
+         "10140 "
+         "7598 "
+         "10098 "
+         "8482 "
+         "7600 "
+         "8478 "
+         "9964 "
+         "7602 "
+         "9870 "
+         "6396 "
+         "7604 "
+         "8472 "
+         "7606 "
+         "8468 "
+         "9608 "
+         "7608 "
+         "5314 "
+         "7610 "
+         "5312 "
+         "9526 "
+         "10078 "
+         "7614 "
+         "8462 "
+         "6928 "
+         "7620 "
+         "5310 "
+         "8180 "
+         "10076 "
+         "7624 "
+         "8186 "
+         "6942 "
+         "8458 "
+         "6950 "
+         "10074 "
+         "5306 "
+         "6958 "
+         "10072 "
+         "8452 "
+         "9278 "
+         "6978 "
+         "5302 "
+         "6986 "
+         "10070 "
+         "8448 "
+         "5300 "
+         "7000 "
+         "5298 "
+         "6994 "
+         "8446 "
+         "5296 "
+         "10066 "
+         "9904 "
+         "8450 "
+         "6966 "
+         "8454 "
+         "6952 "
+         "10064 "
+         "8456 "
+         "6936 "
+         "8460 "
+         "6922 "
+         "8464 "
+         "8466 "
+         "9890 "
+         "8470 "
+         "10060 "
+         "8474 "
+         "9884 "
+         "8476 "
+         "6344 "
+         "8480 "
+         "6342 "
+         "8484 "
+         "10056 "
+         "9650 "
+         "8486 "
+         "6340 "
+         "10054 "
+         "9648 "
+         "10052 "
+         "10050 "
+         "8874 "
+         "10048 "
+         "6392 "
+         "8840 "
+         "10046 "
+         "8824 "
+         "10044 "
+         "10042 "
+         "8750 "
+         "8752 "
+         "8754 "
+         "8760 "
+         "8762 "
+         "8766 "
+         "8768 "
+         "8772 "
+         "8774 "
+         "8776 "
+         "5268 "
+         "8784 "
+         "8788 "
+         "8790 "
+         "8792 "
+         "8796 "
+         "8798 "
+         "8800 "
+         "8804 "
+         "8806 "
+         "8812 "
+         "8814 "
+         "9878 "
+         "8490 "
+         "9880 "
+         "8492 "
+         "5294 "
+         "8864 "
+         "9882 "
+         "9888 "
+         "9894 "
+         "9898 "
+         "5292 "
+         "9054 "
+         "9198 "
+         "9908 "
+         "9912 "
+         "5290 "
+         "7450 "
+         "6178 "
+         "9202 "
+         "5286 "
+         "6438 "
+         "6180 "
+         "5284 "
+         "5280 "
+         "5278 "
+         "5276 "
+         "6406 "
+         "5274 "
+         "9914 "
+         "9552 "
+         "5270 "
+         "5266 "
+         "5264 "
+         "8516 "
+         "5262 "
+         "8270 "
+         "5256 "
+         "6204 "
+         "8508 "
+         "6208 "
+         "5250 "
+         "6210 "
+         "5248 "
+         "8502 "
+         "5246 "
+         "9846 "
+         "8276 "
+         "9874 "
+         "5240 "
+         "9902 "
+         "10038 "
+         "7836 "
+         "7948 "
+         "5238 "
+         "10036 "
+         "5234 "
+         "10034 "
+         "5232 "
+         "8280 "
+         "10030 "
+         "7822 "
+         "5230 "
+         "10032 "
+         "10028 "
+         "7818 "
+         "10062 "
+         "10026 "
+         "7950 "
+         "5224 "
+         "10092 "
+         "10022 "
+         "9300 "
+         "5222 "
+         "10122 "
+         "5220 "
+         "5216 "
+         "10182 "
+         "7952 "
+         "5214 "
+         "10210 "
+         "5212 "
+         "10238 "
+         "10266 "
+         "8494 "
+         "9304 "
+         "8496 "
+         "10018 "
+         "5206 "
+         "10330 "
+         "8498 "
+         "10016 "
+         "10362 "
+         "8500 "
+         "6364 "
+         "5204 "
+         "10394 "
+         "8504 "
+         "10014 "
+         "5202 "
+         "10426 "
+         "8506 "
+         "10012 "
+         "8510 "
+         "10486 "
+         "8512 "
+         "10516 "
+         "8514 "
+         "10008 "
+         "10546 "
+         "6218 "
+         "10574 "
+         "6388 "
+         "10004 "
+         "10630 "
+         "10006 "
+         "7528 "
+         "10658 "
+         "10688 "
+         "6400 "
+         "10718 "
+         "6228 "
+         "10746 "
+         "6230 "
+         "8612 "
+         "6410 "
+         "10804 "
+         "6414 "
+         "10832 "
+         "7524 "
+         "9350 "
+         "10860 "
+         "8624 "
+         "6424 "
+         "10912 "
+         "6428 "
+         "10940 "
+         "10964 "
+         "10990 "
+         "11016 "
+         "7520 "
+         "5200 "
+         "11044 "
+         "11070 "
+         "7518 "
+         "11096 "
+         "5198 "
+         "11122 "
+         "11148 "
+         "11172 "
+         "6252 "
+         "11196 "
+         "9034 "
+         "11222 "
+         "11246 "
+         "11268 "
+         "5194 "
+         "11292 "
+         "5190 "
+         "11338 "
+         "5188 "
+         "11362 "
+         "7510 "
+         "5184 "
+         "11384 "
+         "5182 "
+         "11406 "
+         "9046 "
+         "5180 "
+         "11428 "
+         "9732 "
+         "11450 "
+         "5174 "
+         "11472 "
+         "5172 "
+         "11514 "
+         "9048 "
+         "5166 "
+         "11534 "
+         "5164 "
+         "11556 "
+         "5162 "
+         "11576 "
+         "6478 "
+         "5152 "
+         "11594 "
+         "7502 "
+         "5140 "
+         "7500 "
+         "5128 "
+         "11628 "
+         "11646 "
+         "7496 "
+         "5102 "
+         "11662 "
+         "6474 "
+         "5090 "
+         "9746 "
+         "5078 "
+         "11696 "
+         "6472 "
+         "5064 "
+         "11712 "
+         "5052 "
+         "11730 "
+         "5038 "
+         "11746 "
+         "6470 "
+         "5026 "
+         "11762 "
+         "5012 "
+         "11778 "
+         "8532 "
+         "11792 "
+         "4988 "
+         "11806 "
+         "8204 "
+         "6246 "
+         "9754 "
+         "6466 "
+         "4978 "
+         "11820 "
+         "9448 "
+         "4966 "
+         "11834 "
+         "8206 "
+         "6256 "
+         "8530 "
+         "4954 "
+         "11846 "
+         "6464 "
+         "4944 "
+         "11860 "
+         "8210 "
+         "4932 "
+         "11874 "
+         "6462 "
+         "9446 "
+         "4920 "
+         "11886 "
+         "9760 "
+         "4908 "
+         "11900 "
+         "8528 "
+         "4896 "
+         "11912 "
+         "4884 "
+         "11926 "
+         "11938 "
+         "6458 "
+         "4860 "
+         "11950 "
+         "8284 "
+         "9254 "
+         "4856 "
+         "11960 "
+         "8526 "
+         "6456 "
+         "10002 "
+         "4854 "
+         "11970 "
+         "4852 "
+         "11978 "
+         "6454 "
+         "11986 "
+         "8652 "
+         "11996 "
+         "8290 "
+         "4848 "
+         "12004 "
+         "6452 "
+         "9442 "
+         "4846 "
+         "12012 "
+         "4844 "
+         "12022 "
+         "10000 "
+         "12030 "
+         "8294 "
+         "12038 "
+         "6448 "
+         "4840 "
+         "12048 "
+         "4838 "
+         "4842 "
+         "12064 "
+         "4872 "
+         "12072 "
+         "9998 "
+         "6446 "
+         "4930 "
+         "12088 "
+         "4958 "
+         "12096 "
+         "9646 "
+         "9996 "
+         "4986 "
+         "5014 "
+         "12114 "
+         "5040 "
+         "12122 "
+         "8518 "
+         "5066 "
+         "12130 "
+         "5092 "
+         "12138 "
+         "8648 "
+         "5118 "
+         "12146 "
+         "8644 "
+         "5144 "
+         "12154 "
+         "5170 "
+         "12162 "
+         "5196 "
+         "12178 "
+         "12196 "
+         "6444 "
+         "5254 "
+         "12216 "
+         "8520 "
+         "5282 "
+         "5308 "
+         "12254 "
+         "5336 "
+         "12272 "
+         "5362 "
+         "12290 "
+         "5388 "
+         "12310 "
+         "8522 "
+         "5414 "
+         "12328 "
+         "5440 "
+         "12344 "
+         "5464 "
+         "12362 "
+         "5488 "
+         "12380 "
+         "5514 "
+         "12396 "
+         "5536 "
+         "12410 "
+         "5560 "
+         "5584 "
+         "12438 "
+         "5606 "
+         "12450 "
+         "5628 "
+         "12464 "
+         "5652 "
+         "12478 "
+         "5674 "
+         "12490 "
+         "5694 "
+         "12504 "
+         "5716 "
+         "5738 "
+         "12530 "
+         "12542 "
+         "5778 "
+         "12554 "
+         "8214 "
+         "8524 "
+         "6440 "
+         "6436 "
+         "5822 "
+         "12572 "
+         "8220 "
+         "6434 "
+         "12580 "
+         "7708 "
+         "6430 "
+         "5862 "
+         "12588 "
+         "7446 "
+         "6426 "
+         "12596 "
+         "7706 "
+         "6422 "
+         "5902 "
+         "6420 "
+         "6216 "
+         "6416 "
+         "5942 "
+         "12620 "
+         "8618 "
+         "6412 "
+         "9106 "
+         "5962 "
+         "12628 "
+         "7702 "
+         "6408 "
+         "9110 "
+         "5980 "
+         "12636 "
+         "6170 "
+         "6404 "
+         "6000 "
+         "12652 "
+         "6398 "
+         "6034 "
+         "12658 "
+         "6394 "
+         "6036 "
+         "12662 "
+         "6390 "
+         "6038 "
+         "12664 "
+         "6386 "
+         "6040 "
+         "6042 "
+         "12668 "
+         "6046 "
+         "8266 "
+         "7690 "
+         "6048 "
+         "12674 "
+         "7368 "
+         "6050 "
+         "6368 "
+         "6052 "
+         "12678 "
+         "9644 "
+         "6054 "
+         "12684 "
+         "6358 "
+         "12686 "
+         "6124 "
+         "7680 "
+         "12690 "
+         "8262 "
+         "6062 "
+         "9244 "
+         "12694 "
+         "7370 "
+         "12696 "
+         "9642 "
+         "6348 "
+         "12700 "
+         "8258 "
+         "6058 "
+         "7372 "
+         "6060 "
+         "7374 "
+         "9640 "
+         "6064 "
+         "6354 "
+         "6066 "
+         "6356 "
+         "7670 "
+         "6072 "
+         "8336 "
+         "6362 "
+         "6078 "
+         "6370 "
+         "6080 "
+         "9638 "
+         "6372 "
+         "6376 "
+         "6086 "
+         "6378 "
+         "6088 "
+         "6382 "
+         "12702 "
+         "9994 "
+         "12698 "
+         "6380 "
+         "9232 "
+         "6102 "
+         "12692 "
+         "8344 "
+         "6374 "
+         "9992 "
+         "6106 "
+         "12688 "
+         "6894 "
+         "9226 "
+         "12682 "
+         "6360 "
+         "9990 "
+         "12676 "
+         "6352 "
+         "9988 "
+         "9222 "
+         "6122 "
+         "12672 "
+         "6346 "
+         "6128 "
+         "12666 "
+         "6338 "
+         "9986 "
+         "9216 "
+         "6134 "
+         "12660 "
+         "9984 "
+         "6138 "
+         "12654 "
+         "12650 "
+         "9208 "
+         "12644 "
+         "12638 "
+         "12632 "
+         "8256 "
+         "8718 "
+         "9978 "
+         "6158 "
+         "12622 "
+         "9976 "
+         "6156 "
+         "12612 "
+         "6836 "
+         "9972 "
+         "9192 "
+         "12604 "
+         "9970 "
+         "12594 "
+         "9968 "
+         "9184 "
+         "12584 "
+         "9966 "
+         "12574 "
+         "9018 "
+         "9962 "
+         "12564 "
+         "8006 "
+         "9960 "
+         "12556 "
+         "8950 "
+         "8004 "
+         "9958 "
+         "12546 "
+         "9956 "
+         "12536 "
+         "8578 "
+         "9952 "
+         "12526 "
+         "8572 "
+         "7998 "
+         "6142 "
+         "12516 "
+         "12506 "
+         "6144 "
+         "12496 "
+         "8252 "
+         "8350 "
+         "12486 "
+         "8250 "
+         "7434 "
+         "12476 "
+         "9112 "
+         "12466 "
+         "8248 "
+         "9104 "
+         "6148 "
+         "12456 "
+         "12444 "
+         "8244 "
+         "8358 "
+         "6150 "
+         "12434 "
+         "8242 "
+         "7430 "
+         "12424 "
+         "8240 "
+         "6152 "
+         "12414 "
+         "7428 "
+         "9060 "
+         "12402 "
+         "12392 "
+         "8236 "
+         "6154 "
+         "12378 "
+         "7424 "
+         "6146 "
+         "12356 "
+         "8234 "
+         "6140 "
+         "12332 "
+         "7422 "
+         "9036 "
+         "6132 "
+         "12308 "
+         "7710 "
+         "6126 "
+         "12284 "
+         "8230 "
+         "8368 "
+         "9030 "
+         "6118 "
+         "12260 "
+         "9028 "
+         "6112 "
+         "12236 "
+         "8228 "
+         "7416 "
+         "9024 "
+         "6104 "
+         "12210 "
+         "9022 "
+         "6096 "
+         "12184 "
+         "8226 "
+         "7412 "
+         "7712 "
+         "6090 "
+         "12158 "
+         "8366 "
+         "9016 "
+         "6082 "
+         "12132 "
+         "6074 "
+         "12106 "
+         "7408 "
+         "6068 "
+         "12080 "
+         "8222 "
+         "7714 "
+         "6056 "
+         "12056 "
+         "8218 "
+         "6816 "
+         "6044 "
+         "12034 "
+         "8212 "
+         "6030 "
+         "12010 "
+         "6018 "
+         "11988 "
+         "8202 "
+         "9352 "
+         "6004 "
+         "11964 "
+         "8198 "
+         "9354 "
+         "5990 "
+         "11940 "
+         "7718 "
+         "9356 "
+         "5978 "
+         "11916 "
+         "8188 "
+         "9358 "
+         "5964 "
+         "11892 "
+         "8182 "
+         "7720 "
+         "9360 "
+         "5950 "
+         "11866 "
+         "8178 "
+         "5936 "
+         "11842 "
+         "7406 "
+         "5922 "
+         "11816 "
+         "7722 "
+         "5908 "
+         "11790 "
+         "6812 "
+         "8364 "
+         "5894 "
+         "11766 "
+         "6814 "
+         "8362 "
+         "5882 "
+         "11744 "
+         "8360 "
+         "7724 "
+         "5868 "
+         "11722 "
+         "8356 "
+         "8558 "
+         "5854 "
+         "11702 "
+         "8354 "
+         "7726 "
+         "5842 "
+         "11680 "
+         "8142 "
+         "8352 "
+         "5828 "
+         "11658 "
+         "8348 "
+         "7728 "
+         "8550 "
+         "5814 "
+         "11634 "
+         "8346 "
+         "6264 "
+         "5800 "
+         "11612 "
+         "8342 "
+         "5786 "
+         "11590 "
+         "8128 "
+         "8340 "
+         "7730 "
+         "6244 "
+         "5772 "
+         "11566 "
+         "8338 "
+         "5758 "
+         "11542 "
+         "8334 "
+         "5744 "
+         "11518 "
+         "6910 "
+         "8536 "
+         "5728 "
+         "11494 "
+         "7400 "
+         "8934 "
+         "7734 "
+         "5704 "
+         "11470 "
+         "8534 "
+         "5678 "
+         "11444 "
+         "8538 "
+         "5650 "
+         "11420 "
+         "7396 "
+         "7738 "
+         "8540 "
+         "9398 "
+         "5622 "
+         "11394 "
+         "7740 "
+         "8544 "
+         "5592 "
+         "11368 "
+         "8546 "
+         "5564 "
+         "11342 "
+         "8548 "
+         "9402 "
+         "5534 "
+         "11316 "
+         "8920 "
+         "8552 "
+         "5504 "
+         "11288 "
+         "7390 "
+         "8554 "
+         "5474 "
+         "11262 "
+         "7388 "
+         "8556 "
+         "5442 "
+         "11234 "
+         "8560 "
+         "5410 "
+         "11204 "
+         "5378 "
+         "11176 "
+         "5350 "
+         "11146 "
+         "8060 "
+         "7996 "
+         "5334 "
+         "11116 "
+         "5320 "
+         "11084 "
+         "8058 "
+         "6214 "
+         "7994 "
+         "5304 "
+         "11054 "
+         "6224 "
+         "5288 "
+         "11020 "
+         "8566 "
+         "6232 "
+         "7992 "
+         "5272 "
+         "10988 "
+         "6242 "
+         "5258 "
+         "10954 "
+         "8054 "
+         "6250 "
+         "7990 "
+         "5242 "
+         "10920 "
+         "8052 "
+         "6260 "
+         "5226 "
+         "10886 "
+         "8150 "
+         "7988 "
+         "5208 "
+         "10850 "
+         "5192 "
+         "10814 "
+         "5176 "
+         "10776 "
+         "7986 "
+         "5160 "
+         "10738 "
+         "8562 "
+         "5138 "
+         "10704 "
+         "8564 "
+         "7984 "
+         "5116 "
+         "10670 "
+         "8332 "
+         "8568 "
+         "5094 "
+         "10636 "
+         "8878 "
+         "7660 "
+         "8570 "
+         "7982 "
+         "5070 "
+         "10602 "
+         "8574 "
+         "5048 "
+         "10566 "
+         "8330 "
+         "8576 "
+         "5024 "
+         "10530 "
+         "8580 "
+         "7980 "
+         "5000 "
+         "10494 "
+         "8880 "
+         "4976 "
+         "10456 "
+         "7978 "
+         "4952 "
+         "10416 "
+         "4928 "
+         "10378 "
+         "7976 "
+         "4902 "
+         "10338 "
+         "4876 "
+         "10296 "
+         "8174 "
+         "4850 "
+         "10258 "
+         "7704 "
+         "4822 "
+         "10232 "
+         "8172 "
+         "4792 "
+         "10206 "
+         "4762 "
+         "10180 "
+         "7696 "
+         "8610 "
+         "4730 "
+         "10152 "
+         "7694 "
+         "8614 "
+         "7974 "
+         "4700 "
+         "10124 "
+         "8168 "
+         "7692 "
+         "8616 "
+         "4668 "
+         "9392 "
+         "7688 "
+         "8620 "
+         "4634 "
+         "10068 "
+         "8166 "
+         "8884 "
+         "7686 "
+         "8622 "
+         "4602 "
+         "10040 "
+         "8164 "
+         "8626 "
+         "4568 "
+         "10010 "
+         "7682 "
+         "4534 "
+         "9980 "
+         "7678 "
+         "8632 "
+         "4498 "
+         "9950 "
+         "7676 "
+         "4462 "
+         "9918 "
+         "8160 "
+         "7380 "
+         "7674 "
+         "4426 "
+         "9892 "
+         "8156 "
+         "7672 "
+         "7972 "
+         "4388 "
+         "9868 "
+         "4350 "
+         "9842 "
+         "8152 "
+         "7666 "
+         "4312 "
+         "7664 "
+         "7970 "
+         "4272 "
+         "8146 "
+         "7662 "
+         "8708 "
+         "4232 "
+         "8888 "
+         "4190 "
+         "9738 "
+         "7656 "
+         "7968 "
+         "4146 "
+         "8138 "
+         "7382 "
+         "7654 "
+         "4102 "
+         "8136 "
+         "7652 "
+         "4058 "
+         "8132 "
+         "7648 "
+         "7966 "
+         "4012 "
+         "8890 "
+         "7646 "
+         "3964 "
+         "8126 "
+         "7384 "
+         "3928 "
+         "6824 "
+         "3926 "
+         "7392 "
+         "9612 "
+         "7804 "
+         "7964 "
+         "9652 "
+         "3922 "
+         "8892 "
+         "9506 "
+         "3918 "
+         "7404 "
+         "3914 "
+         "9386 "
+         "8690 "
+         "3912 "
+         "9444 "
+         "7414 "
+         "8894 "
+         "3908 "
+         "8122 "
+         "7420 "
+         "9656 "
+         "3904 "
+         "6882 "
+         "7788 "
+         "3900 "
+         "7432 "
+         "7962 "
+         "9658 "
+         "3898 "
+         "7438 "
+         "8896 "
+         "3894 "
+         "9308 "
+         "3890 "
+         "7448 "
+         "9382 "
+         "9660 "
+         "9014 "
+         "3886 "
+         "8328 "
+         "7454 "
+         "3870 "
+         "8118 "
+         "6932 "
+         "8326 "
+         "7456 "
+         "7776 "
+         "9662 "
+         "9026 "
+         "3852 "
+         "9204 "
+         "8682 "
+         "3834 "
+         "6948 "
+         "8324 "
+         "8898 "
+         "8686 "
+         "7784 "
+         "9664 "
+         "9038 "
+         "3814 "
+         "8322 "
+         "7458 "
+         "8008 "
+         "7790 "
+         "3796 "
+         "6964 "
+         "8320 "
+         "7794 "
+         "9050 "
+         "3776 "
+         "8114 "
+         "8694 "
+         "7798 "
+         "9666 "
+         "9056 "
+         "3758 "
+         "6980 "
+         "8318 "
+         "8698 "
+         "7802 "
+         "9062 "
+         "3738 "
+         "8316 "
+         "7462 "
+         "7808 "
+         "9668 "
+         "3718 "
+         "9032 "
+         "8112 "
+         "6996 "
+         "8704 "
+         "3698 "
+         "8314 "
+         "7464 "
+         "7816 "
+         "3676 "
+         "7010 "
+         "8312 "
+         "9670 "
+         "3656 "
+         "8310 "
+         "8712 "
+         "3638 "
+         "7018 "
+         "7466 "
+         "9616 "
+         "9672 "
+         "3628 "
+         "8104 "
+         "7004 "
+         "8636 "
+         "9674 "
+         "9102 "
+         "3618 "
+         "6988 "
+         "8308 "
+         "8900 "
+         "9676 "
+         "3606 "
+         "8886 "
+         "8096 "
+         "6972 "
+         "9678 "
+         "3596 "
+         "8872 "
+         "8092 "
+         "6956 "
+         "7470 "
+         "9622 "
+         "9680 "
+         "3586 "
+         "8856 "
+         "8088 "
+         "6940 "
+         "9682 "
+         "3574 "
+         "8842 "
+         "8084 "
+         "6924 "
+         "9626 "
+         "9684 "
+         "3564 "
+         "8826 "
+         "8080 "
+         "6908 "
+         "7472 "
+         "9686 "
+         "3552 "
+         "8810 "
+         "8078 "
+         "7830 "
+         "9688 "
+         "3542 "
+         "8794 "
+         "7474 "
+         "9632 "
+         "9690 "
+         "3530 "
+         "8780 "
+         "8070 "
+         "9692 "
+         "3518 "
+         "8764 "
+         "8066 "
+         "9694 "
+         "3508 "
+         "9636 "
+         "8902 "
+         "8716 "
+         "7832 "
+         "9696 "
+         "9166 "
+         "3496 "
+         "8744 "
+         "7478 "
+         "9634 "
+         "8714 "
+         "7828 "
+         "9172 "
+         "3484 "
+         "9630 "
+         "8710 "
+         "7824 "
+         "9114 "
+         "9700 "
+         "3474 "
+         "6842 "
+         "7480 "
+         "9628 "
+         "8904 "
+         "8706 "
+         "7820 "
+         "9702 "
+         "9182 "
+         "3462 "
+         "7482 "
+         "9624 "
+         "8702 "
+         "7814 "
+         "9100 "
+         "9920 "
+         "9704 "
+         "9188 "
+         "3450 "
+         "6858 "
+         "9620 "
+         "9376 "
+         "8700 "
+         "7810 "
+         "7960 "
+         "9706 "
+         "9194 "
+         "3438 "
+         "9618 "
+         "8696 "
+         "7806 "
+         "9708 "
+         "3426 "
+         "8746 "
+         "7486 "
+         "9614 "
+         "8692 "
+         "7800 "
+         "9710 "
+         "3414 "
+         "8908 "
+         "8688 "
+         "9712 "
+         "9212 "
+         "3402 "
+         "6888 "
+         "9606 "
+         "8684 "
+         "7792 "
+         "9066 "
+         "9714 "
+         "9218 "
+         "3390 "
+         "9604 "
+         "8680 "
+         "7786 "
+         "8640 "
+         "9058 "
+         "9922 "
+         "9716 "
+         "3378 "
+         "7490 "
+         "9600 "
+         "8910 "
+         "7782 "
+         "9052 "
+         "9718 "
+         "3366 "
+         "8748 "
+         "8062 "
+         "6912 "
+         "9596 "
+         "7778 "
+         "9044 "
+         "9720 "
+         "9236 "
+         "3356 "
+         "8758 "
+         "7494 "
+         "9594 "
+         "9240 "
+         "3352 "
+         "8782 "
+         "9592 "
+         "9246 "
+         "3350 "
+         "8808 "
+         "7504 "
+         "9590 "
+         "8912 "
+         "9722 "
+         "3346 "
+         "8834 "
+         "7508 "
+         "9588 "
+         "9258 "
+         "3342 "
+         "8858 "
+         "7512 "
+         "9584 "
+         "9264 "
+         "8882 "
+         "9098 "
+         "7516 "
+         "9582 "
+         "7958 "
+         "9270 "
+         "8906 "
+         "9580 "
+         "9724 "
+         "9274 "
+         "6918 "
+         "7526 "
+         "9578 "
+         "8914 "
+         "9280 "
+         "9576 "
+         "7534 "
+         "9574 "
+         "9726 "
+         "9572 "
+         "9298 "
+         "9020 "
+         "9096 "
+         "7544 "
+         "9570 "
+         "9042 "
+         "6920 "
+         "9568 "
+         "8916 "
+         "6326 "
+         "9040 "
+         "9064 "
+         "6914 "
+         "8918 "
+         "6324 "
+         "9310 "
+         "8300 "
+         "8922 "
+         "9314 "
+         "9108 "
+         "8924 "
+         "6322 "
+         "9926 "
+         "3298 "
+         "8926 "
+         "6320 "
+         "9320 "
+         "8928 "
+         "6318 "
+         "7956 "
+         "8930 "
+         "6316 "
+         "6864 "
+         "8932 "
+         "9774 "
+         "3282 "
+         "8936 "
+         "3278 "
+         "9230 "
+         "8938 "
+         "6312 "
+         "9250 "
+         "8940 "
+         "6310 "
+         "9268 "
+         "6830 "
+         "8942 "
+         "6308 "
+         "9768 "
+         "9288 "
+         "8944 "
+         "9348 "
+         "9318 "
+         "6818 "
+         "9566 "
+         "8946 "
+         "8948 "
+         "7772 "
+         "6306 "
+         "9346 "
+         "3254 "
+         "9372 "
+         "8952 "
+         "8954 "
+         "9410 "
+         "9928 "
+         "9344 "
+         "6848 "
+         "8956 "
+         "9564 "
+         "8958 "
+         "9342 "
+         "3242 "
+         "9610 "
+         "8960 "
+         "9654 "
+         "6870 "
+         "8962 "
+         "9412 "
+         "9340 "
+         "3236 "
+         "9698 "
+         "6876 "
+         "8964 "
+         "7770 "
+         "3232 "
+         "8966 "
+         "9338 "
+         "9562 "
+         "9414 "
+         "9336 "
+         "9860 "
+         "7954 "
+         "9930 "
+         "9728 "
+         "9900 "
+         "6906 "
+         "7768 "
+         "9730 "
+         "9334 "
+         "8976 "
+         "7626 "
+         "9734 "
+         "3222 "
+         "9982 "
+         "8656 "
+         "6304 "
+         "9932 "
+         "9736 "
+         "9332 "
+         "10020 "
+         "6904 "
+         "9740 "
+         "10058 "
+         "9094 "
+         "8306 "
+         "8050 "
+         "8980 "
+         "7628 "
+         "7766 "
+         "9742 "
+         "9330 "
+         "10096 "
+         "6902 "
+         "8660 "
+         "9782 "
+         "9744 "
+         "3224 "
+         "10132 "
+         "9748 "
+         "9328 "
+         "10168 "
+         "9788 "
+         "9936 "
+         "9750 "
+         "10202 "
+         "6900 "
+         "9560 "
+         "8986 "
+         "9752 "
+         "9326 "
+         "10236 "
+         "8664 "
+         "9756 "
+         "3226 "
+         "10270 "
+         "6898 "
+         "9938 "
+         "9758 "
+         "9324 "
+         "3228 "
+         "10304 "
+         "9092 "
+         "8304 "
+         "8992 "
+         "9762 "
+         "9322 "
+         "3230 "
+         "6896 "
+         "8302 "
+         "8968 "
+         "7548 "
+         "9558 "
+         "8048 "
+         "7762 "
+         "6302 "
+         "9804 "
+         "9764 "
+         "9316 "
+         "3234 "
+         "6892 "
+         "8298 "
+         "9556 "
+         "8668 "
+         "9766 "
+         "9312 "
+         "3238 "
+         "9090 "
+         "6890 "
+         "8296 "
+         "9554 "
+         "8996 "
+         "9770 "
+         "9306 "
+         "3244 "
+         "6886 "
+         "8292 "
+         "7550 "
+         "9550 "
+         "6300 "
+         "9772 "
+         "9302 "
+         "3248 "
+         "6884 "
+         "8288 "
+         "9548 "
+         "8044 "
+         "9416 "
+         "9940 "
+         "9776 "
+         "9296 "
+         "3252 "
+         "9088 "
+         "6880 "
+         "8286 "
+         "9546 "
+         "7760 "
+         "9778 "
+         "9292 "
+         "3258 "
+         "6878 "
+         "8282 "
+         "9544 "
+         "9002 "
+         "8672 "
+         "6298 "
+         "9780 "
+         "9286 "
+         "3262 "
+         "6874 "
+         "8278 "
+         "8970 "
+         "9542 "
+         "8042 "
+         "9784 "
+         "9282 "
+         "9086 "
+         "6872 "
+         "8274 "
+         "9540 "
+         "6296 "
+         "9786 "
+         "9276 "
+         "3272 "
+         "6868 "
+         "8272 "
+         "7554 "
+         "9536 "
+         "8040 "
+         "7758 "
+         "9272 "
+         "3276 "
+         "6866 "
+         "8268 "
+         "9534 "
+         "9008 "
+         "8676 "
+         "9824 "
+         "9266 "
+         "9084 "
+         "6862 "
+         "8264 "
+         "9532 "
+         "9260 "
+         "3286 "
+         "10324 "
+         "6860 "
+         "8260 "
+         "8972 "
+         "7556 "
+         "9530 "
+         "8678 "
+         "6292 "
+         "9256 "
+         "3288 "
+         "8582 "
+         "6856 "
+         "8254 "
+         "8974 "
+         "9528 "
+         "8036 "
+         "8674 "
+         "9418 "
+         "9252 "
+         "3292 "
+         "6852 "
+         "8246 "
+         "8978 "
+         "7558 "
+         "9524 "
+         "8034 "
+         "8670 "
+         "7756 "
+         "6290 "
+         "9420 "
+         "9942 "
+         "9248 "
+         "9082 "
+         "6850 "
+         "8238 "
+         "8982 "
+         "9522 "
+         "8032 "
+         "8666 "
+         "6288 "
+         "9422 "
+         "9242 "
+         "3296 "
+         "6846 "
+         "8232 "
+         "8984 "
+         "9520 "
+         "8030 "
+         "8662 "
+         "6286 "
+         "9424 "
+         "9238 "
+         "6844 "
+         "8224 "
+         "8988 "
+         "7562 "
+         "9518 "
+         "8658 "
+         "6284 "
+         "9426 "
+         "9234 "
+         "3302 "
+         "6840 "
+         "8216 "
+         "8990 "
+         "9514 "
+         "9362 "
+         "8654 "
+         "6282 "
+         "9428 "
+         "9228 "
+         "6838 "
+         "8208 "
+         "8994 "
+         "7564 "
+         "9512 "
+         "8026 "
+         "8650 "
+         "7754 "
+         "6280 "
+         "9430 "
+         "9224 "
+         "3308 "
+         "9080 "
+         "6834 "
+         "8200 "
+         "8998 "
+         "7566 "
+         "9510 "
+         "8024 "
+         "8646 "
+         "6278 "
+         "9432 "
+         "9220 "
+         "6832 "
+         "8192 "
+         "9000 "
+         "9508 "
+         "8642 "
+         "9796 "
+         "9214 "
+         "3314 "
+         "6828 "
+         "8184 "
+         "9004 "
+         "9504 "
+         "8022 "
+         "8638 "
+         "9434 "
+         "9210 "
+         "6826 "
+         "8176 "
+         "9006 "
+         "9502 "
+         "8634 "
+         "6274 "
+         "9436 "
+         "9206 "
+         "3318 "
+         "8584 "
+         "6822 "
+         "8170 "
+         "9010 "
+         "7570 "
+         "9500 "
+         "8630 "
+         "7752 "
+         "6272 "
+         "9438 "
+         "9200 "
+         "8162 "
+         "9498 "
+         "8018 "
+         "6268 "
+         "9196 "
+         "8586 "
+         "9078 "
+         "8158 "
+         "9496 "
+         "6262 "
+         "9190 "
+         "3324 "
+         "8154 "
+         "7750 "
+         "6254 "
+         "9794 "
+         "9186 "
+         "8588 "
+         "8148 "
+         "9494 "
+         "8016 "
+         "9364 "
+         "6248 "
+         "9180 "
+         "8144 "
+         "6240 "
+         "9830 "
+         "9176 "
+         "7890 "
+         "8590 "
+         "8140 "
+         "7572 "
+         "9492 "
+         "6234 "
+         "9170 "
+         "3330 "
+         "8134 "
+         "9490 "
+         "8014 "
+         "6226 "
+         "9164 "
+         "8592 "
+         "8130 "
+         "7746 "
+         "9076 "
+         "8124 "
+         "9488 "
+         "6212 "
+         "9946 "
+         "3336 "
+         "8594 "
+         "8120 "
+         "9486 "
+         "8012 "
+         "9366 "
+         "6206 "
+         "9792 "
+         "8116 "
+         "7744 "
+         "8596 "
+         "9484 "
+         "7892 "
+         "3340 "
+         "6820 "
+         "9012 "
+         "7574 "
+         "9368 "
+         "7630 "
+         "8628 "
+         "9440 "
+         "3338 "
+         "8598 "
+         "7568 "
+         "9370 "
+         "3334 "
+         "9074 "
+         "7560 "
+         "9374 "
+         "7632 "
+         "3332 "
+         "8106 "
+         "7552 "
+         "9378 "
+         "7634 "
+         "3328 "
+         "8600 "
+         "7546 "
+         "9380 "
+         "3326 "
+         "7538 "
+         "9384 "
+         "7636 "
+         "3322 "
+         "8602 "
+         "7530 "
+         "9388 "
+         "3320 "
+         "7522 "
+         "9482 "
+         "9390 "
+         "7638 "
+         "3316 "
+         "7514 "
+         "9394 "
+         "3312 "
+         "7506 "
+         "9396 "
+         "7640 "
+         "3310 "
+         "7498 "
+         "9400 "
+         "3306 "
+         "7492 "
+         "9404 "
+         "7642 "
+         "3304 "
+         "8110 "
+         "7484 "
+         "9406 "
+         "7644 "
+         "7742 "
+         "6182 "
+         "9948 "
+         "9162 "
+         "3300 "
+         "8108 "
+         "7476 "
+         "9480 "
+         "7650 "
+         "6184 "
+         "9944 "
+         "9160 "
+         "3294 "
+         "8100 "
+         "7468 "
+         "9478 "
+         "7668 "
+         "9822 "
+         "9934 "
+         "9158 "
+         "3290 "
+         "8090 "
+         "7460 "
+         "9476 "
+         "7684 "
+         "6186 "
+         "9820 "
+         "9924 "
+         "9156 "
+         "3284 "
+         "8082 "
+         "7452 "
+         "9474 "
+         "7700 "
+         "6188 "
+         "9818 "
+         "9916 "
+         "9154 "
+         "3280 "
+         "8074 "
+         "9472 "
+         "7716 "
+         "6190 "
+         "9816 "
+         "9906 "
+         "9152 "
+         "3274 "
+         "8064 "
+         "7436 "
+         "9470 "
+         "7732 "
+         "6192 "
+         "9814 "
+         "9896 "
+         "9150 "
+         "3270 "
+         "8056 "
+         "7426 "
+         "9468 "
+         "7748 "
+         "9812 "
+         "9886 "
+         "9148 "
+         "3266 "
+         "8046 "
+         "7418 "
+         "9466 "
+         "7764 "
+         "6194 "
+         "9810 "
+         "9876 "
+         "3260 "
+         "8038 "
+         "7410 "
+         "9464 "
+         "7780 "
+         "6196 "
+         "9808 "
+         "9866 "
+         "9146 "
+         "3256 "
+         "8028 "
+         "7402 "
+         "9462 "
+         "7796 "
+         "6198 "
+         "9806 "
+         "9858 "
+         "9144 "
+         "3250 "
+         "8020 "
+         "7394 "
+         "9460 "
+         "6200 "
+         "9802 "
+         "9848 "
+         "9142 "
+         "3246 "
+         "8010 "
+         "7386 "
+         "9458 "
+         "7826 "
+         "9800 "
+         "9838 "
+         "9140 "
+         "8002 "
+         "7378 "
+         "9408 "
+         "7842 "
+         "6202 "
+         "9828 "
+         "9790 "
+         "9138 "
+         "6220 "
+         "9136 "
+         "6238 "
+         "9134 "
+         "7914 "
+         "6258 "
+         "9132 "
+         "9068 "
+         "6276 "
+         "9130 "
+         "6294 "
+         "9128 "
+         "6314 "
+         "9126 "
+         "7912 "
+         "9456 "
+         "6332 "
+         "9124 "
+         "6350 "
+         "9122 "
+         "6366 "
+         "8608 "
+         "6384 "
+         "9120 "
+         "7910 "
+         "6402 "
+         "9118 "
+         "3240 "
+         "8000 "
+         "7376 "
+         "7844 "
+         "6418 "
+         "9798 "
+         "9826 "
+         "6432 "
+         "7908 "
+         "6442 "
+         "6450 "
+         "7906 "
+         "6460 "
+         "6468 "
+         "6476 "
+         "7904 "
+         "6486 "
+         "6494 "
+         "6502 "
+         "7902 "
+         "6512 "
+         "6520 "
+         "7900 "
+         "6528 "
+         "9116 "
+         "6706 "
+         "6536 "
+         "9070 "
+         "6704 "
+         "6702 "
+         "9454 "
+         "6538 "
+         "6700 "
+         "8606 "
+         "6698 "
+         "6696 "
+         "6694 "
+         "6692 "
+         "9072 "
+         "7894 "
+         "6690 "
+         "6688 "
+         "6686 "
+         "6684 "
+         "7896 "
+         "6682 "
+         "7898 "
+         "8604 "
+         "7884 "
+         "6680 "
+         "7848 "
+         "7812 "
+         "7774 "
+         "7736 "
+         "6678 "
+         "7698 "
+         "7658 "
+         "7616 "
+         "7576 "
+         "6676 "
+         "7532 "
+         "7488 "
+         "7444 "
+         "6674 "
+         "7398 "
+         "6672 "
+         "7350 "
+         "7302 "
+         "7252 "
+         "7200 "
+         "7148 "
+         "7092 "
+         "7036 "
+         "6976 "
+         "6916 "
+         "6854 "
+         "6788 "
+         "6720 "))))
+     (:add-slots ((:input-mode :lines-cols)))))
+   (:id 11))
+  (:box
+   (:type :function)
+   (:reference flat)
+   (:group-id nil)
+   (:name "flat")
+   (:x 168)
+   (:y 146)
+   (:w 70)
+   (:h 36)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "LST")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 12))
+  (:box
+   (:library "OM-JI")
+   (:type :function)
+   (:reference cps)
+   (:group-id nil)
+   (:name "cps")
+   (:x 681)
+   (:y 264)
+   (:w 120)
+   (:h 36)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "NOTES")
+     (:value (:list 1 3 5 7 9 11))
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "QUANTIDADE")
+     (:value 3)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 13))
+  (:box
+   (:type :value)
+   (:reference fixnum)
+   (:group-id nil)
+   (:name "value box")
+   (:x 778)
+   (:y 204)
+   (:w 32)
+   (:h 41)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :left)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value 2)
+   (:id 14))
+  (:box
+   (:type :function)
+   (:reference file-chooser)
+   (:group-id nil)
+   (:name "file-chooser")
+   (:x 44)
+   (:y 23)
+   (:w 143)
+   (:h 36)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock :locked)
+   (:lambda nil)
+   (:inputs)
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 15))
+  (:box
+   (:library "OM-Sieves")
+   (:type :function)
+   (:reference s-union-l)
+   (:group-id nil)
+   (:name "s-union-l")
+   (:x 787)
+   (:y 587)
+   (:w 117)
+   (:h 36)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value (:list (:list 19 16 64) (:list 11 16 64)))
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 16))
+  (:box
+   (:type :value)
+   (:reference cons)
+   (:group-id nil)
+   (:name "value box")
+   (:x 725)
+   (:y 550)
+   (:w 240)
+   (:h 38)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :left)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value (:list (:list 11 32 512) (:list 19 32 512)))
+   (:id 17))
+  (:box
+   (:library "OM-Sieves")
+   (:type :function)
+   (:reference revel-sieve)
+   (:group-id nil)
+   (:name "revel-sieve")
+   (:x 777)
+   (:y 624)
+   (:w 137)
+   (:h 36)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "SELF")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 18))
+  (:box
+   (:library "OM-JI")
+   (:type :function)
+   (:reference interval-sob)
+   (:group-id nil)
+   (:name "interval-sob")
+   (:x 690)
+   (:y 696)
+   (:w 146)
+   (:h 36)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "RATIO")
+     (:value 11/8)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "SIEVE")
+     (:value (:list 2 3 7 11 12))
+     (:reactive nil)))
+   (:outputs
+    (:output (:name "out0") (:reactive nil))
+    (:output (:name "out1") (:reactive nil)))
+   (:id 19))
+  (:box
+   (:type :value)
+   (:reference ratio)
+   (:group-id nil)
+   (:name "value box")
+   (:x 642)
+   (:y 643)
+   (:w 114)
+   (:h 38)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :left)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value 1997/1024)
+   (:id 20))
+  (:box
+   (:type :function)
+   (:reference first)
+   (:group-id nil)
+   (:name "first")
+   (:x 1028)
+   (:y 253)
+   (:w 73)
+   (:h 36)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "LIST")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 21))
+  (:box
+   (:type :function)
+   (:reference last-elem)
+   (:group-id nil)
+   (:name "last-elem")
+   (:x 1107)
+   (:y 252)
+   (:w 121)
+   (:h 36)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "LIST")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 22))
+  (:box
+   (:type :function)
+   (:reference sort-list)
+   (:group-id nil)
+   (:name "sort-list")
+   (:x 963)
+   (:y 187)
+   (:w 107)
+   (:h 36)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "LST")
+     (:value nil)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 23))
+  (:box
+   (:library "OM-JI")
+   (:type :function)
+   (:reference rt->mc)
+   (:group-id nil)
+   (:name "rt->mc")
+   (:x 887)
+   (:y 717)
+   (:w 102)
+   (:h 36)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "RATIO")
+     (:value 11/8)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "FUNDAMENTAL")
+     (:value 6000)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 24))
+  (:box
+   (:type :value)
+   (:reference fixnum)
+   (:group-id nil)
+   (:name "value box")
+   (:x 930)
+   (:y 682)
+   (:w 62)
+   (:h 38)
+   (:color
+    (:color-or-nil
+     (:color (:color 1.0S0 1.0S0 1.0S0 1.0))
+     (:t-or-nil t)))
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align :left)
+   (:lock nil)
+   (:inputs)
+   (:outputs (:output (:name "value") (:reactive nil)))
+   (:value 6700)
+   (:id 25))
+  (:box
+   (:library "OM-JI")
+   (:type :function)
+   (:reference range-reduce)
+   (:group-id nil)
+   (:name "range-reduce")
+   (:x 965)
+   (:y 762)
+   (:w 158)
+   (:h 36)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input
+     (:type :standard)
+     (:name "NOTELIST")
+     (:value (:list 4800 7200 6000))
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "GRAVE")
+     (:value 6000)
+     (:reactive nil))
+    (:input
+     (:type :standard)
+     (:name "AGUDA")
+     (:value 7902)
+     (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 26))
+  (:box
+   (:type :function)
+   (:reference om-round)
+   (:group-id nil)
+   (:name "om-round")
+   (:x 980)
+   (:y 808)
+   (:w 127)
+   (:h 36)
+   (:color nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:icon :left)
+   (:lock nil)
+   (:lambda nil)
+   (:inputs
+    (:input (:type :standard) (:name "N") (:value 1) (:reactive nil)))
+   (:outputs (:output (:name "out") (:reactive nil)))
+   (:id 27))
+  (:comment
+   (:x 758)
+   (:y 381)
+   (:w 221)
+   (:h 58)
+   (:fgcolor nil)
+   (:bgcolor nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:text "Combinações de unidades somatórias")
+   (:id 28))
+  (:comment
+   (:x 12)
+   (:y 435)
+   (:w 181)
+   (:h 58)
+   (:fgcolor nil)
+   (:bgcolor nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font
+    (:font-or-nil
+     (:font (:font (:face "Verdana") (:size 16) (:style :plain)))
+     (:t-or-nil t)))
+   (:align nil)
+   (:text "Identities que serão testadas")
+   (:id 29))
+  (:comment
+   (:x 53)
+   (:y 825)
+   (:w 765)
+   (:h 83)
+   (:fgcolor nil)
+   (:bgcolor nil)
+   (:border nil)
+   (:roundness nil)
+   (:text-font nil)
+   (:align nil)
+   (:text
+    "(intervalo 19/16 união do crivo ((11 32 512) (19 32 512)) cumpre)
+(intervalo 97/64 união do crivo ((11 32 512) (19 32 512)) cumpre)
+OM# :: => \"fim\" ")
+   (:id 30)))
+ (:connections
+  (:connection (:from (:box 0 :out 0)) (:to (:box 1 :in 0)))
+  (:connection
+   (:from (:box 2 :out 0))
+   (:to (:box 0 :in 2))
+   (:attributes (:color nil :style nil :modif (0 -11/53))))
+  (:connection (:from (:box 3 :out 0)) (:to (:box 0 :in 4)))
+  (:connection (:from (:box 4 :out 0)) (:to (:box 0 :in 5)))
+  (:connection (:from (:box 9 :out 0)) (:to (:box 13 :in 0)))
+  (:connection
+   (:from (:box 10 :out 0))
+   (:to (:box 0 :in 0))
+   (:attributes (:color nil :style nil :modif (0 -11/39))))
+  (:connection (:from (:box 11 :out 1)) (:to (:box 12 :in 0)))
+  (:connection
+   (:from (:box 12 :out 0))
+   (:to (:box 0 :in 1))
+   (:attributes (:color nil :style nil :modif (0 -77/185))))
+  (:connection (:from (:box 12 :out 0)) (:to (:box 23 :in 0)))
+  (:connection
+   (:from (:box 13 :out 0))
+   (:to (:box 0 :in 3))
+   (:attributes (:color nil :style nil :modif (0 43/221))))
+  (:connection (:from (:box 14 :out 0)) (:to (:box 13 :in 1)))
+  (:connection (:from (:box 15 :out 0)) (:to (:box 11 :in 0)))
+  (:connection (:from (:box 16 :out 0)) (:to (:box 18 :in 0)))
+  (:connection (:from (:box 17 :out 0)) (:to (:box 16 :in 0)))
+  (:connection (:from (:box 18 :out 0)) (:to (:box 19 :in 1)))
+  (:connection (:from (:box 19 :out 1)) (:to (:box 24 :in 0)))
+  (:connection (:from (:box 20 :out 0)) (:to (:box 19 :in 0)))
+  (:connection (:from (:box 21 :out 0)) (:to (:box 26 :in 1)))
+  (:connection (:from (:box 22 :out 0)) (:to (:box 26 :in 2)))
+  (:connection (:from (:box 23 :out 0)) (:to (:box 21 :in 0)))
+  (:connection (:from (:box 23 :out 0)) (:to (:box 22 :in 0)))
+  (:connection (:from (:box 24 :out 0)) (:to (:box 26 :in 0)))
+  (:connection (:from (:box 25 :out 0)) (:to (:box 24 :in 1)))
+  (:connection (:from (:box 26 :out 0)) (:to (:box 27 :in 0)))))

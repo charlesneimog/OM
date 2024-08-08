@@ -1,0 +1,14 @@
+
+(:patch
+ (:name "Sieve sintaxe")
+ (:doc "")
+ (:info
+  (:created "2020/10/14 21:15:40")
+  (:modified "2020/10/14 21:15:56")
+  (:by "om-sharp")
+  (:version 1.0))
+ (:window (:size (1672 809)) (:position (64 64)))
+ (:grid nil)
+ (:lock nil)
+ (:boxes)
+ (:connections))

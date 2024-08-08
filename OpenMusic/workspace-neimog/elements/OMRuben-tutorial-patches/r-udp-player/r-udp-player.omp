@@ -1,0 +1,4 @@
+; OM File Header - Saved 2020/09/23 20:55:23
+; (6.13 :patc (om-make-point 10 10) (om-make-point 279 88) (om-make-point 610 296) "" 183 0 nil "2020/09/23 20:55:23")
+; End File Header
+(in-package :om)(load-lib-for (quote nil))(setf *om-current-persistent* (om-load-patch1 "r-udp-player" (quote ((let ((box (om-load-boxcomment "comment" (om-make-point 484 174) (quote "r-udp-player$$These example patches are made for microtonal playback with$r-udp-player available here:$http://rubensverregjertsen.com/Research/Downloads/software.html$$The osc-score-player option is available since OM 6.10.$In MIDI preferences, select osc-scoreplayer and check $\"Force score player\".") "" (om-make-point 66 40) nil (om-make-color 0 0 0) (om-make-font "Verdana" 12 :family "Verdana" :style (quote (:plain)) :mode (quote nil))))) (when (fboundp (quote set-active)) (set-active box nil)) box))) (quote nil) nil 6.120002))
